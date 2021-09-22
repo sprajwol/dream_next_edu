@@ -15,15 +15,26 @@
         {% block titlearea %}
         {% endblock titlearea %}
     </title>
+
     <!-- Favicon Linking -->
     <link rel="shortcut icon" href="{% static 'home\static_images\logo.jpg' %}">
 
+    <!-- NormalizeCSS Linking -->
+    <link rel="stylesheet" type="text/css" href="{% static 'home\styles\packages\NormalizeCSS\normalize.css' %}">
+    <!-- Custom CSS Linking -->
+    <link rel="stylesheet" type="text/css" href="{% static 'home\styles\customs\css\base.min.css' %}">
     {% block cssarea %}
     {% endblock cssarea %}
 
 </head>
 
 <body>
+    <div class="lds-ring" id="loading">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
 
     <header></header>
 
@@ -33,6 +44,17 @@
     </main>
 
     <footer></footer>
+
+    <!-- ALL JS LINKING ARE HERE -->
+    <!-- jQuery -->
+    <!-- <script type=" text/javascript" src="{% static 'home\styles\packages\jQuery\jquery-3.6.0.min.js' %}"></script> -->
+
+    <!-- Custom -->
+    <!-- <script>
+        window.onload = function () {
+            document.getElementById('loading').style.display = 'none';
+        };
+    </script> -->
 
     {% block javascript %}
     {% endblock javascript %}
