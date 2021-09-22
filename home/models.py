@@ -1,5 +1,7 @@
 from django.db import models
 
+from home.image_compress import compressImage
+
 # Create your models here.
 
 
@@ -23,5 +25,21 @@ class HeroSlider(models.Model):
     content_position = models.CharField(
         choices=SLIDER_CONTENT_POSITION, max_length=10)
 
+    __original_image = None
+
     def __str__(self):
         return str(self.main_text)
+
+    def __init__(self, *args, **kwargs):
+        super(HeroSlider, self).__init__(*args, **kwargs)
+        if self.image:
+            self.__original_image = self.image
+
+    def save(self, *args, **kwargs):
+        # print("in save")
+        # print("in save", self.image)
+        if self.image:
+            if self.image != self.__original_image:
+                self.image = compressImage(self.image)
+
+        super(HeroSlider, self).save(*args, **kwargs)
