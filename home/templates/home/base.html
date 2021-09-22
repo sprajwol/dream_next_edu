@@ -2,13 +2,40 @@
 <html lang="en">
 
 <head>
+    {% load static %}
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    {% block metaarea %}
+    {% endblock metaarea %}
+
+    <title>
+        {% block titlearea %}
+        {% endblock titlearea %}
+    </title>
+    <!-- Favicon Linking -->
+    <link rel="shortcut icon" href="{% static 'home\static_images\logo.jpg' %}">
+
+    {% block cssarea %}
+    {% endblock cssarea %}
+
 </head>
 
 <body>
+
+    <header></header>
+
+    <main>
+        {% block content %}
+        {% endblock content %}
+    </main>
+
+    <footer></footer>
+
+    {% block javascript %}
+    {% endblock javascript %}
 
 </body>
 
