@@ -1,21 +1,36 @@
+@import 'globals';
+
 // Loader
+#loader {
+	position: fixed;
+	height: 100vh;
+	width: 100vw;
+	z-index: 999999;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 300ms linear 0ms;
+	background-color: $light;
+	transform: scale(1);
+}
+
 .lds-ring {
 	display: inline-block;
 	position: relative;
-	width: 80px;
-	height: 80px;
+	height: 65px;
+	width: 65px;
 
 	div {
 		box-sizing: border-box;
 		display: block;
 		position: absolute;
-		width: 64px;
-		height: 64px;
+		width: 60px;
+		height: 60px;
 		margin: 8px;
-		border: 8px solid #385c92;
+		border: 6px solid $logo_blue;
 		border-radius: 50%;
 		animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-		border-color: #385c92 transparent transparent transparent;
+		border-color: $logo_blue transparent transparent transparent;
 	}
 	div:nth-child(1) {
 		animation-delay: -0.45s;
@@ -36,3 +51,5 @@
 		transform: rotate(360deg);
 	}
 }
+
+// ?WEbsite

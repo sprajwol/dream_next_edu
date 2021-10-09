@@ -29,33 +29,37 @@
 </head>
 
 <body>
-    <div class="lds-ring" id="loading">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+    <div id="loader">
+        <div class="lds-ring" id="loading">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </div>
+    <div id="page" class="site">
+        <header>
 
-    <header></header>
+        </header>
 
-    <main>
-        {% block content %}
-        {% endblock content %}
-    </main>
+        <main>
+            This is it
+            {% block content %}
+            {% endblock content %}
+        </main>
 
-    <footer></footer>
+        <footer>
+
+        </footer>
+    </div>
 
     <!-- ALL JS LINKING ARE HERE -->
     <!-- jQuery -->
     <!-- <script type=" text/javascript" src="{% static 'home\styles\packages\jQuery\jquery-3.6.0.min.js' %}"></script> -->
 
     <!-- Custom -->
-    <!-- <script>
-        window.onload = function () {
-            document.getElementById('loading').style.display = 'none';
-        };
-    </script> -->
 
+    <script type=" text/javascript" src="{% static 'home\styles\customs\js\base.js' %}"></script>
     {% block javascript %}
     {% endblock javascript %}
 
