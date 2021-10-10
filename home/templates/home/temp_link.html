@@ -1,0 +1,1032 @@
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+<style type="text/css">
+    @font-face {
+        font-family: 'Barlow';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/barlow/v5/7cHpv4kjgoGqM7E_Ass8.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Kalam';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/kalam/v11/YA9dr0Wd4kDdMthfOCI.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/lato/v20/S6uyw4BMUTPHjxAwWw.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Muli';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/muli/v22/7Aulp_0qiz-aVz7u3PJLcUMYOFnOkEk50e0.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Nunito Sans';
+        font-style: italic;
+        font-weight: 200;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v8/pe01MImSLYBIv1o4X1M8cce4GxZrY10IVw.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Nunito Sans';
+        font-style: italic;
+        font-weight: 300;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v8/pe01MImSLYBIv1o4X1M8cce4G3JoY10IVw.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Nunito Sans';
+        font-style: italic;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v8/pe0oMImSLYBIv1o4X1M8cce4E9dKcw.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Nunito Sans';
+        font-style: italic;
+        font-weight: 600;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v8/pe01MImSLYBIv1o4X1M8cce4GwZuY10IVw.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Nunito Sans';
+        font-style: italic;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v8/pe01MImSLYBIv1o4X1M8cce4G2JvY10IVw.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Nunito Sans';
+        font-style: italic;
+        font-weight: 800;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v8/pe01MImSLYBIv1o4X1M8cce4G35sY10IVw.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Nunito Sans';
+        font-style: italic;
+        font-weight: 900;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v8/pe01MImSLYBIv1o4X1M8cce4G1ptY10IVw.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Nunito Sans';
+        font-style: normal;
+        font-weight: 200;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v8/pe03MImSLYBIv1o4X1M8cc9yAs5jU1Q.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Nunito Sans';
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v8/pe03MImSLYBIv1o4X1M8cc8WAc5jU1Q.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Nunito Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v8/pe0qMImSLYBIv1o4X1M8ccezI94.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Nunito Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v8/pe03MImSLYBIv1o4X1M8cc9iB85jU1Q.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Nunito Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v8/pe03MImSLYBIv1o4X1M8cc8GBs5jU1Q.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Nunito Sans';
+        font-style: normal;
+        font-weight: 800;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v8/pe03MImSLYBIv1o4X1M8cc8aBc5jU1Q.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Nunito Sans';
+        font-style: normal;
+        font-weight: 900;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v8/pe03MImSLYBIv1o4X1M8cc8-BM5jU1Q.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Playfair Display';
+        font-style: italic;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/playfairdisplay/v22/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_qiTXt_A_A.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Playfair Display';
+        font-style: italic;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/playfairdisplay/v22/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_k-UXt_A_A.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Playfair Display';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/playfairdisplay/v22/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDZbtY.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Playfair Display';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/playfairdisplay/v22/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKeiunDZbtY.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Playfair Display';
+        font-style: normal;
+        font-weight: 800;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/playfairdisplay/v22/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKfFunDZbtY.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Playfair Display';
+        font-style: normal;
+        font-weight: 900;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/playfairdisplay/v22/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKfsunDZbtY.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Poppins';
+        font-style: italic;
+        font-weight: 100;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v15/pxiAyp8kv8JHgFVrJJLmE0tMMPc.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Poppins';
+        font-style: italic;
+        font-weight: 200;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v15/pxiDyp8kv8JHgFVrJJLmv1pVGdeL.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Poppins';
+        font-style: italic;
+        font-weight: 300;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v15/pxiDyp8kv8JHgFVrJJLm21lVGdeL.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Poppins';
+        font-style: italic;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v15/pxiGyp8kv8JHgFVrJJLufntF.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Poppins';
+        font-style: italic;
+        font-weight: 500;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v15/pxiDyp8kv8JHgFVrJJLmg1hVGdeL.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Poppins';
+        font-style: italic;
+        font-weight: 600;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v15/pxiDyp8kv8JHgFVrJJLmr19VGdeL.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Poppins';
+        font-style: italic;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v15/pxiDyp8kv8JHgFVrJJLmy15VGdeL.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Poppins';
+        font-style: italic;
+        font-weight: 800;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v15/pxiDyp8kv8JHgFVrJJLm111VGdeL.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Poppins';
+        font-style: italic;
+        font-weight: 900;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v15/pxiDyp8kv8JHgFVrJJLm81xVGdeL.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 100;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v15/pxiGyp8kv8JHgFVrLPTufntF.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 200;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLFj_Z1JlEA.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLDz8Z1JlEA.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v15/pxiEyp8kv8JHgFVrJJnedw.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLGT9Z1JlEA.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLEj6Z1JlEA.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLCz7Z1JlEA.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 800;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLDD4Z1JlEA.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 900;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLBT5Z1JlEA.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Roboto';
+        font-style: italic;
+        font-weight: 100;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/roboto/v27/KFOiCnqEu92Fr1Mu51QrEz4dKg.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Roboto';
+        font-style: italic;
+        font-weight: 300;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/roboto/v27/KFOjCnqEu92Fr1Mu51TjASc0CsE.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Roboto';
+        font-style: italic;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/roboto/v27/KFOkCnqEu92Fr1Mu51xGIzc.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Roboto';
+        font-style: italic;
+        font-weight: 500;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/roboto/v27/KFOjCnqEu92Fr1Mu51S7ACc0CsE.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Roboto';
+        font-style: italic;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/roboto/v27/KFOjCnqEu92Fr1Mu51TzBic0CsE.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Roboto';
+        font-style: italic;
+        font-weight: 900;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/roboto/v27/KFOjCnqEu92Fr1Mu51TLBCc0CsE.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 100;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/roboto/v27/KFOkCnqEu92Fr1MmgVxGIzc.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/roboto/v27/KFOlCnqEu92Fr1MmSU5fChc9.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/roboto/v27/KFOmCnqEu92Fr1Mu7GxP.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/roboto/v27/KFOlCnqEu92Fr1MmEU9fChc9.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/roboto/v27/KFOlCnqEu92Fr1MmWUlfChc9.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 900;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/roboto/v27/KFOlCnqEu92Fr1MmYUtfChc9.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Roboto Slab';
+        font-style: normal;
+        font-weight: 100;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/robotoslab/v16/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojIWmYWRm.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Roboto Slab';
+        font-style: normal;
+        font-weight: 200;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/robotoslab/v16/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoDISmYWRm.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Roboto Slab';
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/robotoslab/v16/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjo0oSmYWRm.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Roboto Slab';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/robotoslab/v16/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISmYWRm.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Roboto Slab';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/robotoslab/v16/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjovoSmYWRm.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Roboto Slab';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/robotoslab/v16/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoUoOmYWRm.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Roboto Slab';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/robotoslab/v16/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoa4OmYWRm.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Roboto Slab';
+        font-style: normal;
+        font-weight: 800;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/robotoslab/v16/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoDIOmYWRm.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Roboto Slab';
+        font-style: normal;
+        font-weight: 900;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/robotoslab/v16/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoJYOmYWRm.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Rubik';
+        font-style: italic;
+        font-weight: 300;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/rubik/v14/iJWbBXyIfDnIV7nEt3KSJbVDV49rz8sDE3U5f4c.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Rubik';
+        font-style: italic;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/rubik/v14/iJWbBXyIfDnIV7nEt3KSJbVDV49rz8tdE3U5f4c.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Rubik';
+        font-style: italic;
+        font-weight: 500;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/rubik/v14/iJWbBXyIfDnIV7nEt3KSJbVDV49rz8tvE3U5f4c.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Rubik';
+        font-style: italic;
+        font-weight: 600;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/rubik/v14/iJWbBXyIfDnIV7nEt3KSJbVDV49rz8uDFHU5f4c.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Rubik';
+        font-style: italic;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/rubik/v14/iJWbBXyIfDnIV7nEt3KSJbVDV49rz8u6FHU5f4c.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Rubik';
+        font-style: italic;
+        font-weight: 800;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/rubik/v14/iJWbBXyIfDnIV7nEt3KSJbVDV49rz8vdFHU5f4c.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Rubik';
+        font-style: italic;
+        font-weight: 900;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/rubik/v14/iJWbBXyIfDnIV7nEt3KSJbVDV49rz8v0FHU5f4c.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/rubik/v14/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-WYiFWUUw.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/rubik/v14/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-B4iFWUUw.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/rubik/v14/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-NYiFWUUw.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/rubik/v14/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-2Y-FWUUw.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/rubik/v14/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-4I-FWUUw.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 800;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/rubik/v14/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-h4-FWUUw.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 900;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/rubik/v14/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-ro-FWUUw.ttf) format('truetype');
+    }
+</style>
+<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='preconnect' href='https://fonts.gstatic.com/' crossorigin />
+<link rel="alternate" type="application/rss+xml" title="DreamNext Education Foundation &raquo; Feed"
+    href="../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="DreamNext Education Foundation &raquo; Comments Feed"
+    href="../comments/feed/index.html" />
+<link rel='stylesheet' id='sb_instagram_styles-css'
+    href="{% static 'home\styles\assets\wp-content\plugins\instagram-feed\css\sbi-styles.min.css' %}" type='text/css'
+    media='all' />
+<link rel='stylesheet' id='wp-block-library-css'
+    href='{% static "home\styles\assets\wp-includes\css\dist\block-library\style.min.css" %}' type='text/css'
+    media='all' />
+<link rel='stylesheet' id='wc-block-vendors-style-css'
+    href='{% static "home\styles\assets\wp-content\plugins\woocommerce\packages\woocommerce-blocks\build\wc-block-vendors-style.min.css" %}'
+    type='text/css' media='all' />
+<link rel='stylesheet' id='wc-block-style-css'
+    href='{% static "home\styles\assets\wp-content\plugins\woocommerce\packages\woocommerce-blocks\build\wc-block-style.min.css" %}'
+    type='text/css' media='all' />
+<link rel='stylesheet' id='jquery-selectBox-css'
+    href='{% static "home\styles\assets\wp-content\plugins\yith-woocommerce-wishlist\assets\css\jquery-selectBox.min.css" %}'
+    type='text/css' media='all' />
+<link rel='stylesheet' id='yith-wcwl-font-awesome-css'
+    href='{% static "home\styles\assets\wp-content\plugins\yith-woocommerce-wishlist\assets\css\yith-wcwl-font-awesome.min.css" %}'
+    type='text/css' media='all' />
+<link rel='stylesheet' id='woocommerce_prettyPhoto_css-css'
+    href='{% static "home\styles\assets\wp-content\plugins\woocommerce\assets\css\woocommerce_prettyPhoto_css.min.css" %}'
+    type='text/css' media='all' />
+<link rel='stylesheet' id='yith-wcwl-main-css'
+    href='{% static "home\styles\assets\wp-content\plugins\yith-woocommerce-wishlist\assets\css\yith-wcwl-main.min.css" %}'
+    type='text/css' media='all' />
+<style id='yith-wcwl-main-inline-css' type='text/css'>
+    .yith-wcwl-share li a {
+        color: #FFFFFF;
+    }
+
+    .yith-wcwl-share li a:hover {
+        color: #FFFFFF;
+    }
+
+    .yith-wcwl-share a.facebook {
+        background: #28c209;
+        background-color: #399e4f;
+    }
+
+    .yith-wcwl-share a.facebook:hover {
+        background: #595A5A;
+        background-color: #595A5A;
+    }
+
+    .yith-wcwl-share a.twitter {
+        background: #288bbd;
+        background-color: #288bbd;
+    }
+
+    .yith-wcwl-share a.twitter:hover {
+        background: #595A5A;
+        background-color: #595A5A;
+    }
+
+    .yith-wcwl-share a.pinterest {
+        background: #AB2E31;
+        background-color: #AB2E31;
+    }
+
+    .yith-wcwl-share a.pinterest:hover {
+        background: #595A5A;
+        background-color: #595A5A;
+    }
+
+    .yith-wcwl-share a.email {
+        background: #FBB102;
+        background-color: #FBB102;
+    }
+
+    .yith-wcwl-share a.email:hover {
+        background: #595A5A;
+        background-color: #595A5A;
+    }
+
+    .yith-wcwl-share a.whatsapp {
+        background: #00A901;
+        background-color: #00A901;
+    }
+
+    .yith-wcwl-share a.whatsapp:hover {
+        background: #595A5A;
+        background-color: #595A5A;
+    }
+</style>
+<link rel='stylesheet' id='ct-main-css-css' href='../wp-content/plugins/case-theme-core/assets/css/ct-main-css.min.css'
+    type='text/css' media='all' />
+<link rel='stylesheet' id='progressbar-lib-css-css'
+    href='../wp-content/plugins/case-theme-core/assets/css/lib/progressbar.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='oc-css-css' href='../wp-content/plugins/case-theme-core/assets/css/lib/owl.carousel.min.css'
+    type='text/css' media='all' />
+<link rel='stylesheet' id='ct-font-awesome-css'
+    href='../wp-content/plugins/case-theme-core/assets/plugin/font-awesome/css/font-awesome.min.css' type='text/css'
+    media='all' />
+<link rel='stylesheet' id='contact-form-7-css'
+    href='../wp-content/plugins/contact-form-7/includes/css/contact-form-7.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='rs-plugin-settings-css'
+    href='../wp-content/plugins/revslider/public/assets/css/rs-plugin-settings.min.css' type='text/css' media='all' />
+<style id='rs-plugin-settings-inline-css' type='text/css'>
+    #rs-demo-id {}
+</style>
+<link rel='stylesheet' id='woocommerce-layout-css'
+    href='../wp-content/plugins/woocommerce/assets/css/woocommerce-layout.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='woocommerce-smallscreen-css'
+    href='../wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.min.css' type='text/css'
+    media='only screen and (max-width: 768px)' />
+<link rel='stylesheet' id='woocommerce-general-css'
+    href='../wp-content/plugins/woocommerce/assets/css/woocommerce-general.min.css' type='text/css' media='all' />
+<style id='woocommerce-inline-inline-css' type='text/css'>
+    .woocommerce form .form-row .required {
+        visibility: visible;
+    }
+</style>
+<link rel='stylesheet' id='ppress-frontend-css' href='../wp-content/plugins/wp-user-avatar/assets/css/frontend.min.css'
+    type='text/css' media='all' />
+<link rel='stylesheet' id='ppress-flatpickr-css'
+    href='../wp-content/plugins/wp-user-avatar/assets/flatpickr/flatpickr.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='ppress-select2-css'
+    href='../wp-content/plugins/wp-user-avatar/assets/select2/select2.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='yith-quick-view-css'
+    href='../wp-content/plugins/yith-woocommerce-quick-view/assets/css/yith-quick-view.min.css' type='text/css'
+    media='all' />
+<style id='yith-quick-view-inline-css' type='text/css'>
+    #yith-quick-view-modal .yith-wcqv-main {
+        background: #ffffff;
+    }
+
+    #yith-quick-view-close {
+        color: #cdcdcd;
+    }
+
+    #yith-quick-view-close:hover {
+        color: #288bbd;
+    }
+</style>
+<link rel='stylesheet' id='bootstrap-css' href='../wp-content/themes/csuti/assets/css/bootstrap.min.css' type='text/css'
+    media='all' />
+<link rel='stylesheet' id='font-awesome-css'
+    href='../wp-content/plugins/elementor/assets/lib/font-awesome/css/font-awesome.min.css' type='text/css'
+    media='all' />
+<style id='font-awesome-inline-css' type='text/css'>
+    [data-font="FontAwesome"]:before {
+        font-family: 'FontAwesome' !important;
+        content: attr(data-icon) !important;
+        speak: none !important;
+        font-weight: normal !important;
+        font-variant: normal !important;
+        text-transform: none !important;
+        line-height: 1 !important;
+        font-style: normal !important;
+        -webkit-font-smoothing: antialiased !important;
+        -moz-osx-font-smoothing: grayscale !important;
+    }
+</style>
+<link rel='stylesheet' id='font-awesome-v5-css' href='../wp-content/themes/csuti/assets/css/font-awesome5.min.css'
+    type='text/css' media='all' />
+<link rel='stylesheet' id='font-flaticon-css' href='../wp-content/themes/csuti/assets/css/font-flaticon.min.css'
+    type='text/css' media='all' />
+<link rel='stylesheet' id='font-flaticon-v2-css' href='../wp-content/themes/csuti/assets/css/font-flaticon-v2.min.css'
+    type='text/css' media='all' />
+<link rel='stylesheet' id='font-flaticon-v3-css' href='../wp-content/themes/csuti/assets/css/font-flaticon-v3.min.css'
+    type='text/css' media='all' />
+<link rel='stylesheet' id='font-flaticon-v4-css' href='../wp-content/themes/csuti/assets/css/font-flaticon-v4.min.css'
+    type='text/css' media='all' />
+<link rel='stylesheet' id='font-flaticon-v5-css' href='../wp-content/themes/csuti/assets/css/font-flaticon-v5.min.css'
+    type='text/css' media='all' />
+<link rel='stylesheet' id='font-flaticon-v6-css' href='../wp-content/themes/csuti/assets/css/font-flaticon-v6.min.css'
+    type='text/css' media='all' />
+<link rel='stylesheet' id='font-flaticon-v7-css' href='../wp-content/themes/csuti/assets/css/font-flaticon-v7.min.css'
+    type='text/css' media='all' />
+<link rel='stylesheet' id='font-material-icon-css'
+    href='../wp-content/themes/csuti/assets/css/material-design-iconic-font.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='magnific-popup-css' href='../wp-content/themes/csuti/assets/css/magnific-popup.min.css'
+    type='text/css' media='all' />
+<link rel='stylesheet' id='animate-css' href='../wp-content/themes/csuti/assets/css/animate.min.css' type='text/css'
+    media='all' />
+<link rel='stylesheet' id='consultio-theme-css' href='../wp-content/themes/csuti/assets/css/consultio-theme.min.css'
+    type='text/css' media='all' />
+<style id='consultio-theme-inline-css' type='text/css'>
+    @media screen and (min-width: 1200px) {
+        #ct-header-wrap .ct-header-branding a img {
+            max-height: 47px !important;
+        }
+
+        #ct-header-wrap .ct-header-main.h-fixed .ct-header-branding a img {
+            max-height: 47px !important;
+        }
+    }
+
+    @media screen and (max-width: 1199px) {}
+
+    @media screen and (min-width: 1200px) {}
+</style>
+<link rel='stylesheet' id='consultio-style-css' href='../wp-content/themes/csuti/consultio-style.min.css'
+    type='text/css' media='all' />
+<link rel='stylesheet' id='newsletter-css' href='../wp-content/plugins/newsletter/newsletter.min.css' type='text/css'
+    media='all' />
+<link rel='stylesheet' id='elementor-icons-css'
+    href='../wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-animations-css'
+    href='../wp-content/plugins/elementor/assets/lib/animations/animations.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-frontend-legacy-css'
+    href='../wp-content/plugins/elementor/assets/css/frontend-legacy.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css' href='../wp-content/plugins/elementor/assets/css/frontend.min.css'
+    type='text/css' media='all' />
+<style id='elementor-frontend-inline-css' type='text/css'>
+    @font-face {
+        font-family: eicons;
+        src: url(../wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons0b93.eot?5.10.0);
+        src: url(https://demo.casethemes.net/consultio-immigration/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0#iefix) format("embedded-opentype"), url(https://demo.casethemes.net/consultio-immigration/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff2?5.10.0) format("woff2"), url(https://demo.casethemes.net/consultio-immigration/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff?5.10.0) format("woff"), url(https://demo.casethemes.net/consultio-immigration/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.ttf?5.10.0) format("truetype"), url(https://demo.casethemes.net/consultio-immigration/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.svg?5.10.0#eicon) format("svg");
+        font-weight: 400;
+        font-style: normal
+    }
+</style>
+<link rel='stylesheet' id='elementor-post-4540-css' href='../wp-content/uploads/elementor/css/post-4540.css'
+    type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-global-css' href='../wp-content/uploads/elementor/css/global.css' type='text/css'
+    media='all' />
+<link rel='stylesheet' id='elementor-post-5147-css' href='../wp-content/uploads/elementor/css/post-5147.css'
+    type='text/css' media='all' /> <noscript></noscript>
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery.min.js' id='jquery-core-js'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery-migrate.min.js' id='jquery-migrate-js'></script>
+<script defer type='text/javascript' src='../wp-content/uploads/siteground-optimizer-assets/ct-main-js.min.js'
+    id='ct-main-js-js'></script>
+<script defer type='text/javascript' src='../wp-content/plugins/revslider/public/assets/js/rbtools.min.js'
+    id='tp-tools-js'></script>
+<script defer type='text/javascript' src='../wp-content/plugins/revslider/public/assets/js/rs6.min.js' id='revmin-js'>
+</script>
+<script defer type='text/javascript' src='../wp-content/plugins/wp-user-avatar/assets/flatpickr/flatpickr.min.js'
+    id='ppress-flatpickr-js'></script>
+<script defer type='text/javascript' src='../wp-content/plugins/wp-user-avatar/assets/select2/select2.min.js'
+    id='ppress-select2-js'></script>
+<script defer type='text/javascript' src='../wp-content/uploads/siteground-optimizer-assets/ct-inline-css-js.min.js'
+    id='ct-inline-css-js-js'></script>
+<link rel="https://api.w.org/" href="../wp-json/index.html" />
+<link rel="alternate" type="application/json" href="../wp-json/wp/v2/pages/5147.json" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" />
+<meta name="generator" content="WordPress 5.7.3" />
+<meta name="generator" content="WooCommerce 5.4.2" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='../index4163.html?p=5147' />
+<link rel="alternate" type="application/json+oembed"
+    href="../wp-json/oembed/1.0/embedd900.json?url=https%3A%2F%2Fdemo.casethemes.net%2Fconsultio-immigration%2Fhome-onepage%2F" />
+<link rel="alternate" type="text/xml+oembed"
+    href="../wp-json/oembed/1.0/embedcaa7?url=https%3A%2F%2Fdemo.casethemes.net%2Fconsultio-immigration%2Fhome-onepage%2F&amp;format=xml" />
+<meta name="framework" content="Redux 4.1.26" />
+<script>
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+</script>
+<style>
+    .no-js img.lazyload {
+        display: none;
+    }
+
+    figure.wp-block-image img.lazyloading {
+        min-width: 150px;
+    }
+
+    .lazyload {
+        opacity: 0;
+    }
+
+    .lazyloading {
+        border: 0 !important;
+        opacity: 1;
+        background: rgba(255, 255, 255, 0) url('../wp-content/plugins/wp-smushit/app/assets/images/smush-lazyloader-2.gif') no-repeat center !important;
+        background-size: 16px auto !important;
+        min-width: 16px;
+    }
+</style>
+<link rel="icon" type="image/png" href="../wp-content/uploads/2020/10/favicon.png" /> <noscript>
+    <style>
+        .woocommerce-product-gallery {
+            opacity: 1 !important;
+        }
+    </style>
+</noscript>
+<meta name="generator"
+    content="Powered by Slider Revolution 6.2.22 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+<script type="text/javascript">
+    function setREVStartSize(e) {
+        //window.requestAnimationFrame(function() { 
+        window.RSIW = window.RSIW === undefined ? window.innerWidth : window.RSIW;
+        window.RSIH = window.RSIH === undefined ? window.innerHeight : window.RSIH;
+        try {
+            var pw = document.getElementById(e.c).parentNode.offsetWidth,
+                newh;
+            pw = pw === 0 || isNaN(pw) ? window.RSIW : pw;
+            e.tabw = e.tabw === undefined ? 0 : parseInt(e.tabw);
+            e.thumbw = e.thumbw === undefined ? 0 : parseInt(e.thumbw);
+            e.tabh = e.tabh === undefined ? 0 : parseInt(e.tabh);
+            e.thumbh = e.thumbh === undefined ? 0 : parseInt(e.thumbh);
+            e.tabhide = e.tabhide === undefined ? 0 : parseInt(e.tabhide);
+            e.thumbhide = e.thumbhide === undefined ? 0 : parseInt(e.thumbhide);
+            e.mh = e.mh === undefined || e.mh == "" || e.mh === "auto" ? 0 : parseInt(e.mh, 0);
+            if (e.layout === "fullscreen" || e.l === "fullscreen")
+                newh = Math.max(e.mh, window.RSIH);
+            else {
+                e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
+                for (var i in e.rl)
+                    if (e.gw[i] === undefined || e.gw[i] === 0) e.gw[i] = e.gw[i - 1];
+                e.gh = e.el === undefined || e.el === "" || (Array.isArray(e.el) && e.el.length == 0) ? e.gh : e.el;
+                e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
+                for (var i in e.rl)
+                    if (e.gh[i] === undefined || e.gh[i] === 0) e.gh[i] = e.gh[i - 1];
+                var nl = new Array(e.rl.length),
+                    ix = 0,
+                    sl;
+                e.tabw = e.tabhide >= pw ? 0 : e.tabw;
+                e.thumbw = e.thumbhide >= pw ? 0 : e.thumbw;
+                e.tabh = e.tabhide >= pw ? 0 : e.tabh;
+                e.thumbh = e.thumbhide >= pw ? 0 : e.thumbh;
+                for (var i in e.rl) nl[i] = e.rl[i] < window.RSIW ? 0 : e.rl[i];
+                sl = nl[0];
+                for (var i in nl)
+                    if (sl > nl[i] && nl[i] > 0) {
+                        sl = nl[i];
+                        ix = i;
+                    }
+                var m = pw > (e.gw[ix] + e.tabw + e.thumbw) ? 1 : (pw - (e.tabw + e.thumbw)) / (e.gw[ix]);
+                newh = (e.gh[ix] * m) + (e.tabh + e.thumbh);
+            }
+            if (window.rs_init_css === undefined) window.rs_init_css = document.head.appendChild(document.createElement(
+                "style"));
+            document.getElementById(e.c).height = newh + "px";
+            window.rs_init_css.innerHTML += "#" + e.c + "_wrapper { height: " + newh + "px }";
+        } catch (e) {
+            console.log("Failure at Presize of Slider:" + e)
+        }
+        //});
+    };
+</script>
+<style type="text/css" id="wp-custom-css">
+    .ct-hidden-sidebar section.widget.logo-hidden-sidebar img {
+        max-height: 50px;
+    }
+</style>
+<style id="ct_theme_options-dynamic-css" title="dynamic-css" class="redux-options-output">
+    .ct-main-menu>li>a,
+    body .ct-main-menu .sub-menu li a {
+        font-display: swap;
+    }
+
+    body #pagetitle {
+        background-image: url('../wp-content/uploads/2020/05/bg-page-title-u.jpg');
+    }
+
+    body #pagetitle {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    a {
+        color: #00ff4c;
+    }
+
+    a:hover {
+        color: #288bbd;
+    }
+
+    a:active {
+        color: #0d2252;
+    }
+
+    body {
+        font-family: "Nunito Sans";
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    h1,
+    .h1,
+    .text-heading {
+        font-display: swap;
+    }
+
+    h2,
+    .h2 {
+        font-display: swap;
+    }
+
+    h3,
+    .h3 {
+        font-display: swap;
+    }
+
+    h4,
+    .h4 {
+        font-display: swap;
+    }
+
+    h5,
+    .h5 {
+        font-display: swap;
+    }
+
+    h6,
+    .h6 {
+        font-display: swap;
+    }
+</style>
+<style id="ct-page-dynamic-css" data-type="redux-output-css">
+    #content {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+</style>
