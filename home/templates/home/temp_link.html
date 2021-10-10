@@ -1,3 +1,5 @@
+{% load static %}
+
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
 <style type="text/css">
     @font-face {
@@ -706,43 +708,52 @@
         background-color: #595A5A;
     }
 </style>
-<link rel='stylesheet' id='ct-main-css-css' href='../wp-content/plugins/case-theme-core/assets/css/ct-main-css.min.css'
+<link rel='stylesheet' id='ct-main-css-css'
+    href='{% static "home\styles\assets\wp-content\plugins\case-theme-core\assets\css\ct-main-css.min.css" %}'
     type='text/css' media='all' />
 <link rel='stylesheet' id='progressbar-lib-css-css'
-    href='../wp-content/plugins/case-theme-core/assets/css/lib/progressbar.min.css' type='text/css' media='all' />
-<link rel='stylesheet' id='oc-css-css' href='../wp-content/plugins/case-theme-core/assets/css/lib/owl.carousel.min.css'
+    href='{% static "home\styles\assets\wp-content\plugins\case-theme-core\assets\css\lib\progressbar.min.css" %}'
+    type='text/css' media='all' />
+<link rel='stylesheet' id='oc-css-css'
+    href='{% static "home\styles\assets\wp-content\plugins\case-theme-core\assets\css\lib\owl.carousel.min.css" %}'
     type='text/css' media='all' />
 <link rel='stylesheet' id='ct-font-awesome-css'
-    href='../wp-content/plugins/case-theme-core/assets/plugin/font-awesome/css/font-awesome.min.css' type='text/css'
-    media='all' />
+    href='{% static "home\styles\assets\wp-content\plugins\case-theme-core\assets\plugin\font-awesome\css\font-awesome.min.css" %}'
+    type='text/css' media='all' />
 <link rel='stylesheet' id='contact-form-7-css'
-    href='../wp-content/plugins/contact-form-7/includes/css/contact-form-7.min.css' type='text/css' media='all' />
+    href='{% static "home\styles\assets\wp-content\plugins\contact-form-7\includes\css\contact-form-7.min.css" %}'
+    type='text/css' media='all' />
 <link rel='stylesheet' id='rs-plugin-settings-css'
-    href='../wp-content/plugins/revslider/public/assets/css/rs-plugin-settings.min.css' type='text/css' media='all' />
+    href='{% static "home\styles\assets\wp-content\plugins\revslider\public\assets\css\rs-plugin-settings.min.css" %}'
+    type='text/css' media='all' />
 <style id='rs-plugin-settings-inline-css' type='text/css'>
-    #rs-demo-id {}
 </style>
 <link rel='stylesheet' id='woocommerce-layout-css'
-    href='../wp-content/plugins/woocommerce/assets/css/woocommerce-layout.min.css' type='text/css' media='all' />
+    href='{% static "home\styles\assets\wp-content\plugins\woocommerce\assets\css\woocommerce-layout.min.css" %}'
+    type='text/css' media='all' />
 <link rel='stylesheet' id='woocommerce-smallscreen-css'
-    href='../wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.min.css' type='text/css'
-    media='only screen and (max-width: 768px)' />
+    href='{% static "home\styles\assets\wp-content\plugins\woocommerce\assets\css\woocommerce-smallscreen.min.css" %}'
+    type='text/css' media='only screen and (max-width: 768px)' />
 <link rel='stylesheet' id='woocommerce-general-css'
-    href='../wp-content/plugins/woocommerce/assets/css/woocommerce-general.min.css' type='text/css' media='all' />
+    href='{% static "home\styles\assets\wp-content\plugins\woocommerce\assets\css\woocommerce-general.min.css" %}'
+    type='text/css' media='all' />
 <style id='woocommerce-inline-inline-css' type='text/css'>
     .woocommerce form .form-row .required {
         visibility: visible;
     }
 </style>
-<link rel='stylesheet' id='ppress-frontend-css' href='../wp-content/plugins/wp-user-avatar/assets/css/frontend.min.css'
+<link rel='stylesheet' id='ppress-frontend-css'
+    href='{% static "home\styles\assets\wp-content\plugins\wp-user-avatar\assets\css\frontend.min.css" %}'
     type='text/css' media='all' />
 <link rel='stylesheet' id='ppress-flatpickr-css'
-    href='../wp-content/plugins/wp-user-avatar/assets/flatpickr/flatpickr.min.css' type='text/css' media='all' />
+    href='{% static "home\styles\assets\wp-content\plugins\wp-user-avatar\assets\flatpickr\flatpickr.min.css" %}'
+    type='text/css' media='all' />
 <link rel='stylesheet' id='ppress-select2-css'
-    href='../wp-content/plugins/wp-user-avatar/assets/select2/select2.min.css' type='text/css' media='all' />
+    href='{% static "home\styles\assets\wp-content\plugins\wp-user-avatar\assets\select2\select2.min.css" %}'
+    type='text/css' media='all' />
 <link rel='stylesheet' id='yith-quick-view-css'
-    href='../wp-content/plugins/yith-woocommerce-quick-view/assets/css/yith-quick-view.min.css' type='text/css'
-    media='all' />
+    href='{% static "home\styles\assets\wp-content\plugins\yith-woocommerce-quick-view\assets\css\yith-quick-view.min.css" %}'
+    type='text/css' media='all' />
 <style id='yith-quick-view-inline-css' type='text/css'>
     #yith-quick-view-modal .yith-wcqv-main {
         background: #ffffff;
@@ -756,11 +767,12 @@
         color: #288bbd;
     }
 </style>
-<link rel='stylesheet' id='bootstrap-css' href='../wp-content/themes/csuti/assets/css/bootstrap.min.css' type='text/css'
+<link rel='stylesheet' id='bootstrap-css'
+    href='{% static "home\styles\assets\wp-content\themes\csuti\assets\css\bootstrap.min.css" %}' type='text/css'
     media='all' />
 <link rel='stylesheet' id='font-awesome-css'
-    href='../wp-content/plugins/elementor/assets/lib/font-awesome/css/font-awesome.min.css' type='text/css'
-    media='all' />
+    href='{% static "home\styles\assets\wp-content\plugins\elementor\assets\lib\font-awesome\css\font-awesome.min.css" %}'
+    type='text/css' media='all' />
 <style id='font-awesome-inline-css' type='text/css'>
     [data-font="FontAwesome"]:before {
         font-family: 'FontAwesome' !important;
@@ -775,30 +787,42 @@
         -moz-osx-font-smoothing: grayscale !important;
     }
 </style>
-<link rel='stylesheet' id='font-awesome-v5-css' href='../wp-content/themes/csuti/assets/css/font-awesome5.min.css'
-    type='text/css' media='all' />
-<link rel='stylesheet' id='font-flaticon-css' href='../wp-content/themes/csuti/assets/css/font-flaticon.min.css'
-    type='text/css' media='all' />
-<link rel='stylesheet' id='font-flaticon-v2-css' href='../wp-content/themes/csuti/assets/css/font-flaticon-v2.min.css'
-    type='text/css' media='all' />
-<link rel='stylesheet' id='font-flaticon-v3-css' href='../wp-content/themes/csuti/assets/css/font-flaticon-v3.min.css'
-    type='text/css' media='all' />
-<link rel='stylesheet' id='font-flaticon-v4-css' href='../wp-content/themes/csuti/assets/css/font-flaticon-v4.min.css'
-    type='text/css' media='all' />
-<link rel='stylesheet' id='font-flaticon-v5-css' href='../wp-content/themes/csuti/assets/css/font-flaticon-v5.min.css'
-    type='text/css' media='all' />
-<link rel='stylesheet' id='font-flaticon-v6-css' href='../wp-content/themes/csuti/assets/css/font-flaticon-v6.min.css'
-    type='text/css' media='all' />
-<link rel='stylesheet' id='font-flaticon-v7-css' href='../wp-content/themes/csuti/assets/css/font-flaticon-v7.min.css'
-    type='text/css' media='all' />
-<link rel='stylesheet' id='font-material-icon-css'
-    href='../wp-content/themes/csuti/assets/css/material-design-iconic-font.min.css' type='text/css' media='all' />
-<link rel='stylesheet' id='magnific-popup-css' href='../wp-content/themes/csuti/assets/css/magnific-popup.min.css'
-    type='text/css' media='all' />
-<link rel='stylesheet' id='animate-css' href='../wp-content/themes/csuti/assets/css/animate.min.css' type='text/css'
+<link rel='stylesheet' id='font-awesome-v5-css'
+    href='{% static "home\styles\assets\wp-content\themes\csuti\assets\css\font-awesome5.min.css" %}' type='text/css'
     media='all' />
-<link rel='stylesheet' id='consultio-theme-css' href='../wp-content/themes/csuti/assets/css/consultio-theme.min.css'
+<link rel='stylesheet' id='font-flaticon-css'
+    href='{% static "home\styles\assets\wp-content\themes\csuti\assets\css\font-flaticon.min.css" %}' type='text/css'
+    media='all' />
+<link rel='stylesheet' id='font-flaticon-v2-css'
+    href='{% static "home\styles\assets\wp-content\themes\csuti\assets\css\font-flaticon-v2.min.css" %}' type='text/css'
+    media='all' />
+<link rel='stylesheet' id='font-flaticon-v3-css'
+    href='{% static "home\styles\assets\wp-content\themes\csuti\assets\css\font-flaticon-v3.min.css" %}' type='text/css'
+    media='all' />
+<link rel='stylesheet' id='font-flaticon-v4-css'
+    href='{% static "home\styles\assets\wp-content\themes\csuti\assets\css\font-flaticon-v4.min.css" %}' type='text/css'
+    media='all' />
+<link rel='stylesheet' id='font-flaticon-v5-css'
+    href='{% static "home\styles\assets\wp-content\themes\csuti\assets\css\font-flaticon-v5.min.css" %}' type='text/css'
+    media='all' />
+<link rel='stylesheet' id='font-flaticon-v6-css'
+    href='{% static "home\styles\assets\wp-content\themes\csuti\assets\css\font-flaticon-v6.min.css" %}' type='text/css'
+    media='all' />
+<link rel='stylesheet' id='font-flaticon-v7-css'
+    href='{% static "home\styles\assets\wp-content\themes\csuti\assets\css\font-flaticon-v7.min.css" %}' type='text/css'
+    media='all' />
+<link rel='stylesheet' id='font-material-icon-css'
+    href='{% static "home\styles\assets\wp-content\themes\csuti\assets\css\material-design-iconic-font.min.css" %}'
     type='text/css' media='all' />
+<link rel='stylesheet' id='magnific-popup-css'
+    href='{% static "home\styles\assets\wp-content\themes\csuti\assets\css\magnific-popup.min.css" %}' type='text/css'
+    media='all' />
+<link rel='stylesheet' id='animate-css'
+    href='{% static "home\styles\assets\wp-content\themes\csuti\assets\css\animate.min.css" %}' type='text/css'
+    media='all' />
+<link rel='stylesheet' id='consultio-theme-css'
+    href='{% static "home\styles\assets\wp-content\themes\csuti\assets\css\consultio-theme.min.css" %}' type='text/css'
+    media='all' />
 <style id='consultio-theme-inline-css' type='text/css'>
     @media screen and (min-width: 1200px) {
         #ct-header-wrap .ct-header-branding a img {
@@ -814,18 +838,24 @@
 
     @media screen and (min-width: 1200px) {}
 </style>
-<link rel='stylesheet' id='consultio-style-css' href='../wp-content/themes/csuti/consultio-style.min.css'
-    type='text/css' media='all' />
-<link rel='stylesheet' id='newsletter-css' href='../wp-content/plugins/newsletter/newsletter.min.css' type='text/css'
+<link rel='stylesheet' id='consultio-style-css'
+    href='{% static "home\styles\assets\wp-content\themes\csuti\consultio-style.min.css" %}' type='text/css'
+    media='all' />
+<link rel='stylesheet' id='newsletter-css'
+    href='{% static "home\styles\assets\wp-content\plugins\newsletter\newsletter.min.css" %}' type='text/css'
     media='all' />
 <link rel='stylesheet' id='elementor-icons-css'
-    href='../wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css' type='text/css' media='all' />
-<link rel='stylesheet' id='elementor-animations-css'
-    href='../wp-content/plugins/elementor/assets/lib/animations/animations.min.css' type='text/css' media='all' />
-<link rel='stylesheet' id='elementor-frontend-legacy-css'
-    href='../wp-content/plugins/elementor/assets/css/frontend-legacy.min.css' type='text/css' media='all' />
-<link rel='stylesheet' id='elementor-frontend-css' href='../wp-content/plugins/elementor/assets/css/frontend.min.css'
+    href='{% static "home\styles\assets\wp-content\plugins\elementor\assets\lib\eicons\css\elementor-icons.min.css" %}'
     type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-animations-css'
+    href='{% static "home\styles\assets\wp-content\plugins\elementor\assets\lib\animations\animations.min.css" %}'
+    type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-frontend-legacy-css'
+    href='{% static "home\styles\assets\wp-content\plugins\elementor\assets\css\frontend-legacy.min.css" %}'
+    type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css'
+    href='{% static "home\styles\assets\wp-content\plugins\elementor\assets\css\frontend.min.css" %}' type='text/css'
+    media='all' />
 <style id='elementor-frontend-inline-css' type='text/css'>
     @font-face {
         font-family: eicons;
@@ -835,27 +865,37 @@
         font-style: normal
     }
 </style>
-<link rel='stylesheet' id='elementor-post-4540-css' href='../wp-content/uploads/elementor/css/post-4540.css'
-    type='text/css' media='all' />
-<link rel='stylesheet' id='elementor-global-css' href='../wp-content/uploads/elementor/css/global.css' type='text/css'
+<link rel='stylesheet' id='elementor-post-4540-css'
+    href='{% static "home\styles\assets\wp-content\uploads\elementor\css\post-4540.css" %}' type='text/css'
     media='all' />
-<link rel='stylesheet' id='elementor-post-5147-css' href='../wp-content/uploads/elementor/css/post-5147.css'
-    type='text/css' media='all' /> <noscript></noscript>
-<script type='text/javascript' src='../wp-includes/js/jquery/jquery.min.js' id='jquery-core-js'></script>
-<script type='text/javascript' src='../wp-includes/js/jquery/jquery-migrate.min.js' id='jquery-migrate-js'></script>
-<script defer type='text/javascript' src='../wp-content/uploads/siteground-optimizer-assets/ct-main-js.min.js'
+<link rel='stylesheet' id='elementor-global-css'
+    href='{% static "home\styles\assets\wp-content\uploads\elementor\css\global.css" %}' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-5147-css'
+    href='{% static "home\styles\assets\wp-content\uploads\elementor\css\post-5147.css" %}' type='text/css'
+    media='all' /> <noscript></noscript>
+<script type='text/javascript' src='{% static "home\styles\assets\wp-includes\js\jquery\jquery.min.js" %}'
+    id='jquery-core-js'></script>
+<script type='text/javascript' src='{% static "home\styles\assets\wp-includes\js\jquery\jquery-migrate.min.js" %}'
+    id='jquery-migrate-js'></script>
+<script defer type='text/javascript'
+    src='{% static "home\styles\assets\wp-content\uploads\siteground-optimizer-assets\ct-main-js.min.js" %}'
     id='ct-main-js-js'></script>
-<script defer type='text/javascript' src='../wp-content/plugins/revslider/public/assets/js/rbtools.min.js'
+<script defer type='text/javascript'
+    src='{% static "home\styles\assets\wp-content\plugins\revslider\public\assets\js\rbtools.min.js" %}'
     id='tp-tools-js'></script>
-<script defer type='text/javascript' src='../wp-content/plugins/revslider/public/assets/js/rs6.min.js' id='revmin-js'>
-</script>
-<script defer type='text/javascript' src='../wp-content/plugins/wp-user-avatar/assets/flatpickr/flatpickr.min.js'
+<script defer type='text/javascript'
+    src='{% static "home\styles\assets\wp-content\plugins\revslider\public\assets\js\rs6.min.js" %}' id='revmin-js'>
+    </script>
+<script defer type='text/javascript'
+    src='{% static "\home\styles\assets\wp-content\plugins\wp-user-avatar\assets\flatpickr\flatpickr.min.js" %}'
     id='ppress-flatpickr-js'></script>
-<script defer type='text/javascript' src='../wp-content/plugins/wp-user-avatar/assets/select2/select2.min.js'
+<script defer type='text/javascript'
+    src='{% static "home\styles\assets\wp-content\plugins\wp-user-avatar\assets\select2\select2.min.js" %}'
     id='ppress-select2-js'></script>
-<script defer type='text/javascript' src='../wp-content/uploads/siteground-optimizer-assets/ct-inline-css-js.min.js'
+<script defer type='text/javascript'
+    src='{% static "home\styles\assets\wp-content\uploads\siteground-optimizer-assets\ct-inline-css-js.min.js" %}'
     id='ct-inline-css-js-js'></script>
-<link rel="https://api.w.org/" href="../wp-json/index.html" />
+<!-- <link rel="https://api.w.org/" href="../wp-json/index.html" />
 <link rel="alternate" type="application/json" href="../wp-json/wp/v2/pages/5147.json" />
 <link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc0db0.php?rsd" />
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" />
@@ -867,7 +907,7 @@
     href="../wp-json/oembed/1.0/embedd900.json?url=https%3A%2F%2Fdemo.casethemes.net%2Fconsultio-immigration%2Fhome-onepage%2F" />
 <link rel="alternate" type="text/xml+oembed"
     href="../wp-json/oembed/1.0/embedcaa7?url=https%3A%2F%2Fdemo.casethemes.net%2Fconsultio-immigration%2Fhome-onepage%2F&amp;format=xml" />
-<meta name="framework" content="Redux 4.1.26" />
+<meta name="framework" content="Redux 4.1.26" /> -->
 <script>
     document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
 </script>
@@ -887,12 +927,13 @@
     .lazyloading {
         border: 0 !important;
         opacity: 1;
-        background: rgba(255, 255, 255, 0) url('../wp-content/plugins/wp-smushit/app/assets/images/smush-lazyloader-2.gif') no-repeat center !important;
+        background: rgba(255, 255, 255, 0) url('{% static "home\styles\assets\wp-content\plugins\wp-smushit\app\assets\images\smush-lazyloader-2.gif" %}') no-repeat center !important;
         background-size: 16px auto !important;
         min-width: 16px;
     }
 </style>
-<link rel="icon" type="image/png" href="../wp-content/uploads/2020/10/favicon.png" /> <noscript>
+<link rel="icon" type="image/png" href="{% static 'home\styles\assets\wp-content\uploads\2020\10\favicon.png' %}" />
+<noscript>
     <style>
         .woocommerce-product-gallery {
             opacity: 1 !important;
@@ -966,7 +1007,7 @@
     }
 
     body #pagetitle {
-        background-image: url('../wp-content/uploads/2020/05/bg-page-title-u.jpg');
+        background-image: url('{% static "home\styles\assets\wp-content\uploads\2020\05\bg-page-title-u.jpg" %}');
     }
 
     body #pagetitle {
