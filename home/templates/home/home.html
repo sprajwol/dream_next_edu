@@ -10,6 +10,7 @@ Dream Next Education Foundation Pvt. Ltd.
 {% endblock titlearea %}
 
 {% block cssarea %}
+{% include 'home/temp_link.html' %}
 {% endblock cssarea %}
 
 
@@ -352,18 +353,46 @@ Dream Next Education Foundation Pvt. Ltd.
                                                                                             </rs-slide>
                                                                                         </rs-slides>
                                                                                     </rs-module>
-                                                                                    <script
-                                                                                        type="text/javascript"> setREVStartSize({ c: 'rev_slider_1_1', rl: [1240, 1024, 778, 480], el: [710, 710, 540, 480], gw: [1240, 1024, 778, 480], gh: [710, 710, 540, 480], type: 'standard', justify: '', layout: 'fullwidth', mh: "0" });
-                                                                                            var revapi1,
-                                                                                                tpj;
-                                                                                            function revinit_revslider11() {
-                                                                                                jQuery(function () {
-                                                                                                    tpj = jQuery;
-                                                                                                    revapi1 = tpj("#rev_slider_1_1");
-                                                                                                    if (revapi1 == undefined || revapi1.revolution == undefined) {
-                                                                                                        revslider_showDoubleJqueryError("rev_slider_1_1");
-                                                                                                    } else {
-                                                                                                        revapi1.revolution({
+                                                                                    <script type="text/javascript">
+                                                                                        setREVStartSize({
+                                                                                            c: 'rev_slider_1_1',
+                                                                                            rl: [1240, 1024,
+                                                                                                778, 480
+                                                                                            ],
+                                                                                            el: [710, 710, 540,
+                                                                                                480
+                                                                                            ],
+                                                                                            gw: [1240, 1024,
+                                                                                                778, 480
+                                                                                            ],
+                                                                                            gh: [710, 710, 540,
+                                                                                                480
+                                                                                            ],
+                                                                                            type: 'standard',
+                                                                                            justify: '',
+                                                                                            layout: 'fullwidth',
+                                                                                            mh: "0"
+                                                                                        });
+                                                                                        var revapi1,
+                                                                                            tpj;
+
+                                                                                        function revinit_revslider11() {
+                                                                                            jQuery(function () {
+                                                                                                tpj = jQuery;
+                                                                                                revapi1 = tpj(
+                                                                                                    "#rev_slider_1_1"
+                                                                                                    );
+                                                                                                if (revapi1 ==
+                                                                                                    undefined ||
+                                                                                                    revapi1
+                                                                                                    .revolution ==
+                                                                                                    undefined) {
+                                                                                                    revslider_showDoubleJqueryError
+                                                                                                        (
+                                                                                                            "rev_slider_1_1");
+                                                                                                } else {
+                                                                                                    revapi1
+                                                                                                        .revolution({
                                                                                                             sliderLayout: "fullwidth",
                                                                                                             visibilityLevels: "1240,1024,778,480",
                                                                                                             gridwidth: "1240,1024,778,480",
@@ -374,7 +403,9 @@ Dream Next Education Foundation Pvt. Ltd.
                                                                                                             keepBPHeight: true,
                                                                                                             editorheight: "710,710,540,480",
                                                                                                             responsiveLevels: "1240,1024,778,480",
-                                                                                                            progressBar: { disableProgressBar: true },
+                                                                                                            progressBar: {
+                                                                                                                disableProgressBar: true
+                                                                                                            },
                                                                                                             navigation: {
                                                                                                                 onHoverStop: false,
                                                                                                                 bullets: {
@@ -393,29 +424,82 @@ Dream Next Education Foundation Pvt. Ltd.
                                                                                                                 allowHTML5AutoPlayOnAndroid: true
                                                                                                             },
                                                                                                         });
+                                                                                                }
+                                                                                            });
+                                                                                        } // End of RevInitScript
+                                                                                        var once_revslider11 = false;
+                                                                                        if (document.readyState ===
+                                                                                            "loading") {
+                                                                                            document.addEventListener(
+                                                                                                'readystatechange',
+                                                                                                function () {
+                                                                                                    if ((document
+                                                                                                            .readyState ===
+                                                                                                            "interactive" ||
+                                                                                                            document
+                                                                                                            .readyState ===
+                                                                                                            "complete"
+                                                                                                            ) && !
+                                                                                                        once_revslider11
+                                                                                                        ) {
+                                                                                                        once_revslider11
+                                                                                                            = true;
+                                                                                                        revinit_revslider11
+                                                                                                            ();
                                                                                                     }
                                                                                                 });
-                                                                                            } // End of RevInitScript
-                                                                                            var once_revslider11 = false;
-                                                                                            if (document.readyState === "loading") { document.addEventListener('readystatechange', function () { if ((document.readyState === "interactive" || document.readyState === "complete") && !once_revslider11) { once_revslider11 = true; revinit_revslider11(); } }); } else { once_revslider11 = true; revinit_revslider11(); }</script>
-                                                                                    <script> var htmlDivCss = unescape("%40media%20screen%20and%20%28max-width%3A%20767px%29%20%7B%0A%20%20.revslider-initialised%20.tp-bullets.case_theme_number%20%7B%0A%20%20%09display%3A%20none%20%21important%3B%0A%20%20%7D%0A%7D");
-                                                                                        var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
-                                                                                        if (htmlDiv) {
-                                                                                            htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
                                                                                         } else {
-                                                                                            var htmlDiv = document.createElement('div');
-                                                                                            htmlDiv.innerHTML = '<style>' + htmlDivCss + '</style>';
-                                                                                            document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
-                                                                                        }</script>
-                                                                                    <script> var htmlDivCss = unescape("%0A%0A%0A");
-                                                                                        var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
+                                                                                            once_revslider11 = true;
+                                                                                            revinit_revslider11();
+                                                                                        }
+                                                                                    </script>
+                                                                                    <script>
+                                                                                        var htmlDivCss = unescape(
+                                                                                            "%40media%20screen%20and%20%28max-width%3A%20767px%29%20%7B%0A%20%20.revslider-initialised%20.tp-bullets.case_theme_number%20%7B%0A%20%20%09display%3A%20none%20%21important%3B%0A%20%20%7D%0A%7D"
+                                                                                            );
+                                                                                        var htmlDiv = document
+                                                                                            .getElementById(
+                                                                                                'rs-plugin-settings-inline-css'
+                                                                                                );
                                                                                         if (htmlDiv) {
-                                                                                            htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+                                                                                            htmlDiv.innerHTML = htmlDiv
+                                                                                                .innerHTML + htmlDivCss;
                                                                                         } else {
-                                                                                            var htmlDiv = document.createElement('div');
-                                                                                            htmlDiv.innerHTML = '<style>' + htmlDivCss + '</style>';
-                                                                                            document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
-                                                                                        }</script>
+                                                                                            var htmlDiv = document
+                                                                                                .createElement('div');
+                                                                                            htmlDiv.innerHTML =
+                                                                                                '<style>' + htmlDivCss +
+                                                                                                '</style>';
+                                                                                            document
+                                                                                                .getElementsByTagName(
+                                                                                                    'head')[0]
+                                                                                                .appendChild(htmlDiv
+                                                                                                    .childNodes[0]);
+                                                                                        }
+                                                                                    </script>
+                                                                                    <script>
+                                                                                        var htmlDivCss = unescape(
+                                                                                            "%0A%0A%0A");
+                                                                                        var htmlDiv = document
+                                                                                            .getElementById(
+                                                                                                'rs-plugin-settings-inline-css'
+                                                                                                );
+                                                                                        if (htmlDiv) {
+                                                                                            htmlDiv.innerHTML = htmlDiv
+                                                                                                .innerHTML + htmlDivCss;
+                                                                                        } else {
+                                                                                            var htmlDiv = document
+                                                                                                .createElement('div');
+                                                                                            htmlDiv.innerHTML =
+                                                                                                '<style>' + htmlDivCss +
+                                                                                                '</style>';
+                                                                                            document
+                                                                                                .getElementsByTagName(
+                                                                                                    'head')[0]
+                                                                                                .appendChild(htmlDiv
+                                                                                                    .childNodes[0]);
+                                                                                        }
+                                                                                    </script>
                                                                                 </rs-module-wrap>
                                                                                 <!-- END REVOLUTION SLIDER -->
                                                                             </div>

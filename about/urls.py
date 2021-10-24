@@ -5,7 +5,7 @@ from django.conf.urls.static import static
 from about import views as about_views
 
 urlpatterns = [
-    # path('', about_views.HomeView.as_view(), name='about')
+    path('', about_views.AboutView.as_view(), name='about')
 ]
 
 if settings.DEBUG:
