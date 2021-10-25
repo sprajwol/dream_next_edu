@@ -2,11 +2,12 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 
-from services import views as services_views
+from events import views as events_views
 
 urlpatterns = [
-    path('visa_application', services_views.ServicesVisaView.as_view(),
-         name='services_visa')
+    path('', events_views.EventView.as_view(), name='events'),
+    path('<slug:slug>', events_views.EventDetailView.as_view(),
+         name='eventdetail')
 ]
 
 if settings.DEBUG:

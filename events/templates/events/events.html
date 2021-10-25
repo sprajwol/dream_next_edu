@@ -1,0 +1,316 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+
+{% block metaarea %}
+{% endblock metaarea %}
+
+{% block titlearea %}
+Events | Dream Next Education Foundation Pvt. Ltd.
+{% endblock titlearea %}
+
+{% block cssarea %}
+{% include 'events/upper_links.html' %}
+{% endblock cssarea %}
+
+
+{% block content %}
+<div id="pagetitle" class="page-title bg-image ">
+    <div class="container">
+        <div class="page-title-inner">
+            <div class="page-title-holder">
+                <h1 class="page-title">Events</h1>
+            </div>
+            <ul class="ct-breadcrumb">
+                <li><a class="breadcrumb-entry" href="{% url 'home' %}">Home</a></li>
+                <li><span class="breadcrumb-entry">Events</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="content" class="site-content">
+    <div class="content-inner">
+        <div class="container content-container">
+            <div class="row content-row">
+                <div id="primary"
+                    class="content-area content-has-sidebar float-right col-xl-9 col-lg-8 col-md-12 col-sm-12">
+                    <main id="main" class="site-main">
+                        <div class="blog-hentry">
+                            {% for post in page_obj %}
+                            <article
+                                class="single-hentry archive post type-post status-publish format-standard has-post-thumbnail hentry category-business tag-builder tag-cloud tag-map tag-tower tag-truck">
+                                <div class="entry-featured">
+                                    <a href="../how-stay-calm-from-the-first-time/index.html" style="background-image:
+                                        url(/media/{{ post.main_image }});">
+                                        <img width="1920" height="1200" alt=""
+                                            data-sizes="(max-width: 1920px) 100vw, 1920px"
+                                            class="attachment-full size-full wp-post-image lazyload" />
+                                    </a>
+                                    <div class="entry-date"> <span>{{ post.date|date:"d" }}</span>
+                                        <span>{{ post.date|date:"M" }} {{ post.date|date:"y" }}</span></div>
+                                </div>
+                                <div class="entry-body">
+                                    <div class="entry-holder">
+                                        <h2 class="entry-title">
+                                            <a href="{% url 'eventdetail' post.slug %}">
+                                                {{ post.title }}
+                                            </a></h2>
+                                        <ul class="entry-meta">
+                                            <li class="item-author">
+                                                <i class="fac fac-user"></i>
+                                                <a href="../author/admin/index.html" title="Posts by {{ post.}}"
+                                                    rel="author">Rinnah</a></li>
+                                        </ul>
+                                        <div class="entry-excerpt">
+                                            {{ post.summary }}
+                                        </div>
+                                        <div class="entry-readmore">
+                                            <a href="{{ post.get_absolute_url }}" class="btn-text text-gradient">
+                                                <i class="fac fac-angle-right"></i>
+                                                <span>Read More</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article><!-- #post -->
+                            {% empty %}
+                            No data
+                            {% endfor %}
+
+                        </div>
+
+                        {% if page_obj  %}
+                        <nav class="navigation posts-pagination ">
+                            <div class="posts-page-links">
+                                {% if page_obj.has_previous %}
+                                <a class="next page-numbers" href="?page=1">
+                                    <i class="far fac-angle-left"></i>
+                                    <i class="far fac-angle-left"></i>
+                                </a>
+                                <a class="next page-numbers" href="?page={{ page_obj.previous_page_number }}">
+                                    <i class="far fac-angle-left"></i></a>
+                                <a class="next page-numbers" href="?page={{ page_obj.previous_page_number  }}">
+                                    {{ page_obj.previous_page_number  }}</a>
+                                {% endif %}
+                                <span aria-current="page" class="page-numbers current">{{ page_obj.number }}</span>
+
+                                {% if page_obj.has_next  %}
+                                <a class="next page-numbers" href="?page={{ page_obj.next_page_number  }}">
+                                    {{ page_obj.next_page_number  }}</a>
+                                <a class="next page-numbers" href="?page={{ page_obj.next_page_number  }}">
+                                    <i class="far fac-angle-right"></i></a>
+                                <a class="next page-numbers" href="?page={{ page_obj.paginator.num_pages }}">
+                                    <i class="far fac-angle-right"></i>
+                                    <i class="far fac-angle-right"></i>
+                                </a>
+                                {% endif %}
+                        </nav>
+                        {% endif %}
+                    </main><!-- #main -->
+                </div><!-- #primary -->
+                <aside id="secondary"
+                    class="sidebar-fixed widget-area widget-has-sidebar sidebar-fixed col-xl-3 col-lg-4 col-md-12 col-sm-12">
+                    <div class="sidebar-fixed-inner">
+                        <section id="search-3" class="widget widget_search">
+                            <div class="widget-content">
+                                <form role="search" method="get" class="search-form"
+                                    action="https://demo.casethemes.net/consultio-immigration/">
+                                    <div class="searchform-wrap"> <input type="text" placeholder="Search..." name="s"
+                                            class="search-field" /> <button type="submit" class="search-submit"><i
+                                                class="far fac-search"></i></button></div>
+                                </form>
+                            </div>
+                        </section>
+                        <section id="categories-4" class="widget widget_categories">
+                            <div class="widget-content">
+                                <h2 class="widget-title">Categories</h2>
+                                <ul>
+                                    <li class="cat-item cat-item-1"><a href="../category/business/index.html">Business
+                                            <span class="count right">2 </span></a></li>
+                                    <li class="cat-item cat-item-18"><a href="../category/creative/index.html">Creative
+                                            <span class="count right">2 </span></a></li>
+                                    <li class="cat-item cat-item-19"><a href="../category/strategy/index.html">Strategy
+                                            <span class="count right">2 </span></a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section id="ct_recent_posts-3" class="widget widget_ct_recent_posts">
+                            <div class="widget-content">
+                                <h2 class="widget-title">Recent News</h2>
+                                <div class="posts-list ">
+                                    <div class="entry-brief">
+                                        <div class="entry-media"> <a
+                                                href="../how-stay-calm-from-the-first-time/index.html"><img
+                                                    alt="How Stay Calm from the First Time."
+                                                    data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/11/theme-10.jpg"
+                                                    class="lazyload"
+                                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /></a>
+                                        </div>
+                                        <div class="entry-content">
+                                            <h4 class="entry-title"><a
+                                                    href="../how-stay-calm-from-the-first-time/index.html"
+                                                    title="How Stay Calm from the First Time.">How Stay Calm
+                                                    from the First Time.</a></h4>
+                                            <div class="item-date"> 5 Nov, 2019</div>
+                                        </div>
+                                    </div>
+                                    <div class="entry-brief">
+                                        <div class="entry-media"> <a
+                                                href="../why-youll-never-succeed-at-7-habits-of-highly/index.html"><img
+                                                    alt="Why You’ll Never Succeed at 7 Habits."
+                                                    data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/11/ud-blog1.jpg"
+                                                    class="lazyload"
+                                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /></a>
+                                        </div>
+                                        <div class="entry-content">
+                                            <h4 class="entry-title"><a
+                                                    href="../why-youll-never-succeed-at-7-habits-of-highly/index.html"
+                                                    title="Why You’ll Never Succeed at 7 Habits.">Why You’ll
+                                                    Never Succeed at 7 Habits.</a></h4>
+                                            <div class="item-date"> 5 Nov, 2019</div>
+                                        </div>
+                                    </div>
+                                    <div class="entry-brief">
+                                        <div class="entry-media"> <a
+                                                href="../you-can-use-it-for-any-kind-website-like/index.html"><img
+                                                    alt="You can use it for any kind website like."
+                                                    data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/11/theme-01.jpg"
+                                                    class="lazyload"
+                                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /></a>
+                                        </div>
+                                        <div class="entry-content">
+                                            <h4 class="entry-title"><a
+                                                    href="../you-can-use-it-for-any-kind-website-like/index.html"
+                                                    title="You can use it for any kind website like.">You can
+                                                    use it for any kind website like.</a></h4>
+                                            <div class="item-date"> 5 Nov, 2019</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- <section id="archives-4" class="widget widget_archive">
+                            <div class="widget-content">
+                                <h2 class="widget-title">Archives</h2>
+                                <ul>
+                                    <li><a href='../2019/11/index.html'>November 2019 <span
+                                                class="count right">5</span></a></li>
+                                    <li><a href='../2018/11/index.html'>November 2018 <span
+                                                class="count right">1</span></a></li>
+                                </ul>
+                            </div>
+                        </section> -->
+                        <section id="media_gallery-3" class="widget widget_media_gallery">
+                            <div class="widget-content">
+                                <h2 class="widget-title">Gallery</h2>
+                                <div id='gallery-1' class='gallery galleryid-166 gallery-columns-3 gallery-size-medium'>
+                                    <figure class='gallery-item'>
+                                        <div class='gallery-icon landscape'> <a
+                                                href='../wp-content/uploads/2019/12/gallery-02.jpg'><img width="300"
+                                                    height="300" alt=""
+                                                    data-srcset="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/12/gallery-02.jpg 600w, https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/12/gallery-02-300x300.jpg 300w"
+                                                    data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/12/gallery-02.jpg"
+                                                    data-sizes="(max-width: 300px) 100vw, 300px"
+                                                    class="attachment-medium size-medium lazyload"
+                                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /></a>
+                                        </div>
+                                    </figure>
+                                    <figure class='gallery-item'>
+                                        <div class='gallery-icon landscape'> <a
+                                                href='../wp-content/uploads/2019/12/gallery-03.jpg'><img width="300"
+                                                    height="300" alt=""
+                                                    data-srcset="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/12/gallery-03.jpg 600w, https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/12/gallery-03-300x300.jpg 300w"
+                                                    data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/12/gallery-03.jpg"
+                                                    data-sizes="(max-width: 300px) 100vw, 300px"
+                                                    class="attachment-medium size-medium lazyload"
+                                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /></a>
+                                        </div>
+                                    </figure>
+                                    <figure class='gallery-item'>
+                                        <div class='gallery-icon landscape'> <a
+                                                href='../wp-content/uploads/2019/12/gallery-01.jpg'><img width="300"
+                                                    height="300" alt=""
+                                                    data-srcset="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/12/gallery-01-300x300.jpg 300w, https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/12/gallery-01-150x150.jpg 150w, https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/12/gallery-01.jpg 600w"
+                                                    data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/12/gallery-01-300x300.jpg"
+                                                    data-sizes="(max-width: 300px) 100vw, 300px"
+                                                    class="attachment-medium size-medium lazyload"
+                                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /></a>
+                                        </div>
+                                    </figure>
+                                    <figure class='gallery-item'>
+                                        <div class='gallery-icon landscape'> <a
+                                                href='../wp-content/uploads/2019/12/gallery-04.jpg'><img width="300"
+                                                    height="300" alt=""
+                                                    data-srcset="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/12/gallery-04.jpg 600w, https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/12/gallery-04-300x300.jpg 300w"
+                                                    data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/12/gallery-04.jpg"
+                                                    data-sizes="(max-width: 300px) 100vw, 300px"
+                                                    class="attachment-medium size-medium lazyload"
+                                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /></a>
+                                        </div>
+                                    </figure>
+                                    <figure class='gallery-item'>
+                                        <div class='gallery-icon landscape'> <a
+                                                href='../wp-content/uploads/2019/12/gallery-05.jpg'><img width="300"
+                                                    height="300" alt=""
+                                                    data-srcset="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/12/gallery-05.jpg 600w, https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/12/gallery-05-300x300.jpg 300w"
+                                                    data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/12/gallery-05.jpg"
+                                                    data-sizes="(max-width: 300px) 100vw, 300px"
+                                                    class="attachment-medium size-medium lazyload"
+                                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /></a>
+                                        </div>
+                                    </figure>
+                                    <figure class='gallery-item'>
+                                        <div class='gallery-icon landscape'> <a
+                                                href='../wp-content/uploads/2019/12/gallery-06.jpg'><img width="300"
+                                                    height="300" alt=""
+                                                    data-srcset="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/12/gallery-06-300x300.jpg 300w, https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/12/gallery-06-150x150.jpg 150w, https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/12/gallery-06.jpg 600w"
+                                                    data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/12/gallery-06-300x300.jpg"
+                                                    data-sizes="(max-width: 300px) 100vw, 300px"
+                                                    class="attachment-medium size-medium lazyload"
+                                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /></a>
+                                        </div>
+                                    </figure>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- <section id="tag_cloud-3" class="widget widget_tag_cloud">
+                            <div class="widget-content">
+                                <h2 class="widget-title">Tags</h2>
+                                <div class="tagcloud"><a href="../tag/builder/index.html"
+                                        class="tag-cloud-link tag-link-22 tag-link-position-1"
+                                        style="font-size: 18.08pt;" aria-label="Builder (5 items)">Builder</a>
+                                    <a href="../tag/cloud/index.html"
+                                        class="tag-cloud-link tag-link-21 tag-link-position-2" style="font-size: 8pt;"
+                                        aria-label="Cloud (3 items)">Cloud</a> <a href="../tag/map/index.html"
+                                        class="tag-cloud-link tag-link-20 tag-link-position-3" style="font-size: 22pt;"
+                                        aria-label="Map (6 items)">Map</a> <a href="../tag/tower/index.html"
+                                        class="tag-cloud-link tag-link-23 tag-link-position-4" style="font-size: 8pt;"
+                                        aria-label="Tower (3 items)">Tower</a> <a href="../tag/truck/index.html"
+                                        class="tag-cloud-link tag-link-24 tag-link-position-5" style="font-size: 8pt;"
+                                        aria-label="Truck (3 items)">Truck</a></div>
+                            </div>
+                        </section> -->
+                        <div class="ct-newsletter widget">
+                            <h2 class="widget-title">Subscribe</h2>
+                            <div class="ct-newsletter-holder">
+                                <div class="ct-newsletter-introduction"></div>
+                                <form method="post" action="https://demo.casethemes.net/consultio-immigration/?na=s"
+                                    class="tnp-subscription" style=""> <input type="hidden" name="nlang" value="">
+                                    <div class="tnp-field tnp-field-email"><label for="tnp-email">Your mail
+                                            address*</label> <input class="tnp-email" type="email" name="ne" value=""
+                                            required></div>
+                                    <div class="tnp-field tnp-field-button"><input class="tnp-button" type="submit"
+                                            value="Subscrib now"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div><!-- #content inner -->
+</div><!-- #content -->
+{% endblock content %}
+
+{% block javascript %}
+{% endblock javascript %}

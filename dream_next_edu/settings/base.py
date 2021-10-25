@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'about.apps.AboutConfig',
     'contact.apps.ContactConfig',
     'services.apps.ServicesConfig',
+    'events.apps.EventsConfig',
 ]
 
 MIDDLEWARE = [

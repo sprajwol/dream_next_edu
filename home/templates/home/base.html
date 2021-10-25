@@ -142,9 +142,10 @@
 
                                                         <li id="menu-item-5199"
                                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5199">
-                                                            <a href="../singleservice/template/index.html"><span>Visa
-                                                                    Application</a>
-                                                        </li>
+                                                            <a href="{% url 'services_visa' %}">
+                                                                Visa Application
+                                                            </a>
+                                                        </li>`
                                                     </ul>
                                                 </li>
 
@@ -174,7 +175,7 @@
                                                 </li>
                                                 <li id="menu-item-5156"
                                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5156">
-                                                    <a href="Events.html" class="is-one-page"
+                                                    <a href="{% url 'events' %}" class="is-one-page"
                                                         data-onepage-offset="80"><span>Events</a>
                                                 </li>
                                                 <li id="menu-item-5157"
