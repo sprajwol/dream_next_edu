@@ -6,11 +6,11 @@
 {% endblock metaarea %}
 
 {% block titlearea %}
-Events Single | Dream Next Education Foundation Pvt. Ltd.
+{{ object.title }} | Dream Next Education Foundation Pvt. Ltd.
 {% endblock titlearea %}
 
 {% block cssarea %}
-{% include 'events/upper_links.html' %}
+{% include 'events/single_upper_links.html' %}
 {% endblock cssarea %}
 
 
@@ -20,13 +20,12 @@ Events Single | Dream Next Education Foundation Pvt. Ltd.
     <div class="container">
         <div class="page-title-inner">
             <div class="page-title-holder">
-                <h1 class="page-title">How Stay Calm from the First Time.</h1>
+                <h1 class="page-title">{{ object.title }}</h1>
             </div>
             <ul class="ct-breadcrumb">
                 <li><a class="breadcrumb-entry" href="{% url 'home' %}">Home</a></li>
                 <li><a class="breadcrumb-entry" href="{% url 'events' %}">Events</a></li>
-                <li><a class="breadcrumb-entry" href="../category/business/index.html">Business</a></li>
-                <li><span class="breadcrumb-entry">How Stay Calm from the First Time.</span></li>
+                <li><span class="breadcrumb-entry">{{ object.title }}</span></li>
             </ul>
         </div>
     </div>
@@ -41,14 +40,16 @@ Events Single | Dream Next Education Foundation Pvt. Ltd.
                         <article id="post-166"
                             class="single-hentry post-166 post type-post status-publish format-standard has-post-thumbnail hentry category-business tag-builder tag-cloud tag-map tag-tower tag-truck">
                             <div class="entry-blog">
-                                <div class="entry-featured"> <img width="501" height="313" alt=""
-                                        data-srcset="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/11/theme-10.jpg 1920w, https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/11/theme-10-600x375.jpg 600w"
-                                        data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/11/theme-10.jpg"
+                                <div class="entry-featured">
+                                    <img width="501" height="313" alt=""
+                                        data-srcset="/media/{{ object.main_image }} 1920w, /media/{{ object.main_image }} 600w"
+                                        data-src="/media/{{ object.main_image }}"
                                         data-sizes="(max-width: 501px) 100vw, 501px"
                                         class="attachment-consultio-large size-consultio-large wp-post-image lazyload"
-                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
-                                    <div class="entry-category"><a href="../category/business/index.html"
-                                            rel="tag">Business</a></div>
+                                        src="/media/{{ object.main_image }}" />
+                                    <div class="entry-category">
+                                        <a href="../category/business/index.html" rel="tag">{{ object.category }}</a>
+                                    </div>
                                 </div>
                                 <div class="entry-body">
                                     <ul class="entry-meta">
@@ -59,83 +60,19 @@ Events Single | Dream Next Education Foundation Pvt. Ltd.
                                                 rel="author">Rinnah</a></li>
                                     </ul>
                                     <div class="entry-content clearfix">
-                                        <p>It is a long established fact that a reader will be distracted by the
-                                            readable content of a page when looking at its layout. The point of
-                                            using Lorem Ipsum The man, who is in a stable condition in hospital,
-                                            has &#8220;potentially life-changing injuries&#8221; after the
-                                            overnight attack in Garvagh, County Lono donderry. He was shot in
-                                            the arms and legs.&#8221;What sort of men would think it is
-                                            accepttable to sub ject a young girl to this level of brutality and
-                                            violence?</p>
-                                        <p>&#8220;Every child has the right to feel safe and protected in their
-                                            own home &#8211; how is this poor child going to sleep tonight or in
-                                            coming nights? What are the long term effects on her going to
-                                            be?&#8221;</p>
-                                        <h3 class="single-title">Content without backward-compatible data.</h3>
-                                        <p>Their community. I wonder how they wou if their own child witnessed
-                                            such a level of violence?</p>
-                                        <p>&#8220;There is absolutely no justification for an attack like this
-                                            in our communities and we must all work together to bring those
-                                            responsible to justice and to stop this from happening to another
-                                            child.&#8221;</p>
-                                        <p>Earlier this month, <u>the PSNI launched a hard-hitting advertisement
-                                                campaign aimed at changing</u> public attitudes to paramilitary
-                                            attacks.</p>
-                                        <div id='gallery-1'
-                                            class='gallery galleryid-166 gallery-columns-2 gallery-size-full'>
-                                            <figure class='gallery-item'>
-                                                <div class='gallery-icon landscape'> <a
-                                                        href='../wp-content/uploads/2019/12/gallery-05.jpg'><img
-                                                            width="600" height="600" alt=""
-                                                            data-srcset="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/12/gallery-05.jpg 600w, https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/12/gallery-05-300x300.jpg 300w"
-                                                            data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/12/gallery-05.jpg"
-                                                            data-sizes="(max-width: 600px) 100vw, 600px"
-                                                            class="attachment-full size-full lazyload"
-                                                            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /></a>
-                                                </div>
-                                            </figure>
-                                            <figure class='gallery-item'>
-                                                <div class='gallery-icon landscape'> <a
-                                                        href='../wp-content/uploads/2019/12/gallery-06.jpg'><img
-                                                            width="600" height="600" alt=""
-                                                            data-srcset="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/12/gallery-06.jpg 600w, https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/12/gallery-06-300x300.jpg 300w, https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/12/gallery-06-150x150.jpg 150w"
-                                                            data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/12/gallery-06.jpg"
-                                                            data-sizes="(max-width: 600px) 100vw, 600px"
-                                                            class="attachment-full size-full lazyload"
-                                                            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /></a>
-                                                </div>
-                                            </figure>
-                                        </div>
-                                        <h3 class="single-title">A Kentucky woman who was accused last year.
-                                        </h3>
-                                        <p>The intruders chased the girl in the house and threatened her when
-                                            she hid from them, according to the PSNI Limavady Facebook page.</p>
-                                        <p>&#8220;She came out petrified with her Piggy Bank, HER PIGGY BANK!
-                                            hoping that the men would take it and leave her dad alone,&#8221;
-                                            one outraged officer wrote.</p>
-                                        <blockquote>
-                                            <p>“What sort of men would think it is acceptable to subject a girl
-                                                to this level of brutality and violence? an attack like
-                                                thiop.”<cite>Neil Borton</cite></p>
-                                        </blockquote>
-                                        <p>The intruders chased the girl in the house and threatened her when
-                                            she hid from them, according to the PSNI Limavady Facebook page.</p>
-                                        <p>&#8220;She came out petrified with her Piggy Bank, HER PIGGY BANK!
-                                            hoping that the men would take it and leave her dad alone,&#8221;
-                                            one outraged officer wrote. especially in capital projects and the
-                                            suppliers and consultants that work for you know the value of a
-                                            customer like that. As a consultant executing two projects for a
-                                            large multinational, I realise how very difficult it sometimes can
-                                            be on the receiving.</p>
+                                        {{ object.description }}
                                     </div>
                                 </div>
                             </div>
                             <div class="entry-footer">
-                                <div class="entry-tags"><label class="label">Tags:</label><a
-                                        href="../tag/builder/index.html" rel="tag">Builder</a> <a
-                                        href="../tag/cloud/index.html" rel="tag">Cloud</a> <a
-                                        href="../tag/map/index.html" rel="tag">Map</a> <a href="../tag/tower/index.html"
-                                        rel="tag">Tower</a> <a href="../tag/truck/index.html" rel="tag">Truck</a></div>
+                                <!-- <div class="entry-tags">
+                                    <label class="label">Tags:</label>
+                                    <a href="../tag/builder/index.html" rel="tag">Builder</a>
+                                    <a href="../tag/cloud/index.html" rel="tag">Cloud</a>
+                                    <a href="../tag/map/index.html" rel="tag">Map</a>
+                                    <a href="../tag/tower/index.html" rel="tag">Tower</a>
+                                    <a href="../tag/truck/index.html" rel="tag">Truck</a>
+                                </div> -->
                                 <div class="entry-social"> <label>Share:</label> <a class="fb-social" title="Facebook"
                                         target="_blank"
                                         href="http://www.facebook.com/sharer/sharer.php?u=https://demo.casethemes.net/consultio-immigration/how-stay-calm-from-the-first-time/"><i
@@ -150,118 +87,27 @@ Events Single | Dream Next Education Foundation Pvt. Ltd.
                                         href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://demo.casethemes.net/consultio-immigration/how-stay-calm-from-the-first-time/&amp;title=How%20Stay%20Calm%20from%20the%20First%20Time."><i
                                             class="fab fac-linkedin-in"></i></a></div>
                             </div>
-                            <div class="entry-navigation">
+                            <!-- <div class="entry-navigation">
                                 <div class="nav-links">
                                     <div class="nav-item nav-post-prev">
-                                        <div class="nav-post-img"> <a
-                                                href="../why-youll-never-succeed-at-7-habits-of-highly/index.html"><img
+                                        <div class="nav-post-img">
+                                            <a href="../why-youll-never-succeed-at-7-habits-of-highly/index.html"><img
                                                     data-src='https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/11/ud-blog1.jpg'
                                                     class='lazyload'
-                                                    src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' /></a>
+                                                    src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' />
+                                            </a>
                                         </div>
-                                        <div class="nav-post-meta"> <label>Previous Post</label> <a
-                                                href="../why-youll-never-succeed-at-7-habits-of-highly/index.html">Why
-                                                You’ll Never Succeed at 7 Habits.</a></div>
+                                        <div class="nav-post-meta">
+                                            <label>Previous Post</label>
+                                            <a href="../why-youll-never-succeed-at-7-habits-of-highly/index.html">Why
+                                                You’ll Never Succeed at 7 Habits.
+                                            </a>
+                                        </div>
                                     </div>
-                                </div><!-- .nav-links -->
-                            </div>
+                                </div><!-- .nav-links ->
+                            </div> -->
                         </article><!-- #post -->
-                        <div id="comments" class="comments-area">
-                            <div class="comment-list-wrap">
-                                <h2 class="comments-title"> 2 Comments</h2><!-- .comments-title -->
-                                <ul class="comment-list">
-                                    <li class="comment byuser comment-author-admin2 even thread-even depth-1"
-                                        id="comment-2">
-                                        <div id="div-comment-2" class="comment-body">
-                                            <div class="comment-inner"> <img data-del="avatar" alt='' height='90'
-                                                    width='90'
-                                                    data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/11/author-01.jpg"
-                                                    class="avatar pp-user-avatar avatar-90 photo  lazyload"
-                                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
-                                                <div class="comment-content">
-                                                    <h4 class="comment-title"> Riva Collins</h4>
-                                                    <div class="comment-meta"> <span class="comment-date"> 9
-                                                            Nov, 2019 - 2:07 am </span></div>
-                                                    <div class="comment-text">
-                                                        <p>It’s no secret that the digital industry is booming.
-                                                            From exciting startups to need ghor<br /> global and
-                                                            brands, companies are reaching out.</p>
-                                                    </div>
-                                                    <div class="comment-reply"> <a rel='nofollow'
-                                                            class='comment-reply-link'
-                                                            href='index0e22.html?replytocom=2#respond'
-                                                            data-commentid="2" data-postid="166"
-                                                            data-belowelement="div-comment-2"
-                                                            data-respondelement="respond"
-                                                            data-replyto="Reply to Riva Collins"
-                                                            aria-label='Reply to Riva Collins'>Reply</a></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li><!-- #comment-## -->
-                                    <li class="comment byuser comment-author-admin3 odd alt thread-odd thread-alt depth-1"
-                                        id="comment-13">
-                                        <div id="div-comment-13" class="comment-body">
-                                            <div class="comment-inner"> <img data-del="avatar" alt='' height='90'
-                                                    width='90'
-                                                    data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/11/author-02.jpg"
-                                                    class="avatar pp-user-avatar avatar-90 photo  lazyload"
-                                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
-                                                <div class="comment-content">
-                                                    <h4 class="comment-title"> Obila Doe</h4>
-                                                    <div class="comment-meta"> <span class="comment-date"> 9
-                                                            Nov, 2019 - 2:09 am </span></div>
-                                                    <div class="comment-text">
-                                                        <p>It’s no secret that the digital industry is booming.
-                                                            From exciting startups to need ghor hmiu<br />
-                                                            global and brands, companies are reaching out.</p>
-                                                    </div>
-                                                    <div class="comment-reply"> <a rel='nofollow'
-                                                            class='comment-reply-link'
-                                                            href='indexfa40.html?replytocom=13#respond'
-                                                            data-commentid="13" data-postid="166"
-                                                            data-belowelement="div-comment-13"
-                                                            data-respondelement="respond"
-                                                            data-replyto="Reply to Obila Doe"
-                                                            aria-label='Reply to Obila Doe'>Reply</a></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li><!-- #comment-## -->
-                                </ul><!-- .comment-list -->
-                            </div>
-                            <div id="respond" class="comment-respond">
-                                <h3 id="reply-title" class="comment-reply-title">Leave A Comment <small><a
-                                            rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond"
-                                            style="display:none;">Cancel
-                                            Comment</a></small></h3>
-                                <form action="https://demo.casethemes.net/consultio-immigration/wp-comments-post.php"
-                                    method="post" id="commentform" class="comment-form" novalidate>
-                                    <div class="comment-form-comment"><textarea id="comment" name="comment" cols="45"
-                                            rows="8" placeholder="Comment*" aria-required="true"></textarea></div>
-                                    <div class="row">
-                                        <div class="comment-form-author col-lg-4 col-md-4 col-sm-12"><input id="author"
-                                                name="author" type="text" value="" size="30" placeholder="Name*" />
-                                        </div>
-                                        <div class="comment-form-email col-lg-4 col-md-4 col-sm-12"><input id="email"
-                                                name="email" type="text" value="" size="30" placeholder="Email*" />
-                                        </div>
-                                        <div class="comment-form-website col-lg-4 col-md-4 col-sm-12"><input
-                                                id="website" name="url" type="text" value="" size="30"
-                                                placeholder="Website*" /></div>
-                                    </div>
-                                    <p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent"
-                                            name="wp-comment-cookies-consent" type="checkbox" value="yes" /> <label
-                                            for="wp-comment-cookies-consent">Save my name, email, and website in
-                                            this browser for the next time I comment.</label></p>
-                                    <p class="form-submit"><input name="submit" type="submit" id="submit" class="submit"
-                                            value="Post Comment" /> <input type='hidden' name='comment_post_ID'
-                                            value='166' id='comment_post_ID' /> <input type='hidden'
-                                            name='comment_parent' id='comment_parent' value='0' />
-                                    </p>
-                                </form>
-                            </div><!-- #respond -->
-                        </div><!-- #comments -->
+
                     </main><!-- #main -->
                 </div><!-- #primary -->
                 <aside id="secondary"
@@ -374,7 +220,7 @@ Events Single | Dream Next Education Foundation Pvt. Ltd.
                                 </div>
                             </div>
                         </section>
-                        <section id="tag_cloud-2" class="widget widget_tag_cloud">
+                        <!-- <section id="tag_cloud-2" class="widget widget_tag_cloud">
                             <div class="widget-content">
                                 <h2 class="widget-title">Tags</h2>
                                 <div class="tagcloud"><a href="../tag/builder/index.html"
@@ -390,7 +236,7 @@ Events Single | Dream Next Education Foundation Pvt. Ltd.
                                         class="tag-cloud-link tag-link-24 tag-link-position-5" style="font-size: 8pt;"
                                         aria-label="Truck (3 items)">Truck</a></div>
                             </div>
-                        </section>
+                        </section> -->
                     </div>
                 </aside>
             </div>
