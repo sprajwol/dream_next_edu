@@ -11,10 +11,12 @@ Services | Dream Next Education Foundation Pvt. Ltd.
 
 {% block cssarea %}
 {% include 'services/visa_upper_links.html' %}
+<link rel="stylesheet" href="{% static 'services\styles\custom_css\services_visa.css' %}">
 {% endblock cssarea %}
 
 
-{% block content %}<div id="pagetitle" class="page-title bg-image ">
+{% block content %}
+<div id="pagetitle" class="page-title bg-image ">
     <div class="container">
         <div class="page-title-inner">
             <div class="page-title-holder">
@@ -119,6 +121,7 @@ Services | Dream Next Education Foundation Pvt. Ltd.
                                                                                 </div>
                                                                                 <div class="ct-grid-inner ct-grid-masonry row animate-time"
                                                                                     data-gutter="15">
+                                                                                    {% for visa in object_list %}
                                                                                     <div
                                                                                         class="grid-item col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 ">
                                                                                         <div
@@ -127,341 +130,7 @@ Services | Dream Next Education Foundation Pvt. Ltd.
                                                                                                 <div
                                                                                                     class="item--featured">
                                                                                                     <img class="disable-lazy "
-                                                                                                        src="{% static 'home\styles\assets\wp-content\uploads\2020\03\update-service-01-541x600.jpg' %}"
-                                                                                                        width="541"
-                                                                                                        height="600"
-                                                                                                        alt="update-service-01"
-                                                                                                        title="update-service-01" />
-                                                                                                </div>
-                                                                                                <div
-                                                                                                    class="item--holder">
-                                                                                                    <div
-                                                                                                        class="item--holder-inner">
-                                                                                                        <div
-                                                                                                            class="item--icon">
-                                                                                                            <i
-                                                                                                                class="text-gradient flaticonv5-airplane"></i>
-                                                                                                        </div>
-                                                                                                        <h3
-                                                                                                            class="item--title">
-                                                                                                            Immigrant
-                                                                                                            Visas
-                                                                                                        </h3>
-                                                                                                        <div
-                                                                                                            class="item--gap">
-                                                                                                        </div>
-                                                                                                        <div
-                                                                                                            class="item--content">
-                                                                                                            Save up to
-                                                                                                            10% when you
-                                                                                                            insure your
-                                                                                                            property &
-                                                                                                            autos with
-                                                                                                            company.
-                                                                                                        </div>
-                                                                                                        <div
-                                                                                                            class="item--icon-abs">
-                                                                                                            <i
-                                                                                                                class="text-gradient flaticonv5-airplane"></i>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div class="item--meta">
-                                                                                                    <h3
-                                                                                                        class="item--title">
-                                                                                                        <a
-                                                                                                            href="../service/immigrant-visas/index.html">Immigrant
-                                                                                                            Visas</a>
-                                                                                                    </h3>
-                                                                                                    <div
-                                                                                                        class="item--readmore">
-                                                                                                        <a class="more-plus"
-                                                                                                            href="../service/immigrant-visas/index.html">+</a>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div
-                                                                                        class="grid-item col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 ">
-                                                                                        <div
-                                                                                            class="grid-item-inner wow fadeIn active-featured">
-                                                                                            <div class="grid-item-over">
-                                                                                                <div
-                                                                                                    class="item--featured">
-                                                                                                    <img class="disable-lazy "
-                                                                                                        src="{% static 'home\styles\assets\wp-content\uploads\2020\03\update-service-02-541x600.jpg' %}"
-                                                                                                        width="541"
-                                                                                                        height="600"
-                                                                                                        alt="update-service-02"
-                                                                                                        title="update-service-02" />
-                                                                                                </div>
-                                                                                                <div
-                                                                                                    class="item--holder">
-                                                                                                    <div
-                                                                                                        class="item--holder-inner">
-                                                                                                        <div
-                                                                                                            class="item--icon">
-                                                                                                            <i
-                                                                                                                class="text-gradient flaticonv5-localization"></i>
-                                                                                                        </div>
-                                                                                                        <h3
-                                                                                                            class="item--title">
-                                                                                                            Local
-                                                                                                            Visa
-                                                                                                        </h3>
-                                                                                                        <div
-                                                                                                            class="item--gap">
-                                                                                                        </div>
-                                                                                                        <div
-                                                                                                            class="item--content">
-                                                                                                            Drive
-                                                                                                            down
-                                                                                                            your
-                                                                                                            rates
-                                                                                                            with
-                                                                                                            car
-                                                                                                            insurance
-                                                                                                            discounts
-                                                                                                            and
-                                                                                                            premium
-                                                                                                            reductions.
-                                                                                                        </div>
-                                                                                                        <div
-                                                                                                            class="item--icon-abs">
-                                                                                                            <i
-                                                                                                                class="text-gradient flaticonv5-localization"></i>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div class="item--meta">
-                                                                                                    <h3
-                                                                                                        class="item--title">
-                                                                                                        <a
-                                                                                                            href="../service/local-visa/index.html">Local
-                                                                                                            Visa</a>
-                                                                                                    </h3>
-                                                                                                    <div
-                                                                                                        class="item--readmore">
-                                                                                                        <a class="more-plus"
-                                                                                                            href="../service/local-visa/index.html">+</a>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div
-                                                                                        class="grid-item col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 ">
-                                                                                        <div
-                                                                                            class="grid-item-inner wow fadeIn active-featured">
-                                                                                            <div class="grid-item-over">
-                                                                                                <div
-                                                                                                    class="item--featured">
-                                                                                                    <img class="disable-lazy "
-                                                                                                        src="{% static 'home\styles\assets\wp-content\uploads\2019\11\update-blog3-541x600.jpg' %}"
-                                                                                                        width="541"
-                                                                                                        height="600"
-                                                                                                        alt="update-blog3"
-                                                                                                        title="update-blog3" />
-                                                                                                </div>
-                                                                                                <div
-                                                                                                    class="item--holder">
-                                                                                                    <div
-                                                                                                        class="item--holder-inner">
-                                                                                                        <div
-                                                                                                            class="item--icon">
-                                                                                                            <i
-                                                                                                                class="text-gradient flaticonv5-caduceus"></i>
-                                                                                                        </div>
-                                                                                                        <h3
-                                                                                                            class="item--title">
-                                                                                                            Medical
-                                                                                                            Visa
-                                                                                                        </h3>
-                                                                                                        <div
-                                                                                                            class="item--gap">
-                                                                                                        </div>
-                                                                                                        <div
-                                                                                                            class="item--content">
-                                                                                                            Help
-                                                                                                            protect
-                                                                                                            lost
-                                                                                                            income,
-                                                                                                            pay
-                                                                                                            for
-                                                                                                            higher
-                                                                                                            education,
-                                                                                                            and
-                                                                                                            cover.
-                                                                                                        </div>
-                                                                                                        <div
-                                                                                                            class="item--icon-abs">
-                                                                                                            <i
-                                                                                                                class="text-gradient flaticonv5-caduceus"></i>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div class="item--meta">
-                                                                                                    <h3
-                                                                                                        class="item--title">
-                                                                                                        <a
-                                                                                                            href="../service/medical-visa/index.html">Medical
-                                                                                                            Visa</a>
-                                                                                                    </h3>
-                                                                                                    <div
-                                                                                                        class="item--readmore">
-                                                                                                        <a class="more-plus"
-                                                                                                            href="../service/medical-visa/index.html">+</a>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div
-                                                                                        class="grid-item col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 ">
-                                                                                        <div
-                                                                                            class="grid-item-inner wow fadeIn active-featured">
-                                                                                            <div class="grid-item-over">
-                                                                                                <div
-                                                                                                    class="item--featured">
-                                                                                                    <img class="disable-lazy "
-                                                                                                        src="{% static 'home\styles\assets\wp-content\uploads\2019\11\theme-05-541x600.jpg' %}"
-                                                                                                        width="541"
-                                                                                                        height="600"
-                                                                                                        alt="theme-05"
-                                                                                                        title="theme-05" />
-                                                                                                </div>
-                                                                                                <div
-                                                                                                    class="item--holder">
-                                                                                                    <div
-                                                                                                        class="item--holder-inner">
-                                                                                                        <div
-                                                                                                            class="item--icon">
-                                                                                                            <i
-                                                                                                                class="text-gradient flaticonv5-reading-book"></i>
-                                                                                                        </div>
-                                                                                                        <h3
-                                                                                                            class="item--title">
-                                                                                                            Student
-                                                                                                            Visa
-                                                                                                        </h3>
-                                                                                                        <div
-                                                                                                            class="item--gap">
-                                                                                                        </div>
-                                                                                                        <div
-                                                                                                            class="item--content">
-                                                                                                            Drive
-                                                                                                            down
-                                                                                                            your
-                                                                                                            rates
-                                                                                                            with
-                                                                                                            car
-                                                                                                            insurance
-                                                                                                            discounts
-                                                                                                            and
-                                                                                                            premium
-                                                                                                            reductions.
-                                                                                                        </div>
-                                                                                                        <div
-                                                                                                            class="item--icon-abs">
-                                                                                                            <i
-                                                                                                                class="text-gradient flaticonv5-reading-book"></i>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div class="item--meta">
-                                                                                                    <h3
-                                                                                                        class="item--title">
-                                                                                                        <a
-                                                                                                            href="../service/student-visa/index.html">Student
-                                                                                                            Visa</a>
-                                                                                                    </h3>
-                                                                                                    <div
-                                                                                                        class="item--readmore">
-                                                                                                        <a class="more-plus"
-                                                                                                            href="../service/student-visa/index.html">+</a>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div
-                                                                                        class="grid-item col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 ">
-                                                                                        <div
-                                                                                            class="grid-item-inner wow fadeIn active-featured">
-                                                                                            <div class="grid-item-over">
-                                                                                                <div
-                                                                                                    class="item--featured">
-                                                                                                    <img class="disable-lazy "
-                                                                                                        src="{% static 'home\styles\assets\wp-content\uploads\2019\12\gallery-05-541x600.jpg' %}"
-                                                                                                        width="541"
-                                                                                                        height="600"
-                                                                                                        alt="gallery-05"
-                                                                                                        title="gallery-05" />
-                                                                                                </div>
-                                                                                                <div
-                                                                                                    class="item--holder">
-                                                                                                    <div
-                                                                                                        class="item--holder-inner">
-                                                                                                        <div
-                                                                                                            class="item--icon">
-                                                                                                            <i
-                                                                                                                class="text-gradient flaticonv5-photographer"></i>
-                                                                                                        </div>
-                                                                                                        <h3
-                                                                                                            class="item--title">
-                                                                                                            Tourist
-                                                                                                            Visa
-                                                                                                        </h3>
-                                                                                                        <div
-                                                                                                            class="item--gap">
-                                                                                                        </div>
-                                                                                                        <div
-                                                                                                            class="item--content">
-                                                                                                            Drive
-                                                                                                            down
-                                                                                                            your
-                                                                                                            rates
-                                                                                                            with
-                                                                                                            car
-                                                                                                            insurance
-                                                                                                            discounts
-                                                                                                            and
-                                                                                                            premium
-                                                                                                            reductions.
-                                                                                                        </div>
-                                                                                                        <div
-                                                                                                            class="item--icon-abs">
-                                                                                                            <i
-                                                                                                                class="text-gradient flaticonv5-photographer"></i>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div class="item--meta">
-                                                                                                    <h3
-                                                                                                        class="item--title">
-                                                                                                        <a
-                                                                                                            href="../service/tourist-visa/index.html">Tourist
-                                                                                                            Visa</a>
-                                                                                                    </h3>
-                                                                                                    <div
-                                                                                                        class="item--readmore">
-                                                                                                        <a class="more-plus"
-                                                                                                            href="../service/tourist-visa/index.html">+</a>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div
-                                                                                        class="grid-item col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 ">
-                                                                                        <div
-                                                                                            class="grid-item-inner wow fadeIn active-featured">
-                                                                                            <div class="grid-item-over">
-                                                                                                <div
-                                                                                                    class="item--featured">
-                                                                                                    <img class="disable-lazy "
-                                                                                                        src="{% static 'home\styles\assets\wp-content\uploads\2019\11\theme-10-541x600.jpg' %}"
+                                                                                                        src="/media/{{ visa.main_image }}"
                                                                                                         width="541"
                                                                                                         height="600"
                                                                                                         alt="theme-10"
@@ -478,25 +147,14 @@ Services | Dream Next Education Foundation Pvt. Ltd.
                                                                                                         </div>
                                                                                                         <h3
                                                                                                             class="item--title">
-                                                                                                            Business
-                                                                                                            Visa
+                                                                                                            {{ visa.title }}
                                                                                                         </h3>
                                                                                                         <div
                                                                                                             class="item--gap">
                                                                                                         </div>
                                                                                                         <div
                                                                                                             class="item--content">
-                                                                                                            Drive
-                                                                                                            down
-                                                                                                            your
-                                                                                                            rates
-                                                                                                            with
-                                                                                                            car
-                                                                                                            insurance
-                                                                                                            discounts
-                                                                                                            and
-                                                                                                            premium
-                                                                                                            reductions.
+                                                                                                            {{ visa.summary }}
                                                                                                         </div>
                                                                                                         <div
                                                                                                             class="item--icon-abs">
@@ -509,18 +167,21 @@ Services | Dream Next Education Foundation Pvt. Ltd.
                                                                                                     <h3
                                                                                                         class="item--title">
                                                                                                         <a
-                                                                                                            href="../service/business-visa/index.html">Business
+                                                                                                            href="{{ visa.get_absolute_url}}">Business
                                                                                                             Visa</a>
                                                                                                     </h3>
                                                                                                     <div
                                                                                                         class="item--readmore">
                                                                                                         <a class="more-plus"
-                                                                                                            href="../service/business-visa/index.html">+</a>
+                                                                                                            href="{{ visa.get_absolute_url}}">+</a>
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
+                                                                                    {% empty %}
+                                                                                    No Data
+                                                                                    {% endfor %}
                                                                                     <div
                                                                                         class="grid-sizer col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
                                                                                     </div>
