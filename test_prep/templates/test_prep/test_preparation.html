@@ -1,0 +1,245 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+
+{% block metaarea %}
+{% endblock metaarea %}
+
+{% block titlearea %}
+Test Preparation | Dream Next Education Foundation Pvt. Ltd.
+{% endblock titlearea %}
+
+{% block cssarea %}
+{% include 'services/visa_upper_links.html' %}
+{% endblock cssarea %}
+
+
+{% block content %}
+<div id="pagetitle" class="page-title bg-image ">
+    <div class="container">
+        <div class="page-title-inner">
+            <div class="page-title-holder">
+                <h1 class="page-title">Test Preparation</h1>
+            </div>
+            <ul class="ct-breadcrumb">
+                <li><a class="breadcrumb-entry" href="{% url 'home' %}">Home</a></li>
+                <li><span class="breadcrumb-entry">Test Preparation</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="content" class="site-content">
+    <div class="content-inner">
+        <div class="container content-container">
+            <div class="row content-row">
+                <div id="primary"
+                    class="content-area content-has-sidebar float-left col-xl-9 col-lg-8 col-md-12 col-sm-12">
+                    <main id="main" class="site-main">
+                        {% for course in object_list %}
+                        <article id=""
+                            class="single-hentry archive post-5472 courses type-courses status-publish has-post-thumbnail hentry">
+                            <div class="entry-featured">
+                                <a href="{{ course.get_absolute_url }}"
+                                    style="background-image: url('/media/{{ course.main_image }}');">
+                                    <img width="1920" height="1200" alt="{{ course.name }}"
+                                        class="attachment-full size-full wp-post-image lazyload" />
+                                </a>
+
+                            </div>
+                            <div class="entry-body">
+                                <div class="entry-holder">
+                                    <h2 class="entry-title">
+                                        <a href="{{ course.get_absolute_url }}"> {{ course.name }} </a>
+                                    </h2>
+
+                                    <div class="entry-excerpt"> IELTS Skills Exam Take IELTS TOEFL Contact 3111
+                                        West Allegheny Avenue Pennsylvania 19132 1-982-782-5297 1-982-125-6378
+                                        support@consultio.com Downloads View our 2020 Medical prospectus of
+                                        brochure for an easy to read guide on all of the services offer. Visa
+                                        Application Form Visa Application Form Sponsoring and managing work
+                                        visas parts now becoming results in the experience with [&hellip;]</div>
+                                    <div class="entry-readmore">
+                                        <a href="{{ course.get_absolute_url }}" class="btn-text text-gradient">
+                                            <i class="fac fac-angle-right"></i>
+                                            <span>Read More</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article><!-- #post -->
+                        {% empty %}
+                        No Data
+                        {% endfor %}
+                        <article id=""
+                            class="single-hentry archive post-5471 courses type-courses status-publish has-post-thumbnail hentry">
+                            <div class="entry-featured"> <a href="ielts/index.html"
+                                    style="background-image: url(../wp-content/uploads/2019/11/theme-07.jpg);"><img
+                                        width="1920" height="1200" alt=""
+                                        data-srcset="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/11/theme-07.jpg 1920w, https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/11/theme-07-600x375.jpg 600w"
+                                        data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/11/theme-07.jpg"
+                                        data-sizes="(max-width: 1920px) 100vw, 1920px"
+                                        class="attachment-full size-full wp-post-image lazyload"
+                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /></a>
+
+                            </div>
+                            <div class="entry-body">
+                                <div class="entry-holder">
+                                    <h2 class="entry-title"> <a href="ielts/index.html"> IELTS </a></h2>
+
+                                    <div class="entry-excerpt"> IELTS Skills Exam Take IELTS TOEFL Contact 3111
+                                        West Allegheny Avenue Pennsylvania 19132 1-982-782-5297 1-982-125-6378
+                                        support@consultio.com Downloads View our 2020 Medical prospectus of
+                                        brochure for an easy to read guide on all of the services offer. Visa
+                                        Application Form Visa Application Form Sponsoring and managing work
+                                        visas parts now becoming results in the experience with [&hellip;]</div>
+                                    <div class="entry-readmore"> <a href="ielts/index.html"
+                                            class="btn-text text-gradient"> <i class="fac fac-angle-right"></i>
+                                            <span>Read More</span> </a></div>
+                                </div>
+                            </div>
+
+
+
+                        </article><!-- #post -->
+                        <article id="post-5470"
+                            class="single-hentry archive post-5470 courses type-courses status-publish has-post-thumbnail hentry">
+                            <div class="entry-featured"> <a href="spoken-english/index.html"
+                                    style="background-image: url(../wp-content/uploads/2019/12/corporate-portfolio5.jpg);"><img
+                                        width="900" height="560" alt=""
+                                        data-srcset="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/12/corporate-portfolio5.jpg 900w, https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/12/corporate-portfolio5-600x373.jpg 600w"
+                                        data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/12/corporate-portfolio5.jpg"
+                                        data-sizes="(max-width: 900px) 100vw, 900px"
+                                        class="attachment-full size-full wp-post-image lazyload"
+                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /></a>
+
+                            </div>
+                            <div class="entry-body">
+                                <div class="entry-holder">
+                                    <h2 class="entry-title"> <a href="spoken-english/index.html"> Spoken English
+                                        </a></h2>
+
+                                    <div class="entry-excerpt"> IELTS Skills Exam Take IELTS TOEFL Contact 3111
+                                        West Allegheny Avenue Pennsylvania 19132 1-982-782-5297 1-982-125-6378
+                                        support@consultio.com Downloads View our 2020 Medical prospectus of
+                                        brochure for an easy to read guide on all of the services offer. Visa
+                                        Application Form Visa Application Form Sponsoring and managing work
+                                        visas parts now becoming results in the experience with [&hellip;]</div>
+                                    <div class="entry-readmore"> <a href="..\testpreparation\template\index.html"
+                                            class="btn-text text-gradient"> <i class="fac fac-angle-right"></i>
+                                            <span>Read More</span> </a></div>
+                                </div>
+                            </div>
+                        </article><!-- #post -->
+                        <article id="post-5469"
+                            class="single-hentry archive post-5469 courses type-courses status-publish has-post-thumbnail hentry">
+                            <div class="entry-featured"> <a href="take-ielts/index.html"
+                                    style="background-image: url(../wp-content/uploads/2019/12/corporate-portfolio4.jpg);"><img
+                                        width="900" height="560" alt=""
+                                        data-srcset="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/12/corporate-portfolio4.jpg 900w, https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/12/corporate-portfolio4-600x373.jpg 600w"
+                                        data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/12/corporate-portfolio4.jpg"
+                                        data-sizes="(max-width: 900px) 100vw, 900px"
+                                        class="attachment-full size-full wp-post-image lazyload"
+                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /></a>
+
+                            </div>
+                            <div class="entry-body">
+                                <div class="entry-holder">
+                                    <h2 class="entry-title"> <a href="take-ielts/index.html"> Take IELTS </a>
+                                    </h2>
+
+                                    <div class="entry-excerpt"> IELTS Skills Exam Take IELTS TOEFL Contact 3111
+                                        West Allegheny Avenue Pennsylvania 19132 1-982-782-5297 1-982-125-6378
+                                        support@consultio.com Downloads View our 2020 Medical prospectus of
+                                        brochure for an easy to read guide on all of the services offer. Visa
+                                        Application Form Visa Application Form Sponsoring and managing work
+                                        visas parts now becoming results in the experience with [&hellip;]</div>
+                                    <div class="entry-readmore"> <a href="take-ielts/index.html"
+                                            class="btn-text text-gradient"> <i class="fac fac-angle-right"></i>
+                                            <span>Read More</span> </a></div>
+                                </div>
+                            </div>
+                        </article><!-- #post -->
+                        <article id="post-5468"
+                            class="single-hentry archive post-5468 courses type-courses status-publish has-post-thumbnail hentry">
+                            <div class="entry-featured"> <a href="skills-exam/index.html"
+                                    style="background-image: url(../wp-content/uploads/2019/11/theme-09.jpg);"><img
+                                        width="1920" height="1200" alt=""
+                                        data-srcset="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/11/theme-09.jpg 1920w, https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/11/theme-09-600x375.jpg 600w"
+                                        data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/11/theme-09.jpg"
+                                        data-sizes="(max-width: 1920px) 100vw, 1920px"
+                                        class="attachment-full size-full wp-post-image lazyload"
+                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /></a>
+
+                            </div>
+                            <div class="entry-body">
+                                <div class="entry-holder">
+                                    <h2 class="entry-title"> <a href="skills-exam/index.html"> Skills Exam </a>
+                                    </h2>
+
+                                    <div class="entry-excerpt"> IELTS Skills Exam Take IELTS TOEFL Contact 3111
+                                        West Allegheny Avenue Pennsylvania 19132 1-982-782-5297 1-982-125-6378
+                                        support@consultio.com Downloads View our 2020 Medical prospectus of
+                                        brochure for an easy to read guide on all of the services offer. Visa
+                                        Application Form Visa Application Form Sponsoring and managing work
+                                        visas parts now becoming results in the experience with [&hellip;]</div>
+                                    <div class="entry-readmore"> <a href="skills-exam/index.html"
+                                            class="btn-text text-gradient"> <i class="fac fac-angle-right"></i>
+                                            <span>Read More</span> </a></div>
+                                </div>
+                            </div>
+                        </article><!-- #post -->
+                    </main><!-- #main -->
+                </div><!-- #primary -->
+
+
+                <!-- SIDEBAR -->
+
+                <aside id="secondary"
+                    class="widget-area widget-has-sidebar sidebar-fixed col-xl-3 col-lg-4 col-md-12 col-sm-12">
+                    <div class="sidebar-sticky">
+
+
+                        <!-- SEARCH -->
+
+                        <section id="search-2" class="widget widget_search">
+                            <div class="widget-content">
+                                <form role="search" method="get" class="search-form"
+                                    action="https://demo.casethemes.net/consultio-immigration/">
+                                    <div class="searchform-wrap"> <input type="text" placeholder="Search..." name="s"
+                                            class="search-field" /> <button type="submit" class="search-submit"><i
+                                                class="far fac-search"></i></button></div>
+                                </form>
+                            </div>
+                        </section>
+
+
+
+
+                        <section id="categories-3" class="widget widget_categories">
+                            <div class="widget-content">
+                                <h2 class="widget-title">Book Online</h2>
+                                <ul>
+                                    <li class="cat-item cat-item-1"><a href="../testbooking/index.html">IELTS
+                                            <span class="count right">2 </span></a></li>
+                                    <li class="cat-item cat-item-18"><a href="../testbooking/index.html">TOEFL
+                                            <span class="count right">2 </span></a></li>
+
+                                    <li class="cat-item cat-item-18"><a href="../testbooking/index.html">PTE
+                                            <span class="count right">2 </span></a></li>
+
+                                </ul>
+                            </div>
+                        </section>
+
+
+
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div><!-- #content inner -->
+</div><!-- #content -->
+{% endblock content %}
+
+{% block javascript %}
+{% endblock javascript %}
