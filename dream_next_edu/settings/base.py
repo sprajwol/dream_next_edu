@@ -35,6 +35,8 @@ INSTALLED_APPS = [
     'contact.apps.ContactConfig',
     'services.apps.ServicesConfig',
     'events.apps.EventsConfig',
+    'study_abroad.apps.StudyAbroadConfig',
+    'test_prep.apps.TestPrepConfig',
 ]
 
 MIDDLEWARE = [

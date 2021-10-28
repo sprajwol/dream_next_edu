@@ -5,33 +5,29 @@ from django.utils.text import slugify
 # Create your models here.
 
 
-def get_visa_services_main_image_uploadpath(instance, filename):
+def get_country_main_image_uploadpath(instance, filename):
     ext = filename.split('.')[-1]
     text = [
-        character for character in instance.title if character.isalnum()]
+        character for character in instance.name if character.isalnum()]
     text = "".join(text)
 
-    return f'uploads/services/visa/{text}/{text}_image.{ext}'
+    return f'uploads/study_abroad/countries/{text}/{text}_image.{ext}'
 
 
-class Visa(models.Model):
-    title = models.CharField(max_length=255)
+class Country(models.Model):
+    name = models.CharField(max_length=255)
     slug = models.SlugField(max_length=255, unique=True, blank=True, null=True)
     main_image = models.ImageField(
-        upload_to=get_visa_services_main_image_uploadpath)
-    summary = models.TextField()
-    description = models.TextField()
-    created_on = models.DateTimeField(auto_now_add=True)
-    updated_on = models.DateTimeField(auto_now=True)
+        upload_to=get_country_main_image_uploadpath)
 
     def __str__(self):
-        return str(self.title)
+        return str(self.name)
 
     def _get_unique_slug(self):
         slug = slugify(self.title)
         unique_slug = slug
         num = 1
-        while Visa.objects.filter(slug=unique_slug).exists():
+        while Country.objects.filter(slug=unique_slug).exists():
             unique_slug = '{}-{}'.format(slug, num)
             num += 1
         return unique_slug
@@ -43,4 +39,4 @@ class Visa(models.Model):
         super().save(*args, **kwargs)
 
     def get_absolute_url(self):
-        return reverse('services_visa_detail', args=[str(self.slug)])
+        return reverse('single_country', args=[str(self.slug)])

@@ -1,0 +1,9 @@
+body {
+	color: green !important;
+}
+
+.entry-featured > a > img {
+	height: 16rem;
+	object-fit: cover;
+	object-position: center;
+}
