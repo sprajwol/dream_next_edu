@@ -1,13 +1,14 @@
 from django.contrib import admin
 from django.template.loader import get_template
 from django.utils.translation import gettext as _
+from django_summernote.admin import SummernoteModelAdmin
 
 from services.models import Visa
 # Register your models here.
 
 
-class VisaAdmin(admin.ModelAdmin):
-    # summernote_fields = ('description',)
+class VisaAdmin(SummernoteModelAdmin):
+    summernote_fields = ('description',)
 
     list_display = ('title', 'id',)
     prepopulated_fields = {'slug': ('title',)}

@@ -22,6 +22,15 @@ def get_member_image_uploadpath(instance, filename):
     return f'uploads/about/members/{full_name}/{full_name}_image.{ext}'
 
 
+RATING_CHOICES = (
+    ('1', '1'),
+    ('2', '2'),
+    ('3', '3'),
+    ('4', '4'),
+    ('5', '5'),
+)
+
+
 class Testimonial(models.Model):
     reviewer = models.CharField(
         max_length=100, verbose_name='Reviewer Full Name')
@@ -29,6 +38,7 @@ class Testimonial(models.Model):
         max_length=50, verbose_name='Reviewer Designation')
     image = models.ImageField(upload_to=get_reviewer_image_uploadpath,
                               blank=True, null=True, verbose_name='Reviewer Image')
+    rating = models.CharField(choices=RATING_CHOICES, max_length=10)
     testimony = models.TextField()
     created_at = models.DateField(auto_now_add=True, verbose_name='Created at')
     updated_at = models.DateField(auto_now=True, verbose_name='Updated at')

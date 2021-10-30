@@ -1,0 +1,6 @@
+.slick-slide .testimonial-image {
+	height: 96px;
+	width: 96px;
+	object-fit: cover;
+	object-position: center;
+}

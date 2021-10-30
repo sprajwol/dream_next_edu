@@ -11,6 +11,7 @@ Dream Next Education Foundation Pvt. Ltd.
 
 {% block cssarea %}
 {% include 'home/temp_link.html' %}
+<link rel="stylesheet" href="{% static 'home\styles\custom_css\home.css' %}">
 {% endblock cssarea %}
 
 
@@ -381,7 +382,7 @@ Dream Next Education Foundation Pvt. Ltd.
                                                                                                 tpj = jQuery;
                                                                                                 revapi1 = tpj(
                                                                                                     "#rev_slider_1_1"
-                                                                                                    );
+                                                                                                );
                                                                                                 if (revapi1 ==
                                                                                                     undefined ||
                                                                                                     revapi1
@@ -389,7 +390,8 @@ Dream Next Education Foundation Pvt. Ltd.
                                                                                                     undefined) {
                                                                                                     revslider_showDoubleJqueryError
                                                                                                         (
-                                                                                                            "rev_slider_1_1");
+                                                                                                            "rev_slider_1_1"
+                                                                                                        );
                                                                                                 } else {
                                                                                                     revapi1
                                                                                                         .revolution({
@@ -439,9 +441,9 @@ Dream Next Education Foundation Pvt. Ltd.
                                                                                                             document
                                                                                                             .readyState ===
                                                                                                             "complete"
-                                                                                                            ) && !
+                                                                                                        ) && !
                                                                                                         once_revslider11
-                                                                                                        ) {
+                                                                                                    ) {
                                                                                                         once_revslider11
                                                                                                             = true;
                                                                                                         revinit_revslider11
@@ -456,11 +458,11 @@ Dream Next Education Foundation Pvt. Ltd.
                                                                                     <script>
                                                                                         var htmlDivCss = unescape(
                                                                                             "%40media%20screen%20and%20%28max-width%3A%20767px%29%20%7B%0A%20%20.revslider-initialised%20.tp-bullets.case_theme_number%20%7B%0A%20%20%09display%3A%20none%20%21important%3B%0A%20%20%7D%0A%7D"
-                                                                                            );
+                                                                                        );
                                                                                         var htmlDiv = document
                                                                                             .getElementById(
                                                                                                 'rs-plugin-settings-inline-css'
-                                                                                                );
+                                                                                            );
                                                                                         if (htmlDiv) {
                                                                                             htmlDiv.innerHTML = htmlDiv
                                                                                                 .innerHTML + htmlDivCss;
@@ -483,7 +485,7 @@ Dream Next Education Foundation Pvt. Ltd.
                                                                                         var htmlDiv = document
                                                                                             .getElementById(
                                                                                                 'rs-plugin-settings-inline-css'
-                                                                                                );
+                                                                                            );
                                                                                         if (htmlDiv) {
                                                                                             htmlDiv.innerHTML = htmlDiv
                                                                                                 .innerHTML + htmlDivCss;
@@ -1033,7 +1035,7 @@ Dream Next Education Foundation Pvt. Ltd.
                                                                                             <div class="item--meta">
                                                                                                 <h3 class="item--title">
                                                                                                     <a
-                                                                                                        href="../service/immigrant-visas/index.html">Test
+                                                                                                        href="{% url 'test_preparation' %}">Test
                                                                                                         Preparation</a>
                                                                                                 </h3>
                                                                                                 <div
@@ -1048,7 +1050,7 @@ Dream Next Education Foundation Pvt. Ltd.
                                                                                                 <div
                                                                                                     class="item--readmore">
                                                                                                     <a class="btn-arrow-right"
-                                                                                                        href="../service/immigrant-visas/index.html">
+                                                                                                        href="{% url 'test_preparation' %}">
                                                                                                         <span>
                                                                                                             Read
                                                                                                             more
@@ -1071,7 +1073,7 @@ Dream Next Education Foundation Pvt. Ltd.
                                                                                             <div class="item--meta">
                                                                                                 <h3 class="item--title">
                                                                                                     <a
-                                                                                                        href="../service/local-visa/index.html">Consultation</a>
+                                                                                                        href="{% url 'services_visa' %}">Consultation</a>
                                                                                                 </h3>
                                                                                                 <div
                                                                                                     class="item--description">
@@ -1086,7 +1088,7 @@ Dream Next Education Foundation Pvt. Ltd.
                                                                                                 <div
                                                                                                     class="item--readmore">
                                                                                                     <a class="btn-arrow-right"
-                                                                                                        href="../service/local-visa/index.html">
+                                                                                                        href="{% url 'services_visa' %}">
                                                                                                         <span>
                                                                                                             Read
                                                                                                             more
@@ -1109,7 +1111,7 @@ Dream Next Education Foundation Pvt. Ltd.
                                                                                             <div class="item--meta">
                                                                                                 <h3 class="item--title">
                                                                                                     <a
-                                                                                                        href="../service/medical-visa/index.html">Visa
+                                                                                                        href="{% url 'services_visa' %}">Visa
                                                                                                         Applications</a>
                                                                                                 </h3>
                                                                                                 <div
@@ -1124,7 +1126,7 @@ Dream Next Education Foundation Pvt. Ltd.
                                                                                                 <div
                                                                                                     class="item--readmore">
                                                                                                     <a class="btn-arrow-right"
-                                                                                                        href="../service/medical-visa/index.html">
+                                                                                                        href="{% url 'services_visa' %}">
                                                                                                         <span>
                                                                                                             Read
                                                                                                             more
@@ -1136,11 +1138,6 @@ Dream Next Education Foundation Pvt. Ltd.
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
-
-
-
-
-
                                                                                     <div
                                                                                         class="grid-sizer col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
                                                                                     </div>
@@ -2049,6 +2046,8 @@ Dream Next Education Foundation Pvt. Ltd.
                                                                                         data-collg="3" data-colxl="3"
                                                                                         data-slidesToScroll="1"
                                                                                         data-dir="false">
+
+                                                                                        {% for each_testimonial in testimonial_data %}
                                                                                         <div class="slick-slide">
                                                                                             <div class="item--inner ">
                                                                                                 <div
@@ -2058,277 +2057,48 @@ Dream Next Education Foundation Pvt. Ltd.
                                                                                                     class="item--image">
                                                                                                     <img width="96"
                                                                                                         height="96"
-                                                                                                        alt="ud-testimonial-02"
-                                                                                                        title="ud-testimonial-02"
-                                                                                                        data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2020/10/ud-testimonial-02.jpg"
-                                                                                                        class="lazyload"
-                                                                                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                                                                                                        alt="{{ each_testimonial.reviewer }}"
+                                                                                                        title="{{ each_testimonial.reviewer }}"
+                                                                                                        data-src="/media/{{ each_testimonial.image }}"
+                                                                                                        class="lazyload testimonial-image"
+                                                                                                        src="/media/{{ each_testimonial.image }}" />
                                                                                                     <i
                                                                                                         class="item--icon fac fac-quote-right"></i>
                                                                                                 </div>
                                                                                                 <div
                                                                                                     class="item-rating">
+                                                                                                    {% with ''|center:each_testimonial.rating as range %}
+                                                                                                    {% for obj in range %}
                                                                                                     <i
                                                                                                         class="fac fac-star"></i>
-                                                                                                    <i
-                                                                                                        class="fac fac-star"></i>
-                                                                                                    <i
-                                                                                                        class="fac fac-star"></i>
-                                                                                                    <i
-                                                                                                        class="fac fac-star"></i>
-                                                                                                    <i
-                                                                                                        class="fac fac-star"></i>
+                                                                                                    {% empty %}
+                                                                                                    No Rating
+                                                                                                    {% endfor %}
+                                                                                                    {% endwith %}
                                                                                                 </div>
                                                                                                 <div
                                                                                                     class="item--description">
-                                                                                                    Lorem ipsum
-                                                                                                    dolor sit
-                                                                                                    amet,
-                                                                                                    consecte
-                                                                                                    sed do
-                                                                                                    eiusmod
-                                                                                                    tempor
-                                                                                                    incididunt
-                                                                                                    utlao
-                                                                                                    bore et
-                                                                                                    dolore magna
-                                                                                                    aliqua.
+                                                                                                    {{ each_testimonial.testimony }}
                                                                                                 </div>
                                                                                                 <div class="item--meta">
                                                                                                     <h3
                                                                                                         class="item--title">
-                                                                                                        Farhan
-                                                                                                        Rio,
-                                                                                                    </h3> <span
-                                                                                                        class="item--position">Agent
-                                                                                                        Manager</span>
+                                                                                                        {{ each_testimonial.reviewer }}
+                                                                                                    </h3>
+                                                                                                    {% if each_testimonial.designation %}
+                                                                                                    <span
+                                                                                                        class="item--position">
+                                                                                                        ,
+                                                                                                        {{ each_testimonial.designation }}
+                                                                                                    </span>
+                                                                                                    {% endif %}
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
-                                                                                        <div class="slick-slide">
-                                                                                            <div class="item--inner ">
-                                                                                                <div
-                                                                                                    class="item--overlay bg-image">
-                                                                                                </div>
-                                                                                                <div
-                                                                                                    class="item--image">
-                                                                                                    <img width="96"
-                                                                                                        height="96"
-                                                                                                        alt="ud-testimonial-03"
-                                                                                                        title="ud-testimonial-03"
-                                                                                                        data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2020/10/ud-testimonial-03.jpg"
-                                                                                                        class="lazyload"
-                                                                                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
-                                                                                                    <i
-                                                                                                        class="item--icon fac fac-quote-right"></i>
-                                                                                                </div>
-                                                                                                <div
-                                                                                                    class="item-rating">
-                                                                                                    <i
-                                                                                                        class="fac fac-star"></i>
-                                                                                                    <i
-                                                                                                        class="fac fac-star"></i>
-                                                                                                    <i
-                                                                                                        class="fac fac-star"></i>
-                                                                                                    <i
-                                                                                                        class="fac fac-star"></i>
-                                                                                                    <i
-                                                                                                        class="fac fac-star"></i>
-                                                                                                </div>
-                                                                                                <div
-                                                                                                    class="item--description">
-                                                                                                    Lorem ipsum
-                                                                                                    dolor sit
-                                                                                                    amet,
-                                                                                                    consecte
-                                                                                                    sed do
-                                                                                                    eiusmod
-                                                                                                    tempor
-                                                                                                    incididunt
-                                                                                                    utlao
-                                                                                                    bore et
-                                                                                                    dolore magna
-                                                                                                    aliqua.
-                                                                                                </div>
-                                                                                                <div class="item--meta">
-                                                                                                    <h3
-                                                                                                        class="item--title">
-                                                                                                        Van
-                                                                                                        Hunter ,
-                                                                                                    </h3> <span
-                                                                                                        class="item--position">Senior
-                                                                                                        Director</span>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="slick-slide">
-                                                                                            <div class="item--inner ">
-                                                                                                <div
-                                                                                                    class="item--overlay bg-image">
-                                                                                                </div>
-                                                                                                <div
-                                                                                                    class="item--image">
-                                                                                                    <img width="96"
-                                                                                                        height="96"
-                                                                                                        alt="testimonial-06"
-                                                                                                        title="testimonial-06"
-                                                                                                        data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/11/testimonial-06-96x96.jpg"
-                                                                                                        class="lazyload"
-                                                                                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
-                                                                                                    <i
-                                                                                                        class="item--icon fac fac-quote-right"></i>
-                                                                                                </div>
-                                                                                                <div
-                                                                                                    class="item-rating">
-                                                                                                    <i
-                                                                                                        class="fac fac-star"></i>
-                                                                                                    <i
-                                                                                                        class="fac fac-star"></i>
-                                                                                                    <i
-                                                                                                        class="fac fac-star"></i>
-                                                                                                    <i
-                                                                                                        class="fac fac-star"></i>
-                                                                                                    <i
-                                                                                                        class="fac fac-star"></i>
-                                                                                                </div>
-                                                                                                <div
-                                                                                                    class="item--description">
-                                                                                                    Lorem ipsum
-                                                                                                    dolor sit
-                                                                                                    amet,
-                                                                                                    consecte
-                                                                                                    sed do
-                                                                                                    eiusmod
-                                                                                                    tempor
-                                                                                                    incididunt
-                                                                                                    utlao
-                                                                                                    bore et
-                                                                                                    dolore magna
-                                                                                                    aliqua.
-                                                                                                </div>
-                                                                                                <div class="item--meta">
-                                                                                                    <h3
-                                                                                                        class="item--title">
-                                                                                                        Fred L
-                                                                                                        Smith,
-                                                                                                    </h3> <span
-                                                                                                        class="item--position">Leadership
-                                                                                                        Group</span>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="slick-slide">
-                                                                                            <div class="item--inner ">
-                                                                                                <div
-                                                                                                    class="item--overlay bg-image">
-                                                                                                </div>
-                                                                                                <div
-                                                                                                    class="item--image">
-                                                                                                    <img width="92"
-                                                                                                        height="92"
-                                                                                                        alt="author-02"
-                                                                                                        title="author-02"
-                                                                                                        data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/11/author-02.jpg"
-                                                                                                        class="lazyload"
-                                                                                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
-                                                                                                    <i
-                                                                                                        class="item--icon fac fac-quote-right"></i>
-                                                                                                </div>
-                                                                                                <div
-                                                                                                    class="item-rating">
-                                                                                                    <i
-                                                                                                        class="fac fac-star"></i>
-                                                                                                    <i
-                                                                                                        class="fac fac-star"></i>
-                                                                                                    <i
-                                                                                                        class="fac fac-star"></i>
-                                                                                                    <i
-                                                                                                        class="fac fac-star"></i>
-                                                                                                    <i
-                                                                                                        class="fac fac-star"></i>
-                                                                                                </div>
-                                                                                                <div
-                                                                                                    class="item--description">
-                                                                                                    Lorem ipsum
-                                                                                                    dolor sit
-                                                                                                    amet,
-                                                                                                    consecte
-                                                                                                    sed do
-                                                                                                    eiusmod
-                                                                                                    tempor
-                                                                                                    incididunt
-                                                                                                    utlao
-                                                                                                    bore et
-                                                                                                    dolore magna
-                                                                                                    aliqua.
-                                                                                                </div>
-                                                                                                <div class="item--meta">
-                                                                                                    <h3
-                                                                                                        class="item--title">
-                                                                                                        Carolyn
-                                                                                                        Smith ,
-                                                                                                    </h3> <span
-                                                                                                        class="item--position">Agent
-                                                                                                        Manager</span>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="slick-slide">
-                                                                                            <div class="item--inner ">
-                                                                                                <div
-                                                                                                    class="item--overlay bg-image">
-                                                                                                </div>
-                                                                                                <div
-                                                                                                    class="item--image">
-                                                                                                    <img width="96"
-                                                                                                        height="96"
-                                                                                                        alt="testimonial-05"
-                                                                                                        title="testimonial-05"
-                                                                                                        data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/11/testimonial-05-96x96.jpg"
-                                                                                                        class="lazyload"
-                                                                                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
-                                                                                                    <i
-                                                                                                        class="item--icon fac fac-quote-right"></i>
-                                                                                                </div>
-                                                                                                <div
-                                                                                                    class="item-rating">
-                                                                                                    <i
-                                                                                                        class="fac fac-star"></i>
-                                                                                                    <i
-                                                                                                        class="fac fac-star"></i>
-                                                                                                    <i
-                                                                                                        class="fac fac-star"></i>
-                                                                                                    <i
-                                                                                                        class="fac fac-star"></i>
-                                                                                                    <i
-                                                                                                        class="fac fac-star"></i>
-                                                                                                </div>
-                                                                                                <div
-                                                                                                    class="item--description">
-                                                                                                    Lorem ipsum
-                                                                                                    dolor sit
-                                                                                                    amet,
-                                                                                                    consecte
-                                                                                                    sed do
-                                                                                                    eiusmod
-                                                                                                    tempor
-                                                                                                    incididunt
-                                                                                                    utlao
-                                                                                                    bore et
-                                                                                                    dolore magna
-                                                                                                    aliqua.
-                                                                                                </div>
-                                                                                                <div class="item--meta">
-                                                                                                    <h3
-                                                                                                        class="item--title">
-                                                                                                        Kathleen
-                                                                                                        Smith ,
-                                                                                                    </h3> <span
-                                                                                                        class="item--position">Agent
-                                                                                                        Manager</span>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
+                                                                                        {% empty %}
+                                                                                        No Testimonial Data
+                                                                                        {% endfor %}
+
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -2354,14 +2124,6 @@ Dream Next Education Foundation Pvt. Ltd.
                                                             <div
                                                                 class="elementor-column-wrap elementor-element-populated">
                                                                 <div class="elementor-widget-wrap">
-
-
-
-
-
-
-
-
 
                                                                     <section
                                                                         class="elementor-section elementor-inner-section elementor-element elementor-element-34dbb17b elementor-section-boxed elementor-section-height-default elementor-section-height-default"
@@ -2396,7 +2158,7 @@ Dream Next Education Foundation Pvt. Ltd.
                                                                                                         <div
                                                                                                             class="item--sub-title style9 show-line">
                                                                                                             Latest
-                                                                                                            Blog
+                                                                                                            Events
                                                                                                             <span
                                                                                                                 class="line-left"></span>
                                                                                                             <span
@@ -2411,7 +2173,7 @@ Dream Next Education Foundation Pvt. Ltd.
                                                                                                                 from
                                                                                                                 our
                                                                                                                 latest
-                                                                                                                blog!
+                                                                                                                events!
                                                                                                             </span>
                                                                                                         </h3>
                                                                                                     </div>
@@ -2451,6 +2213,8 @@ Dream Next Education Foundation Pvt. Ltd.
                                                                                         data-colsm="1" data-colmd="2"
                                                                                         data-collg="2" data-colxl="2"
                                                                                         data-slidesToScroll="2">
+                                                                                        {% for event in event_data %}
+
                                                                                         <div
                                                                                             class="carousel-item slick-slide">
                                                                                             <div
@@ -2458,14 +2222,14 @@ Dream Next Education Foundation Pvt. Ltd.
                                                                                                 <div
                                                                                                     class="item--featured">
                                                                                                     <a class="bg-image"
-                                                                                                        href="../how-stay-calm-from-the-first-time/index.html"
-                                                                                                        style="background-image: url(../wp-content/uploads/2019/11/theme-10.jpg);"></a>
+                                                                                                        href="{{ event.get_absolute_url}}"
+                                                                                                        style="background-image: url('/media/{{ event.main_image }}');"></a>
                                                                                                     <div
                                                                                                         class="item--date">
                                                                                                         <div
                                                                                                             class="item--date-inner">
-                                                                                                            <span>05</span>
-                                                                                                            <span>Nov</span>
+                                                                                                            <span>{{ event.date|date:"d" }}</span>
+                                                                                                            <span>{{ event.date|date:"M" }}</span>
                                                                                                         </div>
                                                                                                     </div>
                                                                                                 </div>
@@ -2478,37 +2242,18 @@ Dream Next Education Foundation Pvt. Ltd.
                                                                                                     <h3
                                                                                                         class="item--title">
                                                                                                         <a
-                                                                                                            href="../how-stay-calm-from-the-first-time/index.html">How
-                                                                                                            Stay
-                                                                                                            Calm
-                                                                                                            from
-                                                                                                            the
-                                                                                                            First
-                                                                                                            Time.</a>
+                                                                                                            href="{{ event.get_absolute_url }}">
+                                                                                                            {{ event.title }}
+                                                                                                        </a>
                                                                                                     </h3>
                                                                                                     <div
                                                                                                         class="item--content">
-                                                                                                        As a app
-                                                                                                        web
-                                                                                                        crawler
-                                                                                                        expert,
-                                                                                                        help
-                                                                                                        organizations
-                                                                                                        adjust
-                                                                                                        to the
-                                                                                                        of the
-                                                                                                        internet
-                                                                                                        promoting.
-                                                                                                        Far
-                                                                                                        away,
-                                                                                                        behind
-                                                                                                        the
-                                                                                                        word.
+                                                                                                        {{ event.summary }}
                                                                                                     </div>
                                                                                                     <div
                                                                                                         class="item--readmore">
                                                                                                         <a class="btn btn-effect"
-                                                                                                            href="../how-stay-calm-from-the-first-time/index.html">
+                                                                                                            href="{{ event.get_absolute_url }}">
                                                                                                             <span>
                                                                                                                 Read
                                                                                                                 more
@@ -2520,349 +2265,10 @@ Dream Next Education Foundation Pvt. Ltd.
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
-                                                                                        <div
-                                                                                            class="carousel-item slick-slide">
-                                                                                            <div
-                                                                                                class="grid-item-inner ">
-                                                                                                <div
-                                                                                                    class="item--featured">
-                                                                                                    <a class="bg-image"
-                                                                                                        href="../why-youll-never-succeed-at-7-habits-of-highly/index.html"
-                                                                                                        style="background-image: url(../wp-content/uploads/2019/11/ud-blog1.jpg);"></a>
-                                                                                                    <div
-                                                                                                        class="item--date">
-                                                                                                        <div
-                                                                                                            class="item--date-inner">
-                                                                                                            <span>05</span>
-                                                                                                            <span>Nov</span>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div class="item--body">
-                                                                                                    <div
-                                                                                                        class="item--category">
-                                                                                                        <a href="../category/strategy/index.html"
-                                                                                                            rel="tag">Strategy</a>
-                                                                                                    </div>
-                                                                                                    <h3
-                                                                                                        class="item--title">
-                                                                                                        <a
-                                                                                                            href="../why-youll-never-succeed-at-7-habits-of-highly/index.html">Why
-                                                                                                            You’ll
-                                                                                                            Never
-                                                                                                            Succeed
-                                                                                                            at 7
-                                                                                                            Habits.</a>
-                                                                                                    </h3>
-                                                                                                    <div
-                                                                                                        class="item--content">
-                                                                                                        As a app
-                                                                                                        web
-                                                                                                        crawler
-                                                                                                        expert,
-                                                                                                        help
-                                                                                                        organizations
-                                                                                                        adjust
-                                                                                                        to the
-                                                                                                        of the
-                                                                                                        internet
-                                                                                                        promoting.
-                                                                                                        Far
-                                                                                                        away,
-                                                                                                        behind
-                                                                                                        the
-                                                                                                        word.
-                                                                                                    </div>
-                                                                                                    <div
-                                                                                                        class="item--readmore">
-                                                                                                        <a class="btn btn-effect"
-                                                                                                            href="../why-youll-never-succeed-at-7-habits-of-highly/index.html">
-                                                                                                            <span>
-                                                                                                                Read
-                                                                                                                more
-                                                                                                            </span>
-                                                                                                            <i
-                                                                                                                class="fac fac-plus"></i>
-                                                                                                        </a>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div
-                                                                                            class="carousel-item slick-slide">
-                                                                                            <div
-                                                                                                class="grid-item-inner ">
-                                                                                                <div
-                                                                                                    class="item--featured">
-                                                                                                    <a class="bg-image"
-                                                                                                        href="../you-can-use-it-for-any-kind-website-like/index.html"
-                                                                                                        style="background-image: url(../wp-content/uploads/2019/11/theme-01.jpg);"></a>
-                                                                                                    <div
-                                                                                                        class="item--date">
-                                                                                                        <div
-                                                                                                            class="item--date-inner">
-                                                                                                            <span>05</span>
-                                                                                                            <span>Nov</span>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div class="item--body">
-                                                                                                    <div
-                                                                                                        class="item--category">
-                                                                                                        <a href="../category/business/index.html"
-                                                                                                            rel="tag">Business</a>
-                                                                                                    </div>
-                                                                                                    <h3
-                                                                                                        class="item--title">
-                                                                                                        <a
-                                                                                                            href="../you-can-use-it-for-any-kind-website-like/index.html">You
-                                                                                                            can
-                                                                                                            use
-                                                                                                            it
-                                                                                                            for
-                                                                                                            any
-                                                                                                            kind
-                                                                                                            website
-                                                                                                            like.</a>
-                                                                                                    </h3>
-                                                                                                    <div
-                                                                                                        class="item--content">
-                                                                                                        As a app
-                                                                                                        web
-                                                                                                        crawler
-                                                                                                        expert,
-                                                                                                        help
-                                                                                                        organizations
-                                                                                                        adjust
-                                                                                                        to the
-                                                                                                        of the
-                                                                                                        internet
-                                                                                                        promoting.
-                                                                                                        Far
-                                                                                                        away,
-                                                                                                        behind
-                                                                                                        the
-                                                                                                        word.
-                                                                                                    </div>
-                                                                                                    <div
-                                                                                                        class="item--readmore">
-                                                                                                        <a class="btn btn-effect"
-                                                                                                            href="../you-can-use-it-for-any-kind-website-like/index.html">
-                                                                                                            <span>
-                                                                                                                Read
-                                                                                                                more
-                                                                                                            </span>
-                                                                                                            <i
-                                                                                                                class="fac fac-plus"></i>
-                                                                                                        </a>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div
-                                                                                            class="carousel-item slick-slide">
-                                                                                            <div
-                                                                                                class="grid-item-inner ">
-                                                                                                <div
-                                                                                                    class="item--featured">
-                                                                                                    <a class="bg-image"
-                                                                                                        href="../how-to-go-about-intiating-an-start-up/index.html"
-                                                                                                        style="background-image: url(../wp-content/uploads/2019/11/theme-13.jpg);"></a>
-                                                                                                    <div
-                                                                                                        class="item--date">
-                                                                                                        <div
-                                                                                                            class="item--date-inner">
-                                                                                                            <span>05</span>
-                                                                                                            <span>Nov</span>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div class="item--body">
-                                                                                                    <div
-                                                                                                        class="item--category">
-                                                                                                        <a href="../category/creative/index.html"
-                                                                                                            rel="tag">Creative</a>
-                                                                                                    </div>
-                                                                                                    <h3
-                                                                                                        class="item--title">
-                                                                                                        <a
-                                                                                                            href="../how-to-go-about-intiating-an-start-up/index.html">How
-                                                                                                            to
-                                                                                                            go
-                                                                                                            about
-                                                                                                            intiating
-                                                                                                            an
-                                                                                                            start-up.</a>
-                                                                                                    </h3>
-                                                                                                    <div
-                                                                                                        class="item--content">
-                                                                                                        As a app
-                                                                                                        web
-                                                                                                        crawler
-                                                                                                        expert,
-                                                                                                        help
-                                                                                                        organizations
-                                                                                                        adjust
-                                                                                                        to the
-                                                                                                        of the
-                                                                                                        internet
-                                                                                                        promoting.
-                                                                                                        Far
-                                                                                                        away,
-                                                                                                        behind
-                                                                                                        the
-                                                                                                        word.
-                                                                                                    </div>
-                                                                                                    <div
-                                                                                                        class="item--readmore">
-                                                                                                        <a class="btn btn-effect"
-                                                                                                            href="../how-to-go-about-intiating-an-start-up/index.html">
-                                                                                                            <span>
-                                                                                                                Read
-                                                                                                                more
-                                                                                                            </span>
-                                                                                                            <i
-                                                                                                                class="fac fac-plus"></i>
-                                                                                                        </a>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div
-                                                                                            class="carousel-item slick-slide">
-                                                                                            <div
-                                                                                                class="grid-item-inner ">
-                                                                                                <div
-                                                                                                    class="item--featured">
-                                                                                                    <a class="bg-image"
-                                                                                                        href="../reasons-to-explan-fast-business-builder/index.html"
-                                                                                                        style="background-image: url(../wp-content/uploads/2019/11/theme-09.jpg);"></a>
-                                                                                                    <div
-                                                                                                        class="item--date">
-                                                                                                        <div
-                                                                                                            class="item--date-inner">
-                                                                                                            <span>05</span>
-                                                                                                            <span>Nov</span>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div class="item--body">
-                                                                                                    <div
-                                                                                                        class="item--category">
-                                                                                                        <a href="../category/strategy/index.html"
-                                                                                                            rel="tag">Strategy</a>
-                                                                                                    </div>
-                                                                                                    <h3
-                                                                                                        class="item--title">
-                                                                                                        <a
-                                                                                                            href="../reasons-to-explan-fast-business-builder/index.html">Reasons
-                                                                                                            to
-                                                                                                            explan
-                                                                                                            fast
-                                                                                                            business
-                                                                                                            builder.</a>
-                                                                                                    </h3>
-                                                                                                    <div
-                                                                                                        class="item--content">
-                                                                                                        As a app
-                                                                                                        web
-                                                                                                        crawler
-                                                                                                        expert,
-                                                                                                        help
-                                                                                                        organizations
-                                                                                                        adjust
-                                                                                                        to the
-                                                                                                        of the
-                                                                                                        internet
-                                                                                                        promoting.
-                                                                                                        Far
-                                                                                                        away,
-                                                                                                        behind
-                                                                                                        the
-                                                                                                        word.
-                                                                                                    </div>
-                                                                                                    <div
-                                                                                                        class="item--readmore">
-                                                                                                        <a class="btn btn-effect"
-                                                                                                            href="../reasons-to-explan-fast-business-builder/index.html">
-                                                                                                            <span>
-                                                                                                                Read
-                                                                                                                more
-                                                                                                            </span>
-                                                                                                            <i
-                                                                                                                class="fac fac-plus"></i>
-                                                                                                        </a>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div
-                                                                                            class="carousel-item slick-slide">
-                                                                                            <div
-                                                                                                class="grid-item-inner ">
-                                                                                                <div
-                                                                                                    class="item--featured">
-                                                                                                    <a class="bg-image"
-                                                                                                        href="../blackpool-polices-hunt-for-david/index.html"
-                                                                                                        style="background-image: url(../wp-content/uploads/2019/11/theme-05.jpg);"></a>
-                                                                                                    <div
-                                                                                                        class="item--date">
-                                                                                                        <div
-                                                                                                            class="item--date-inner">
-                                                                                                            <span>04</span>
-                                                                                                            <span>Nov</span>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div class="item--body">
-                                                                                                    <div
-                                                                                                        class="item--category">
-                                                                                                        <a href="../category/creative/index.html"
-                                                                                                            rel="tag">Creative</a>
-                                                                                                    </div>
-                                                                                                    <h3
-                                                                                                        class="item--title">
-                                                                                                        <a
-                                                                                                            href="../blackpool-polices-hunt-for-david/index.html">Blackpool
-                                                                                                            polices
-                                                                                                            hunt
-                                                                                                            for
-                                                                                                            David.</a>
-                                                                                                    </h3>
-                                                                                                    <div
-                                                                                                        class="item--content">
-                                                                                                        As a app
-                                                                                                        web
-                                                                                                        crawler
-                                                                                                        expert,
-                                                                                                        help
-                                                                                                        organizations
-                                                                                                        adjust
-                                                                                                        to the
-                                                                                                        of the
-                                                                                                        internet
-                                                                                                        promoting.
-                                                                                                        Far
-                                                                                                        away,
-                                                                                                        behind
-                                                                                                        the
-                                                                                                        word.
-                                                                                                    </div>
-                                                                                                    <div
-                                                                                                        class="item--readmore">
-                                                                                                        <a class="btn btn-effect"
-                                                                                                            href="../blackpool-polices-hunt-for-david/index.html">
-                                                                                                            <span>
-                                                                                                                Read
-                                                                                                                more
-                                                                                                            </span>
-                                                                                                            <i
-                                                                                                                class="fac fac-plus"></i>
-                                                                                                        </a>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
+                                                                                        {% empty %}
+                                                                                        No event data
+                                                                                        {% endfor %}
+
                                                                                     </div>
                                                                                 </div>
                                                                             </div>

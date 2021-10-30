@@ -1,13 +1,14 @@
 from django.contrib import admin
 from django.template.loader import get_template
 from django.utils.translation import gettext as _
+from django_summernote.admin import SummernoteModelAdmin
 
 from events.models import Event, Category
 # Register your models here.
 
 
-class EventAdmin(admin.ModelAdmin):
-    # summernote_fields = ('description',)
+class EventAdmin(SummernoteModelAdmin):
+    summernote_fields = ('description',)
 
     list_display = ('title', 'id',)
     prepopulated_fields = {'slug': ('title',)}
