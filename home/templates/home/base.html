@@ -145,7 +145,7 @@
                                                             <a href="{% url 'services_visa' %}">
                                                                 Visa Application
                                                             </a>
-                                                        </li>`
+                                                        </li>
                                                     </ul>
                                                 </li>
 
@@ -153,24 +153,16 @@
                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-414">
                                                     <a href="{% url 'test_preparation' %}"><span>Test Preparation</a>
                                                     <ul class="sub-menu">
+                                                        {% for course in course_data %}
 
                                                         <li id="menu-item-5199"
                                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5199">
                                                             <a
-                                                                href="../testpreparation/template/index.html"><span>TOEFL</a>
+                                                                href="{{ course.get_absolute_url}}"><span>{{ course.name }}</a>
                                                         </li>
-
-                                                        <li id="menu-item-5199"
-                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5199">
-                                                            <a
-                                                                href="../testpreparation/template/index.html"><span>IELTS</a>
-                                                        </li>
-
-                                                        <li id="menu-item-5199"
-                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5199">
-                                                            <a
-                                                                href="../testpreparation/template/index.html"><span>PTE</a>
-                                                        </li>
+                                                        {% empty %}
+                                                        No Course Data
+                                                        {% endfor %}
                                                     </ul>
                                                 </li>
                                                 <li id="menu-item-5156"

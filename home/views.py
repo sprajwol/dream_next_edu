@@ -3,6 +3,7 @@ from django.views.generic import TemplateView
 from home.models import HeroSlider
 from about.models import Testimonial
 from events.models import Event
+from test_prep.models import Course
 # Create your views here.
 
 
@@ -24,6 +25,10 @@ class HomeView(TemplateView):
         if (Event.objects.all().exists()):
             events = Event.objects.all()
             context['event_data'] = events
+
+        if (Course.objects.all().exists()):
+            course_data = Course.objects.all()
+            context['course_data'] = course_data
 
         context['home_page'] = 'active'
         return context

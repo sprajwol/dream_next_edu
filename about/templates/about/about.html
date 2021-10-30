@@ -11,6 +11,7 @@ About | Dream Next Education Foundation Pvt. Ltd.
 
 {% block cssarea %}
 {% include 'about/upper_links.html' %}
+<link rel="stylesheet" href="{% static 'about\styles\custom_css\about.css' %}">
 {% endblock cssarea %}
 
 
@@ -913,386 +914,59 @@ About | Dream Next Education Foundation Pvt. Ltd.
                                                                                         data-collg="3" data-colxl="3"
                                                                                         data-slidesToScroll="2"
                                                                                         data-dir="false">
+
+                                                                                        {% for each_testimonial in testimonial_data %}
                                                                                         <div class="slick-slide">
                                                                                             <div
                                                                                                 class="item--inner wow flipInX">
                                                                                                 <div
                                                                                                     class="item--description">
-                                                                                                    I asked for
-                                                                                                    an extra
-                                                                                                    customization
-                                                                                                    in Process
-                                                                                                    section and
-                                                                                                    the author
-                                                                                                    made special
-                                                                                                    amendments
-                                                                                                    in the theme
-                                                                                                    live on my
-                                                                                                    website.
-                                                                                                    Customer
-                                                                                                    support is
-                                                                                                    amazing
-                                                                                                    really
-                                                                                                    24/24.</div>
+                                                                                                    {{ each_testimonial.testimony }}
+                                                                                                </div>
                                                                                                 <div
                                                                                                     class="item--holder">
                                                                                                     <div
                                                                                                         class="item--image">
                                                                                                         <img width="109"
                                                                                                             height="109"
-                                                                                                            alt="testimonial-04"
-                                                                                                            title="testimonial-04"
-                                                                                                            data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/11/testimonial-04.jpg"
-                                                                                                            class="lazyload"
-                                                                                                            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                                                                                                            alt="{{ each_testimonial.reviewer }}"
+                                                                                                            title="{{ each_testimonial.reviewer }}"
+                                                                                                            data-src="/media/{{ each_testimonial.image }}"
+                                                                                                            class="lazyload testimonial-image"
+                                                                                                            src="/media/{{ each_testimonial.image }}" />
                                                                                                     </div>
                                                                                                     <div
                                                                                                         class="item--meta">
                                                                                                         <h3
                                                                                                             class="item--title">
-                                                                                                            Maria
-                                                                                                            Silverii
+                                                                                                            {{ each_testimonial.reviewer }}
                                                                                                         </h3>
+                                                                                                        {% if each_testimonial.designation %}
                                                                                                         <div
                                                                                                             class="item--position">
-                                                                                                            CEO
-                                                                                                            of
-                                                                                                            Blue
-                                                                                                            Illusion
+                                                                                                            ,
+                                                                                                            {{ each_testimonial.designation }}
                                                                                                         </div>
+                                                                                                        {% endif %}
                                                                                                         <div
                                                                                                             class="item-rating">
+                                                                                                            {% with ''|center:each_testimonial.rating as range %}
+                                                                                                            {% for obj in range %}
                                                                                                             <i
                                                                                                                 class="fac fac-star"></i>
-                                                                                                            <i
-                                                                                                                class="fac fac-star"></i>
-                                                                                                            <i
-                                                                                                                class="fac fac-star"></i>
-                                                                                                            <i
-                                                                                                                class="fac fac-star"></i>
-                                                                                                            <i
-                                                                                                                class="fac fac-star"></i>
+                                                                                                            {% empty %}
+                                                                                                            No Rating
+                                                                                                            {% endfor %}
+                                                                                                            {% endwith %}
                                                                                                         </div>
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
-                                                                                        <div class="slick-slide">
-                                                                                            <div
-                                                                                                class="item--inner wow flipInX">
-                                                                                                <div
-                                                                                                    class="item--description">
-                                                                                                    I love
-                                                                                                    Consultio!
-                                                                                                    It really
-                                                                                                    looks more
-                                                                                                    original
-                                                                                                    than many
-                                                                                                    others.Support
-                                                                                                    deserves 7
-                                                                                                    stars but,
-                                                                                                    unfortunately,
-                                                                                                    you do not
-                                                                                                    have that
-                                                                                                    option. I
-                                                                                                    really
-                                                                                                    suggest you
-                                                                                                    to work with
-                                                                                                    them.</div>
-                                                                                                <div
-                                                                                                    class="item--holder">
-                                                                                                    <div
-                                                                                                        class="item--image">
-                                                                                                        <img width="109"
-                                                                                                            height="109"
-                                                                                                            alt="testimonial-05"
-                                                                                                            title="testimonial-05"
-                                                                                                            data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/11/testimonial-05.jpg"
-                                                                                                            class="lazyload"
-                                                                                                            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
-                                                                                                    </div>
-                                                                                                    <div
-                                                                                                        class="item--meta">
-                                                                                                        <h3
-                                                                                                            class="item--title">
-                                                                                                            Phillip
-                                                                                                            Macintyre
-                                                                                                        </h3>
-                                                                                                        <div
-                                                                                                            class="item--position">
-                                                                                                            CEO
-                                                                                                            of
-                                                                                                            Blue
-                                                                                                            Illusion
-                                                                                                        </div>
-                                                                                                        <div
-                                                                                                            class="item-rating">
-                                                                                                            <i
-                                                                                                                class="fac fac-star"></i>
-                                                                                                            <i
-                                                                                                                class="fac fac-star"></i>
-                                                                                                            <i
-                                                                                                                class="fac fac-star"></i>
-                                                                                                            <i
-                                                                                                                class="fac fac-star"></i>
-                                                                                                            <i
-                                                                                                                class="fac fac-star"></i>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="slick-slide">
-                                                                                            <div
-                                                                                                class="item--inner wow flipInX">
-                                                                                                <div
-                                                                                                    class="item--description">
-                                                                                                    Great,
-                                                                                                    versatile
-                                                                                                    theme with
-                                                                                                    lots of
-                                                                                                    customisability.
-                                                                                                    But - above
-                                                                                                    all that the
-                                                                                                    customer
-                                                                                                    support is
-                                                                                                    amazing,
-                                                                                                    useful and
-                                                                                                    quick! I
-                                                                                                    must
-                                                                                                    recommand
-                                                                                                    them.</div>
-                                                                                                <div
-                                                                                                    class="item--holder">
-                                                                                                    <div
-                                                                                                        class="item--image">
-                                                                                                        <img width="100"
-                                                                                                            height="100"
-                                                                                                            alt="team-01"
-                                                                                                            title="team-01"
-                                                                                                            data-src="{% static 'home\styles\assets\wp-content\uploads\2019\12\team-01.jpg' %}"
-                                                                                                            class="lazyload"
-                                                                                                            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
-                                                                                                    </div>
-                                                                                                    <div
-                                                                                                        class="item--meta">
-                                                                                                        <h3
-                                                                                                            class="item--title">
-                                                                                                            Amy
-                                                                                                            Harrison
-                                                                                                        </h3>
-                                                                                                        <div
-                                                                                                            class="item--position">
-                                                                                                            Contiki
-                                                                                                            Holidays
-                                                                                                        </div>
-                                                                                                        <div
-                                                                                                            class="item-rating">
-                                                                                                            <i
-                                                                                                                class="fac fac-star"></i>
-                                                                                                            <i
-                                                                                                                class="fac fac-star"></i>
-                                                                                                            <i
-                                                                                                                class="fac fac-star"></i>
-                                                                                                            <i
-                                                                                                                class="fac fac-star"></i>
-                                                                                                            <i
-                                                                                                                class="fac fac-star"></i>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="slick-slide">
-                                                                                            <div
-                                                                                                class="item--inner wow flipInX">
-                                                                                                <div
-                                                                                                    class="item--description">
-                                                                                                    I asked for
-                                                                                                    an extra
-                                                                                                    customization
-                                                                                                    in Process
-                                                                                                    section and
-                                                                                                    the author
-                                                                                                    made special
-                                                                                                    amendments
-                                                                                                    in the theme
-                                                                                                    live on my
-                                                                                                    website.
-                                                                                                    Customer
-                                                                                                    support is
-                                                                                                    amazing
-                                                                                                    really
-                                                                                                    24/24.</div>
-                                                                                                <div
-                                                                                                    class="item--holder">
-                                                                                                    <div
-                                                                                                        class="item--image">
-                                                                                                        <img width="109"
-                                                                                                            height="109"
-                                                                                                            alt="testimonial-06"
-                                                                                                            title="testimonial-06"
-                                                                                                            data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/11/testimonial-06.jpg"
-                                                                                                            class="lazyload"
-                                                                                                            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
-                                                                                                    </div>
-                                                                                                    <div
-                                                                                                        class="item--meta">
-                                                                                                        <h3
-                                                                                                            class="item--title">
-                                                                                                            Maria
-                                                                                                            Silverii
-                                                                                                        </h3>
-                                                                                                        <div
-                                                                                                            class="item--position">
-                                                                                                            CEO
-                                                                                                            of
-                                                                                                            Blue
-                                                                                                            Illusion
-                                                                                                        </div>
-                                                                                                        <div
-                                                                                                            class="item-rating">
-                                                                                                            <i
-                                                                                                                class="fac fac-star"></i>
-                                                                                                            <i
-                                                                                                                class="fac fac-star"></i>
-                                                                                                            <i
-                                                                                                                class="fac fac-star"></i>
-                                                                                                            <i
-                                                                                                                class="fac fac-star"></i>
-                                                                                                            <i
-                                                                                                                class="fac fac-star"></i>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="slick-slide">
-                                                                                            <div
-                                                                                                class="item--inner wow flipInX">
-                                                                                                <div
-                                                                                                    class="item--description">
-                                                                                                    Great,
-                                                                                                    versatile
-                                                                                                    theme with
-                                                                                                    lots of
-                                                                                                    customisability.
-                                                                                                    But - above
-                                                                                                    all that the
-                                                                                                    customer
-                                                                                                    support is
-                                                                                                    amazing,
-                                                                                                    useful and
-                                                                                                    quick! I
-                                                                                                    must
-                                                                                                    recommand
-                                                                                                    them.</div>
-                                                                                                <div
-                                                                                                    class="item--holder">
-                                                                                                    <div
-                                                                                                        class="item--image">
-                                                                                                        <img width="122"
-                                                                                                            height="122"
-                                                                                                            alt="home-author-01"
-                                                                                                            title="home-author-01"
-                                                                                                            data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/12/home-author-01-122x122.jpg"
-                                                                                                            class="lazyload"
-                                                                                                            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
-                                                                                                    </div>
-                                                                                                    <div
-                                                                                                        class="item--meta">
-                                                                                                        <h3
-                                                                                                            class="item--title">
-                                                                                                            Amy
-                                                                                                            Harrison
-                                                                                                        </h3>
-                                                                                                        <div
-                                                                                                            class="item--position">
-                                                                                                            Contiki
-                                                                                                            Holidays
-                                                                                                        </div>
-                                                                                                        <div
-                                                                                                            class="item-rating">
-                                                                                                            <i
-                                                                                                                class="fac fac-star"></i>
-                                                                                                            <i
-                                                                                                                class="fac fac-star"></i>
-                                                                                                            <i
-                                                                                                                class="fac fac-star"></i>
-                                                                                                            <i
-                                                                                                                class="fac fac-star"></i>
-                                                                                                            <i
-                                                                                                                class="fac fac-star"></i>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="slick-slide">
-                                                                                            <div
-                                                                                                class="item--inner wow flipInX">
-                                                                                                <div
-                                                                                                    class="item--description">
-                                                                                                    I love
-                                                                                                    Consultio!
-                                                                                                    It really
-                                                                                                    looks more
-                                                                                                    original
-                                                                                                    than many
-                                                                                                    others.Support
-                                                                                                    deserves 7
-                                                                                                    stars but,
-                                                                                                    unfortunately,
-                                                                                                    you do not
-                                                                                                    have that
-                                                                                                    option. I
-                                                                                                    really
-                                                                                                    suggest you
-                                                                                                    to work with
-                                                                                                    them.</div>
-                                                                                                <div
-                                                                                                    class="item--holder">
-                                                                                                    <div
-                                                                                                        class="item--image">
-                                                                                                        <img width="122"
-                                                                                                            height="122"
-                                                                                                            alt="home-author-02"
-                                                                                                            title="home-author-02"
-                                                                                                            data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/12/home-author-02-122x122.jpg"
-                                                                                                            class="lazyload"
-                                                                                                            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
-                                                                                                    </div>
-                                                                                                    <div
-                                                                                                        class="item--meta">
-                                                                                                        <h3
-                                                                                                            class="item--title">
-                                                                                                            Phillip
-                                                                                                            Macintyre
-                                                                                                        </h3>
-                                                                                                        <div
-                                                                                                            class="item--position">
-                                                                                                            CEO
-                                                                                                            of
-                                                                                                            Blue
-                                                                                                            Illusion
-                                                                                                        </div>
-                                                                                                        <div
-                                                                                                            class="item-rating">
-                                                                                                            <i
-                                                                                                                class="fac fac-star"></i>
-                                                                                                            <i
-                                                                                                                class="fac fac-star"></i>
-                                                                                                            <i
-                                                                                                                class="fac fac-star"></i>
-                                                                                                            <i
-                                                                                                                class="fac fac-star"></i>
-                                                                                                            <i
-                                                                                                                class="fac fac-star"></i>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
+                                                                                        {% empty %}
+                                                                                        No Testimonial Data
+                                                                                        {% endfor %}
+
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
