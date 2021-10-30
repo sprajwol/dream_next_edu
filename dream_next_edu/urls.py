@@ -28,6 +28,7 @@ urlpatterns = [
     path('events/', include('events.urls')),
     path('test-preparation/', include('test_prep.urls')),
     path('study-abroad/', include('study_abroad.urls')),
+    path('latest-news/', include('latestnews.urls')),
 
     path('summernote/', include('django_summernote.urls')),
 ]

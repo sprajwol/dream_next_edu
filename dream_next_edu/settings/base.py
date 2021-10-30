@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'events.apps.EventsConfig',
     'study_abroad.apps.StudyAbroadConfig',
     'test_prep.apps.TestPrepConfig',
+    'latestnews.apps.LatestnewsConfig',
 ]
 
 MIDDLEWARE = [

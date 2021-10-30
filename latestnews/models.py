@@ -5,20 +5,20 @@ from django.utils.text import slugify
 # Create your models here.
 
 
-def get_country_main_image_uploadpath(instance, filename):
+def get_news_main_image_uploadpath(instance, filename):
     ext = filename.split('.')[-1]
     text = [
         character for character in instance.name if character.isalnum()]
     text = "".join(text)
 
-    return f'uploads/study_abroad/countries/{text}/{text}_image.{ext}'
+    return f'uploads/test_prep/courses/{text}/{text}_image.{ext}'
 
 
-class Country(models.Model):
+class News(models.Model):
     name = models.CharField(max_length=255)
     slug = models.SlugField(max_length=255, unique=True, blank=True, null=True)
     main_image = models.ImageField(
-        upload_to=get_country_main_image_uploadpath)
+        upload_to=get_news_main_image_uploadpath)
     summary = models.TextField()
     description = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
@@ -31,7 +31,7 @@ class Country(models.Model):
         slug = slugify(self.title)
         unique_slug = slug
         num = 1
-        while Country.objects.filter(slug=unique_slug).exists():
+        while News.objects.filter(slug=unique_slug).exists():
             unique_slug = '{}-{}'.format(slug, num)
             num += 1
         return unique_slug
@@ -43,4 +43,4 @@ class Country(models.Model):
         super().save(*args, **kwargs)
 
     def get_absolute_url(self):
-        return reverse('single_country', args=[str(self.slug)])
+        return reverse('test_prep_detail', args=[str(self.slug)])

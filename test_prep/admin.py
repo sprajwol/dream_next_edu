@@ -1,13 +1,14 @@
 from django.contrib import admin
 from django.template.loader import get_template
 from django.utils.translation import gettext as _
+from django_summernote.admin import SummernoteModelAdmin
 
 from test_prep.models import Course
 # Register your models here.
 
 
-class CourseAdmin(admin.ModelAdmin):
-    # summernote_fields = ('description',)
+class CourseAdmin(SummernoteModelAdmin):
+    summernote_fields = ('description',)
 
     list_display = ('name', 'id',)
     prepopulated_fields = {'slug': ('name',)}

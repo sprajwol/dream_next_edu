@@ -3,17 +3,17 @@ from django.template.loader import get_template
 from django.utils.translation import gettext as _
 from django_summernote.admin import SummernoteModelAdmin
 
-from study_abroad.models import Country
+from latestnews.models import News
 # Register your models here.
 
 
-class CountryAdmin(SummernoteModelAdmin):
+class NewsAdmin(SummernoteModelAdmin):
     summernote_fields = ('description',)
 
     list_display = ('name', 'id',)
     prepopulated_fields = {'slug': ('name',)}
     fields = ('name', 'slug', 'main_image',
-              'image_thumb', 'summary', 'description')
+              'image_thumb')
 
     readonly_fields = ("image_thumb",)
 
@@ -25,4 +25,4 @@ class CountryAdmin(SummernoteModelAdmin):
     image_thumb.short_description = _("Main Image Preview")
 
 
-admin.site.register(Country, CountryAdmin)
+admin.site.register(News, NewsAdmin)
