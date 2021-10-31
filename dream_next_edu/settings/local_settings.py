@@ -18,6 +18,16 @@ DATABASES = {
     }
 }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'dreamnext_db',
+#         'USER': 'dreamnext_db_user',
+#         'PASSWORD': 'havel@52',
+#         'HOST': 'localhost',
+#         'PORT': '',
+#     }
+# }
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
