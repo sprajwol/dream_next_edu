@@ -19,12 +19,12 @@ Single nEWs | Dream Next Education Foundation Pvt. Ltd.
     <div class="container">
         <div class="page-title-inner">
             <div class="page-title-holder">
-                <h1 class="page-title"> object.name </h1>
+                <h1 class="page-title">{{ object.name }}</h1>
             </div>
             <ul class="ct-breadcrumb">
                 <li><a class="breadcrumb-entry" href="{% url 'home' %}">Home</a></li>
                 <li><a class="breadcrumb-entry" href="{% url 'latestnews' %}">Latest News</a></li>
-                <li><span class="breadcrumb-entry"> object.name </span></li>
+                <li><span class="breadcrumb-entry">{{ object.name }}</span></li>
 
             </ul>
         </div>
@@ -51,11 +51,15 @@ Single nEWs | Dream Next Education Foundation Pvt. Ltd.
                                 </div>
                                 <div class="entry-body">
                                     <ul class="entry-meta">
-                                        <li class="item-date"><i class="fac fac-calendar-alt"></i>5 Nov, 2019
+                                        <li class="item-date">
+                                            <i class="fac fac-calendar-alt"></i>5 Nov, 2019
                                         </li>
-                                        <li class="item-author"> <i class="fac fac-user"></i><a
-                                                href="../author/admin/index.html" title="Posts by Rinnah"
-                                                rel="author">Rinnah</a></li>
+                                        <li class="item-author">
+                                            <i class="fac fac-user"></i>
+                                            <a href="../author/admin/index.html" title="Posts by Rinnah"
+                                                rel="author">Rinnah
+                                            </a>
+                                        </li>
                                     </ul>
                                     <div class="entry-content clearfix">
                                         <p>It is a long established fact that a reader will be distracted by the
@@ -155,89 +159,7 @@ Single nEWs | Dream Next Education Foundation Pvt. Ltd.
                                 </div><!-- .nav-links -->
                             </div>
                         </article><!-- #post -->
-                        <div id="comments" class="comments-area">
-                            <div class="comment-list-wrap">
-                                <h2 class="comments-title"> 2 Comments</h2><!-- .comments-title -->
-                                <ul class="comment-list">
-                                    <li class="comment byuser comment-author-admin2 even thread-even depth-1"
-                                        id="comment-2">
-                                        <div id="div-comment-2" class="comment-body">
-                                            <div class="comment-inner"> <img data-del="avatar" alt='' height='90'
-                                                    width='90'
-                                                    data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/11/author-01.jpg"
-                                                    class="avatar pp-user-avatar avatar-90 photo  lazyload"
-                                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
-                                                <div class="comment-content">
-                                                    <h4 class="comment-title"> Riva Collins</h4>
-                                                    <div class="comment-meta"> <span class="comment-date"> 9
-                                                            Nov, 2019 - 2:07 am </span></div>
-                                                    <div class="comment-text">
-                                                        <p>It’s no secret that the digital industry is booming.
-                                                            From exciting startups to need ghor<br /> global and
-                                                            brands, companies are reaching out.</p>
-                                                    </div>
-                                                    <div class="comment-reply"> <a rel='nofollow'
-                                                            class='comment-reply-link'
-                                                            href='index0e22.html?replytocom=2#respond'
-                                                            data-commentid="2" data-postid="166"
-                                                            data-belowelement="div-comment-2"
-                                                            data-respondelement="respond"
-                                                            data-replyto="Reply to Riva Collins"
-                                                            aria-label='Reply to Riva Collins'>Reply</a></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li><!-- #comment-## -->
-                                    <li class="comment byuser comment-author-admin3 odd alt thread-odd thread-alt depth-1"
-                                        id="comment-13">
-                                        <div id="div-comment-13" class="comment-body">
-                                            <div class="comment-inner"> <img data-del="avatar" alt='' height='90'
-                                                    width='90'
-                                                    data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/11/author-02.jpg"
-                                                    class="avatar pp-user-avatar avatar-90 photo  lazyload"
-                                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
-                                                <div class="comment-content">
-                                                    <h4 class="comment-title"> Obila Doe</h4>
-                                                    <div class="comment-meta"> <span class="comment-date"> 9
-                                                            Nov, 2019 - 2:09 am </span></div>
-                                                    <div class="comment-text">
-                                                        <p>It’s no secret that the digital industry is booming.
-                                                            From exciting startups to need ghor hmiu<br />
-                                                            global and brands, companies are reaching out.</p>
-                                                    </div>
-                                                    <div class="comment-reply"> <a rel='nofollow'
-                                                            class='comment-reply-link'
-                                                            href='indexfa40.html?replytocom=13#respond'
-                                                            data-commentid="13" data-postid="166"
-                                                            data-belowelement="div-comment-13"
-                                                            data-respondelement="respond"
-                                                            data-replyto="Reply to Obila Doe"
-                                                            aria-label='Reply to Obila Doe'>Reply</a></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li><!-- #comment-## -->
-                                </ul><!-- .comment-list -->
-                            </div>
-                            <div id="respond" class="comment-respond">
-                                <h3 id="reply-title" class="comment-reply-title">Leave A Comment <small><a
-                                            rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond"
-                                            style="display:none;">Cancel
-                                            Comment</a></small></h3>
-                                <form action="https://demo.casethemes.net/consultio-immigration/wp-comments-post.php"
-                                    method="post" id="commentform" class="comment-form" novalidate>
-                                    <div class="comment-form-comment"><textarea id="comment" name="comment" cols="45"
-                                            rows="8" placeholder="Comment*" aria-required="true"></textarea></div>
 
-
-                                    <p class="form-submit"><input name="submit" type="submit" id="submit" class="submit"
-                                            value="Post Comment" /> <input type='hidden' name='comment_post_ID'
-                                            value='166' id='comment_post_ID' /> <input type='hidden'
-                                            name='comment_parent' id='comment_parent' value='0' />
-                                    </p>
-                                </form>
-                            </div><!-- #respond -->
-                        </div><!-- #comments -->
                     </main><!-- #main -->
                 </div><!-- #primary -->
                 <aside id="secondary"
@@ -253,11 +175,6 @@ Single nEWs | Dream Next Education Foundation Pvt. Ltd.
                                 </form>
                             </div>
                         </section>
-
-
-
-
-
 
                     </div>
                 </aside>

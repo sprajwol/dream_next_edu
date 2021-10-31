@@ -7,6 +7,8 @@ from latestnews import views as latest_news_views
 urlpatterns = [
     path('', latest_news_views.LatestNewsView.as_view(),
          name='latest_news'),
+    path('<slug:slug>', latest_news_views.LatestNewsDetailView.as_view(),
+         name='latest_news_detail')
 ]
 
 if settings.DEBUG:
