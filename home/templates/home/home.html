@@ -54,12 +54,14 @@ Dream Next Education Foundation Pvt. Ltd.
                                                                                     <rs-module id="rev_slider_1_1"
                                                                                         data-version="6.2.22">
                                                                                         <rs-slides>
-                                                                                            <rs-slide data-key="rs-1"
-                                                                                                data-title="Slide"
-                                                                                                data-thumb="//demo.casethemes.net/consultio-immigration/wp-content/uploads/2020/10/bg-slider-01-50x100.jpg"
+                                                                                            {% for slide in hero_sliders %}
+                                                                                            <rs-slide
+                                                                                                data-key="rs-{{ forloop.counter }}"
+                                                                                                data-title="{{ slide.main_text }}"
+                                                                                                data-thumb="/media/{{ slide.image }}"
                                                                                                 data-anim="ei:d;eo:d;s:1000;r:0;t:fade;sl:0;">
-                                                                                                <img src="{% static 'home\styles\assets\wp-content\uploads\2020\10\bg-slider-01.jpg' %}"
-                                                                                                    title="bg-slider-01"
+                                                                                                <img src="/media/{{ slide.image }}"
+                                                                                                    title="{{ slide.main_text }}"
                                                                                                     width="1920"
                                                                                                     height="710"
                                                                                                     data-panzoom="d:8000ms;ss:115%;se:100;"
@@ -92,11 +94,7 @@ Dream Next Education Foundation Pvt. Ltd.
                                                                                                         data-frame_1_mask="u:t;"
                                                                                                         data-frame_999="o:0;st:w;sR:7900;"
                                                                                                         style="z-index:8;font-family:Poppins;">
-                                                                                                        Helping
-                                                                                                        immigrants<br />
-                                                                                                        future
-                                                                                                        in
-                                                                                                        abroad
+                                                                                                        {{ slide.main_text }}
                                                                                                     </rs-layer>
                                                                                                     <!--  -->
                                                                                                     <rs-layer
@@ -115,22 +113,12 @@ Dream Next Education Foundation Pvt. Ltd.
                                                                                                         data-frame_1_mask="u:t;"
                                                                                                         data-frame_999="o:0;st:w;sR:7600;"
                                                                                                         style="z-index:9;font-family:Nunito Sans;">
-                                                                                                        If
-                                                                                                        you’re a
-                                                                                                        newcomer
-                                                                                                        to
-                                                                                                        Canada,
-                                                                                                        free
-                                                                                                        immigrant
-                                                                                                        services
-                                                                                                        including
-                                                                                                        settlement
-                                                                                                        support.
+                                                                                                        {{ slide.sub_text }}
                                                                                                     </rs-layer>
                                                                                                     <!--  --><a
                                                                                                         id="slider-1-slide-1-layer-3"
                                                                                                         class="rs-layer"
-                                                                                                        href="../contact/index.html"
+                                                                                                        href="{% url 'contact' %}"
                                                                                                         target="_self"
                                                                                                         rel="nofollow"
                                                                                                         data-type="text"
@@ -143,11 +131,13 @@ Dream Next Education Foundation Pvt. Ltd.
                                                                                                         data-frame_1="st:1400;sp:1200;"
                                                                                                         data-frame_1_mask="u:t;"
                                                                                                         data-frame_999="o:0;st:w;sR:7300;"
-                                                                                                        style="z-index:10;font-family:Roboto;"><span
-                                                                                                            class="btn btn-icon-fixed-right">Book
-                                                                                                            an
+                                                                                                        style="z-index:10;font-family:Roboto;">
+                                                                                                        <span
+                                                                                                            class="btn btn-icon-fixed-right">
+                                                                                                            Book an
                                                                                                             appionment<i
-                                                                                                                class="fac fac-th-large"></i></span>
+                                                                                                                class="fac fac-th-large"></i>
+                                                                                                        </span>
                                                                                                     </a>
                                                                                                     <!--
 -->
@@ -155,203 +145,9 @@ Dream Next Education Foundation Pvt. Ltd.
                                                                                                 <!--
 -->
                                                                                             </rs-slide>
-                                                                                            <rs-slide data-key="rs-2"
-                                                                                                data-title="Slide"
-                                                                                                data-thumb="//demo.casethemes.net/consultio-immigration/wp-content/uploads/2020/10/bg-slider-02-50x100.jpg"
-                                                                                                data-anim="ei:d;eo:d;s:1000;r:0;t:fade;sl:0;">
-                                                                                                <img src="{% static 'home\styles\assets\wp-content\uploads\2020\10\bg-slider-02.jpg' %}"
-                                                                                                    title="bg-slider-02"
-                                                                                                    width="1920"
-                                                                                                    height="710"
-                                                                                                    data-panzoom="d:8000ms;ss:110%;se:100;"
-                                                                                                    class="rev-slidebg"
-                                                                                                    data-no-retina>
-                                                                                                <!--
--->
-                                                                                                <rs-group
-                                                                                                    id="slider-1-slide-2-layer-0"
-                                                                                                    data-type="group"
-                                                                                                    data-xy="x:r;xo:30px,30px,30px,24px;y:m;yo:-20px,-20px,0,0;"
-                                                                                                    data-text="w:normal;s:20,16,12,7;l:0,20,15,9;"
-                                                                                                    data-dim="w:800px,800px,800px,400px;h:310px,310px,250px,240px;"
-                                                                                                    data-rsp_bd="off"
-                                                                                                    data-frame_0="o:1;"
-                                                                                                    data-frame_999="o:0;st:w;sR:8700;sA:9000;"
-                                                                                                    style="z-index:11;">
-                                                                                                    <!--
--->
-                                                                                                    <rs-layer
-                                                                                                        id="slider-1-slide-2-layer-1"
-                                                                                                        data-type="text"
-                                                                                                        data-xy="x:r;yo:-13px,-13px,-13px,-12px;"
-                                                                                                        data-text="w:normal;s:64,64,40,28;l:70,70,50,36;fw:700;a:right;"
-                                                                                                        data-rsp_o="off"
-                                                                                                        data-rsp_bd="off"
-                                                                                                        data-frame_0="x:100%;"
-                                                                                                        data-frame_0_mask="u:t;"
-                                                                                                        data-frame_1="st:800;sp:1200;"
-                                                                                                        data-frame_1_mask="u:t;"
-                                                                                                        data-frame_999="o:0;st:w;sR:7900;"
-                                                                                                        style="z-index:8;font-family:Poppins;">
-                                                                                                        Taking
-                                                                                                        courses
-                                                                                                        to<br />
-                                                                                                        make
-                                                                                                        easier
-                                                                                                    </rs-layer>
-                                                                                                    <!--  -->
-                                                                                                    <rs-layer
-                                                                                                        id="slider-1-slide-2-layer-2"
-                                                                                                        data-type="text"
-                                                                                                        data-xy="x:r;yo:150px,150px,104px,76px;"
-                                                                                                        data-text="w:normal;s:18,18,18,16;l:29,29,29,26;a:right;"
-                                                                                                        data-dim="w:430px,430px,430px,300px;"
-                                                                                                        data-rsp_o="off"
-                                                                                                        data-rsp_bd="off"
-                                                                                                        data-padding="r:20;"
-                                                                                                        data-border="bos:solid;boc:#ff0040;bow:0,5px,0,0px;"
-                                                                                                        data-frame_0="x:100%;"
-                                                                                                        data-frame_0_mask="u:t;"
-                                                                                                        data-frame_1="st:1100;sp:1200;"
-                                                                                                        data-frame_1_mask="u:t;"
-                                                                                                        data-frame_999="o:0;st:w;sR:7600;"
-                                                                                                        style="z-index:9;font-family:Nunito Sans;">
-                                                                                                        If
-                                                                                                        you’re a
-                                                                                                        newcomer
-                                                                                                        to
-                                                                                                        Canada,
-                                                                                                        free
-                                                                                                        immigrant
-                                                                                                        services
-                                                                                                        including
-                                                                                                        settlement
-                                                                                                        support.
-                                                                                                    </rs-layer>
-                                                                                                    <!--  --><a
-                                                                                                        id="slider-1-slide-2-layer-3"
-                                                                                                        class="rs-layer"
-                                                                                                        href="../contact/index.html"
-                                                                                                        target="_self"
-                                                                                                        rel="nofollow"
-                                                                                                        data-type="text"
-                                                                                                        data-xy="x:r;y:b;"
-                                                                                                        data-text="w:normal;s:20,20,16,16;l:25,25,16,16;"
-                                                                                                        data-rsp_o="off"
-                                                                                                        data-rsp_bd="off"
-                                                                                                        data-frame_0="y:100%;"
-                                                                                                        data-frame_0_mask="u:t;"
-                                                                                                        data-frame_1="st:1400;sp:1200;"
-                                                                                                        data-frame_1_mask="u:t;"
-                                                                                                        data-frame_999="o:0;st:w;sR:7300;"
-                                                                                                        style="z-index:10;font-family:Roboto;"><span
-                                                                                                            class="btn btn-icon-fixed-right">Book
-                                                                                                            an
-                                                                                                            appionment<i
-                                                                                                                class="fac fac-th-large"></i></span>
-                                                                                                    </a>
-                                                                                                    <!--
--->
-                                                                                                </rs-group>
-                                                                                                <!--
--->
-                                                                                            </rs-slide>
-                                                                                            <rs-slide data-key="rs-3"
-                                                                                                data-title="Slide"
-                                                                                                data-thumb="//demo.casethemes.net/consultio-immigration/wp-content/uploads/2020/10/bg-slider-03-50x100.jpg"
-                                                                                                data-anim="ei:d;eo:d;s:1000;r:0;t:fade;sl:0;">
-                                                                                                <img src="{% static 'home\styles\assets\wp-content\uploads\2020\10\bg-slider-03.jpg' %}"
-                                                                                                    title="bg-slider-03"
-                                                                                                    width="1920"
-                                                                                                    height="710"
-                                                                                                    data-panzoom="d:8000ms;ss:110%;se:100;"
-                                                                                                    class="rev-slidebg"
-                                                                                                    data-no-retina>
-                                                                                                <!--
--->
-                                                                                                <rs-group
-                                                                                                    id="slider-1-slide-3-layer-0"
-                                                                                                    data-type="group"
-                                                                                                    data-xy="x:c;xo:0,0,0,24px;y:m;yo:-20px,-20px,0,0;"
-                                                                                                    data-text="w:normal;s:20,16,12,7;l:0,20,15,9;"
-                                                                                                    data-dim="w:1000px,1000px,1000px,400px;h:310px,310px,250px,240px;"
-                                                                                                    data-rsp_bd="off"
-                                                                                                    data-frame_0="o:1;"
-                                                                                                    data-frame_999="o:0;st:w;sR:8700;sA:9000;"
-                                                                                                    style="z-index:11;">
-                                                                                                    <!--
--->
-                                                                                                    <rs-layer
-                                                                                                        id="slider-1-slide-3-layer-1"
-                                                                                                        data-type="text"
-                                                                                                        data-xy="x:c;yo:-13px,-13px,-13px,-12px;"
-                                                                                                        data-text="w:normal;s:64,64,40,24;l:70,70,50,36;fw:700;a:center;"
-                                                                                                        data-rsp_o="off"
-                                                                                                        data-rsp_bd="off"
-                                                                                                        data-frame_0="y:50;"
-                                                                                                        data-frame_1="st:800;sp:1000;"
-                                                                                                        data-frame_999="o:0;st:w;sR:7900;"
-                                                                                                        style="z-index:8;font-family:Poppins;">
-                                                                                                        We
-                                                                                                        provide
-                                                                                                        a
-                                                                                                        supportive<br />
-                                                                                                        environment
-                                                                                                        to
-                                                                                                        Canada
-                                                                                                    </rs-layer>
-                                                                                                    <!--  -->
-                                                                                                    <rs-layer
-                                                                                                        id="slider-1-slide-3-layer-2"
-                                                                                                        data-type="text"
-                                                                                                        data-xy="x:c;yo:150px,150px,104px,76px;"
-                                                                                                        data-text="w:normal;s:18,18,18,16;l:29,29,29,26;a:center;"
-                                                                                                        data-dim="w:430px,430px,430px,260px;"
-                                                                                                        data-rsp_o="off"
-                                                                                                        data-rsp_bd="off"
-                                                                                                        data-border="bos:solid;boc:#ff0040;bow:0,0,0,0px;"
-                                                                                                        data-frame_0="y:50;"
-                                                                                                        data-frame_1="st:1100;sp:1000;"
-                                                                                                        data-frame_999="o:0;st:w;sR:7600;"
-                                                                                                        style="z-index:9;font-family:Nunito Sans;">
-                                                                                                        If
-                                                                                                        you’re a
-                                                                                                        newcomer
-                                                                                                        to
-                                                                                                        Canada,
-                                                                                                        free
-                                                                                                        immigrant
-                                                                                                        services
-                                                                                                        including
-                                                                                                        settlement
-                                                                                                        support.
-                                                                                                    </rs-layer>
-                                                                                                    <!--  --><a
-                                                                                                        id="slider-1-slide-3-layer-3"
-                                                                                                        class="rs-layer"
-                                                                                                        href="../contact/index.html"
-                                                                                                        target="_self"
-                                                                                                        rel="nofollow"
-                                                                                                        data-type="text"
-                                                                                                        data-xy="x:c;y:b;"
-                                                                                                        data-text="w:normal;s:20,20,16,16;l:25,25,16,16;"
-                                                                                                        data-rsp_o="off"
-                                                                                                        data-rsp_bd="off"
-                                                                                                        data-frame_0="y:50;"
-                                                                                                        data-frame_1="st:1400;sp:1000;"
-                                                                                                        data-frame_999="o:0;st:w;sR:7300;"
-                                                                                                        style="z-index:10;font-family:Roboto;"><span
-                                                                                                            class="btn btn-icon-fixed-right">Book
-                                                                                                            an
-                                                                                                            appionment<i
-                                                                                                                class="fac fac-th-large"></i></span>
-                                                                                                    </a>
-                                                                                                    <!--
--->
-                                                                                                </rs-group>
-                                                                                                <!--
--->
-                                                                                            </rs-slide>
+                                                                                            {% empty %}
+                                                                                            No slider data
+                                                                                            {% endfor %}
                                                                                         </rs-slides>
                                                                                     </rs-module>
                                                                                     <script type="text/javascript">
