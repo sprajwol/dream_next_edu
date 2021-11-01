@@ -13,7 +13,7 @@ class CourseAdmin(SummernoteModelAdmin):
     list_display = ('name', 'id',)
     prepopulated_fields = {'slug': ('name',)}
     fields = ('name', 'slug', 'main_image',
-              'image_thumb')
+              'image_thumb', 'summary', 'description')
 
     readonly_fields = ("image_thumb",)
 

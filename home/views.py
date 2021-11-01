@@ -1,9 +1,11 @@
+from django.shortcuts import render
 from django.views.generic import TemplateView
 
 from home.models import HeroSlider
 from about.models import Testimonial
 from events.models import Event
 from test_prep.models import Course
+from contact.models import Contact
 # Create your views here.
 
 
@@ -32,3 +34,23 @@ class HomeView(TemplateView):
 
         context['home_page'] = 'active'
         return context
+
+    def post(self, request):
+        full_name = request.POST["full_name"]
+        number = request.POST["contact_number"]
+        email = request.POST["email"]
+        # print("aaa", request.POST)
+        # print("aaa", request.POST["your-service"])
+        about = request.POST["your-service"]
+        message = request.POST["message"]
+        # print("lavis")
+
+        new_contact = Contact()
+        new_contact.full_name = full_name
+        new_contact.email = email
+        new_contact.contact = number
+        new_contact.about = about
+        new_contact.message = message
+        new_contact.save()
+
+        return render(request, self.template_name)

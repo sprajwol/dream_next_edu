@@ -218,113 +218,114 @@ Contact | Dream Next Education Foundation Pvt. Ltd.
                                                                                                 </p>
                                                                                                 <ul></ul>
                                                                                             </div>
-                                                                                            <form
-                                                                                                action="https://demo.casethemes.net/consultio-immigration/contact/#wpcf7-f91-p24-o1"
-                                                                                                method="post"
-                                                                                                class="wpcf7-form init"
-                                                                                                novalidate="novalidate"
-                                                                                                data-status="init">
-                                                                                                <div
-                                                                                                    style="display: none;">
-                                                                                                    <input type="hidden"
-                                                                                                        name="_wpcf7"
-                                                                                                        value="91" />
-                                                                                                    <input type="hidden"
-                                                                                                        name="_wpcf7_version"
-                                                                                                        value="5.4.1" />
-                                                                                                    <input type="hidden"
-                                                                                                        name="_wpcf7_locale"
-                                                                                                        value="en_US" />
-                                                                                                    <input type="hidden"
-                                                                                                        name="_wpcf7_unit_tag"
-                                                                                                        value="wpcf7-f91-p24-o1" />
-                                                                                                    <input type="hidden"
-                                                                                                        name="_wpcf7_container_post"
-                                                                                                        value="24" />
-                                                                                                    <input type="hidden"
-                                                                                                        name="_wpcf7_posted_data_hash"
-                                                                                                        value="" />
+                                                                                            <form method="POST"
+                                                                                                class="wpcf7-form">
+                                                                                                {% csrf_token %}
+                                                                                                <div class="row">
+                                                                                                    <div
+                                                                                                        class="input-filled col-lg-6 col-md-6">
+                                                                                                        <span
+                                                                                                            class="wpcf7-form-control-wrap your-name">
+                                                                                                            <input
+                                                                                                                type="text"
+                                                                                                                name="full_name"
+                                                                                                                size="40"
+                                                                                                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                                                                                                aria-required="true"
+                                                                                                                aria-invalid="false"
+                                                                                                                placeholder="Your name*" />
+                                                                                                        </span>
+                                                                                                    </div>
+                                                                                                    <div
+                                                                                                        class="input-filled col-lg-6 col-md-6">
+                                                                                                        <span
+                                                                                                            class="wpcf7-form-control-wrap your-name"><input
+                                                                                                                type="text"
+                                                                                                                name="contact_number"
+                                                                                                                size="40"
+                                                                                                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                                                                                                aria-required="true"
+                                                                                                                aria-invalid="false"
+                                                                                                                placeholder="Phone number..." /></span>
+                                                                                                    </div>
                                                                                                 </div>
-                                                                                                <div
-                                                                                                    class="input-filled">
-                                                                                                    <span
-                                                                                                        class="wpcf7-form-control-wrap your-name"><input
-                                                                                                            type="text"
-                                                                                                            name="your-name"
-                                                                                                            value=""
-                                                                                                            size="40"
-                                                                                                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-                                                                                                            aria-required="true"
-                                                                                                            aria-invalid="false"
-                                                                                                            placeholder="Your name*" /></span>
+                                                                                                <div class="row">
+                                                                                                    <div
+                                                                                                        class="input-filled col-12">
+                                                                                                        <span
+                                                                                                            class="wpcf7-form-control-wrap your-name">
+                                                                                                            <input
+                                                                                                                type="email"
+                                                                                                                name="email"
+                                                                                                                value=""
+                                                                                                                size="40"
+                                                                                                                class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
+                                                                                                                aria-required="true"
+                                                                                                                aria-invalid="false"
+                                                                                                                placeholder="Your email*" />
+                                                                                                        </span>
+                                                                                                    </div>
                                                                                                 </div>
-                                                                                                <div
-                                                                                                    class="input-filled">
-                                                                                                    <span
-                                                                                                        class="wpcf7-form-control-wrap your-email"><input
-                                                                                                            type="email"
-                                                                                                            name="your-email"
-                                                                                                            value=""
-                                                                                                            size="40"
-                                                                                                            class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
-                                                                                                            aria-required="true"
-                                                                                                            aria-invalid="false"
-                                                                                                            placeholder="Your mail*" /></span>
+                                                                                                <div class="row">
+                                                                                                    <div
+                                                                                                        class="input-filled col-12">
+                                                                                                        <span
+                                                                                                            class="wpcf7-form-control-wrap your-service">
+                                                                                                            <select
+                                                                                                                name="your-service"
+                                                                                                                class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required"
+                                                                                                                aria-required="true"
+                                                                                                                aria-invalid="false">
+                                                                                                                <option
+                                                                                                                    value="Choose services*"
+                                                                                                                    selected
+                                                                                                                    disabled>
+                                                                                                                    Choose
+                                                                                                                    services*
+                                                                                                                </option>
+                                                                                                                <option
+                                                                                                                    value="consultation">
+                                                                                                                    Consultation
+                                                                                                                </option>
+                                                                                                                <option
+                                                                                                                    value="test-preparation">
+                                                                                                                    Test
+                                                                                                                    preparation
+                                                                                                                </option>
+                                                                                                                <option
+                                                                                                                    value="visa-application">
+                                                                                                                    Visa
+                                                                                                                    Application
+                                                                                                                </option>
+
+                                                                                                            </select></span>
+                                                                                                    </div>
                                                                                                 </div>
-                                                                                                <div
-                                                                                                    class="input-filled">
-                                                                                                    <span
-                                                                                                        class="wpcf7-form-control-wrap your-phone"><input
-                                                                                                            type="text"
-                                                                                                            name="your-phone"
-                                                                                                            value=""
-                                                                                                            size="40"
-                                                                                                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-                                                                                                            aria-required="true"
-                                                                                                            aria-invalid="false"
-                                                                                                            placeholder="Phone*" /></span>
-                                                                                                </div>
-                                                                                                <div
-                                                                                                    class="input-filled">
-                                                                                                    <span
-                                                                                                        class="wpcf7-form-control-wrap your-subject"><select
-                                                                                                            name="your-subject"
-                                                                                                            class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required"
-                                                                                                            aria-required="true"
-                                                                                                            aria-invalid="false">
-                                                                                                            <option
-                                                                                                                value="Subject">
-                                                                                                                Subject
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="Success fullfill">
-                                                                                                                Success
-                                                                                                                fullfill
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="StartUp business">
-                                                                                                                StartUp
-                                                                                                                business
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="Leadership work">
-                                                                                                                Leadership
-                                                                                                                work
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="Business Growth">
-                                                                                                                Business
-                                                                                                                Growth
-                                                                                                            </option>
-                                                                                                        </select></span>
-                                                                                                </div>
-                                                                                                <div
-                                                                                                    class="input-filled">
-                                                                                                    <button
-                                                                                                        type="submit"
-                                                                                                        class="wpcf7-submit btn btn-block"><i
-                                                                                                            class="fac fac-check-circle space-right"></i>Consult
-                                                                                                        today</button>
+                                                                                                <div class="row">
+                                                                                                    <div
+                                                                                                        class="input-filled col-12">
+                                                                                                        <span
+                                                                                                            class="wpcf7-form-control-wrap your-message">
+                                                                                                            <textarea
+                                                                                                                name="message"
+                                                                                                                cols="40"
+                                                                                                                rows="10"
+                                                                                                                class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required"
+                                                                                                                aria-required="true"
+                                                                                                                aria-invalid="false"
+                                                                                                                placeholder="Message..."></textarea>
+                                                                                                        </span>
+                                                                                                    </div>
+                                                                                                    <div
+                                                                                                        class="input-filled col-12">
+                                                                                                        <button
+                                                                                                            type="submit"
+                                                                                                            class="wpcf7-submit btn">
+                                                                                                            <i
+                                                                                                                class="fac fac-paper-plane space-right"></i>
+                                                                                                            Submit
+                                                                                                        </button>
+                                                                                                    </div>
                                                                                                 </div>
                                                                                                 <div class="wpcf7-response-output"
                                                                                                     aria-hidden="true">

@@ -43,4 +43,4 @@ class News(models.Model):
         super().save(*args, **kwargs)
 
     def get_absolute_url(self):
-        return reverse('test_prep_detail', args=[str(self.slug)])
+        return reverse('latest_news_detail', args=[str(self.slug)])

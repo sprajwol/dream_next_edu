@@ -64,7 +64,16 @@ Test Single | Dream Next Education Foundation Pvt. Ltd.
                                                                                         class="menu-menu-courses-container">
                                                                                         <ul id="menu-menu-courses"
                                                                                             class="menu">
-                                                                                            <li id="menu-item-5546"
+                                                                                            {% for course in course_data %}
+                                                                                            <li
+                                                                                                class="menu-item menu-item-type-post_type menu-item-object-courses {% if course.slug == object.slug %} current-menu-item{% endif %}">
+                                                                                                <a
+                                                                                                    href="{{ course.get_absolute_url }}">{{ course.name }}</a>
+                                                                                            </li>
+                                                                                            {% empty %}
+                                                                                            No Course Data
+                                                                                            {% endfor %}
+                                                                                            <!-- <li id="menu-item-5546"
                                                                                                 class="menu-item menu-item-type-post_type menu-item-object-courses menu-item-5546">
                                                                                                 <a
                                                                                                     href="../ielts/index.html">IELTS</a>
@@ -85,7 +94,7 @@ Test Single | Dream Next Education Foundation Pvt. Ltd.
                                                                                                 class="menu-item menu-item-type-post_type menu-item-object-courses current-menu-item menu-item-5549">
                                                                                                 <a href="index.html"
                                                                                                     aria-current="page">TOEFL</a>
-                                                                                            </li>
+                                                                                            </li> -->
                                                                                         </ul>
                                                                                     </div>
                                                                                 </div>
@@ -207,7 +216,8 @@ Test Single | Dream Next Education Foundation Pvt. Ltd.
                                                                 <div
                                                                     class="elementor-column-wrap elementor-element-populated">
                                                                     <div class="elementor-widget-wrap">
-                                                                        <div class="elementor-element elementor-element-21a4ae6 elementor-widget elementor-widget-ct_image"
+                                                                        {{ object.description|safe }}
+                                                                        <!-- <div class="elementor-element elementor-element-21a4ae6 elementor-widget elementor-widget-ct_image"
                                                                             data-id="21a4ae6" data-element_type="widget"
                                                                             data-widget_type="ct_image.default">
                                                                             <div class="elementor-widget-container">
@@ -505,7 +515,7 @@ Test Single | Dream Next Education Foundation Pvt. Ltd.
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                        </div>
+                                                                        </div> -->
                                                                     </div>
                                                                 </div>
                                                             </div>
