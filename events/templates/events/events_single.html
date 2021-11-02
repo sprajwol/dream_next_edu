@@ -11,6 +11,7 @@
 
 {% block cssarea %}
 {% include 'events/single_upper_links.html' %}
+<link rel="stylesheet" href="{% static 'events\styles\custom_css\events.css' %}">
 {% endblock cssarea %}
 
 
@@ -131,12 +132,15 @@
                             <div class="widget-content">
                                 <h2 class="widget-title">Categories</h2>
                                 <ul>
-                                    <li class="cat-item cat-item-1"><a href="../category/business/index.html">Business
-                                            <span class="count right">2 </span></a></li>
-                                    <li class="cat-item cat-item-18"><a href="../category/creative/index.html">Creative
-                                            <span class="count right">2 </span></a></li>
-                                    <li class="cat-item cat-item-19"><a href="../category/strategy/index.html">Strategy
-                                            <span class="count right">2 </span></a></li>
+                                    {% for category in event_category_data %}
+                                    <li class="cat-item cat-item-1">
+                                        <a href="{% url 'events_category' category.slug %}">
+                                            <i class="fas fa-list-alt"></i> {{ category.name }}
+                                        </a>
+                                    </li>
+                                    {% empty %}
+                                    No event category data
+                                    {% endfor %}
                                 </ul>
                             </div>
                         </section>

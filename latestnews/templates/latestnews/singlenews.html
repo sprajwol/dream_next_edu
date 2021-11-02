@@ -11,6 +11,7 @@
 
 {% block cssarea %}
 {% include 'services/visa_upper_links.html' %}
+<link rel="stylesheet" href="{% static 'latestnews\styles\custom_css\latest_news.css' %}">
 {% endblock cssarea %}
 
 
@@ -41,22 +42,21 @@
                         <article id="post-166"
                             class="single-hentry post-166 post type-post status-publish format-standard has-post-thumbnail hentry category-business tag-builder tag-cloud tag-map tag-tower tag-truck">
                             <div class="entry-blog">
-                                <div class="entry-featured"> <img width="501" height="313" alt=""
-                                        data-srcset="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/11/theme-10.jpg 1920w, https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/11/theme-10-600x375.jpg 600w"
-                                        data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/11/theme-10.jpg"
+                                <div class="entry-featured">
+                                    <img width="501" height="313" alt="{{ object.name }}"
+                                        data-srcset="/media/{{ object.main_image }} 1920w, /media/{{ object.main_image }} 600w"
+                                        data-src="/media/{{ object.main_image }}"
                                         data-sizes="(max-width: 501px) 100vw, 501px"
                                         class="attachment-consultio-large size-consultio-large wp-post-image lazyload"
-                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
-                                    <div class="entry-category"><a href="../category/business/index.html"
-                                            rel="tag">Business</a></div>
+                                        src="/media/{{ object.main_image }}" />
+
                                 </div>
                                 <div class="entry-body">
                                     <ul class="entry-meta">
-                                        <li class="item-date"><i class="fac fac-calendar-alt"></i>5 Nov, 2019
+                                        <li class="item-date">
+                                            <i class="fac fac-calendar-alt"></i>{{ object.created_on }}
                                         </li>
-                                        <li class="item-author"> <i class="fac fac-user"></i><a
-                                                href="../author/admin/index.html" title="Posts by Rinnah"
-                                                rel="author">Rinnah</a></li>
+
                                     </ul>
                                     <div class="entry-content clearfix">
                                         {{ object.description|safe }}
@@ -65,15 +65,20 @@
                             </div>
                             <div class="entry-footer">
 
-                                <div class="entry-social"> <label>Share:</label> <a class="fb-social" title="Facebook"
-                                        target="_blank"
-                                        href="http://www.facebook.com/sharer/sharer.php?u=https://demo.casethemes.net/consultio-immigration/how-stay-calm-from-the-first-time/"><i
-                                            class="fab fac-facebook-f"></i></a> <a class="tw-social" title="Twitter"
-                                        target="_blank"
-                                        href="https://twitter.com/intent/tweet?url=https://demo.casethemes.net/consultio-immigration/how-stay-calm-from-the-first-time/&amp;text=How%20Stay%20Calm%20from%20the%20First%20Time."><i
-                                            class="fab fac-twitter"></i></a> </div>
+                                <div class="entry-social">
+                                    <label>Share:</label>
+                                    <a class="fb-social" title="Facebook" target="_blank"
+                                        href="http://www.facebook.com/sharer/sharer.php?u={{ request.get_full_path }}">
+                                        <i class="fab fac-facebook-f"></i>
+                                    </a>
+                                    <a class="tw-social" title="Twitter" target="_blank"
+                                        href="https://twitter.com/intent/tweet?url={{ request.get_full_path }}">
+                                        <i class="fab fac-twitter"></i>
+                                    </a>
+                                </div>
                             </div>
                             {% if object.get_previous_by_created_on %}
+
                             <div class="entry-navigation">
                                 <div class="nav-links">
                                     <div class="nav-item nav-post-prev">

@@ -11,6 +11,7 @@ Events | Dream Next Education Foundation Pvt. Ltd.
 
 {% block cssarea %}
 {% include 'events/upper_links.html' %}
+<link rel="stylesheet" href="{% static 'events\styles\custom_css\events.css' %}">
 {% endblock cssarea %}
 
 
@@ -41,7 +42,7 @@ Events | Dream Next Education Foundation Pvt. Ltd.
                                 class="single-hentry archive post type-post status-publish format-standard has-post-thumbnail hentry category-business tag-builder tag-cloud tag-map tag-tower tag-truck">
                                 <div class="entry-featured">
                                     <a href="{{ event.get_absolute_url}}" style="background-image:
-                                        url(/media/{{ post.main_image }});">
+                                        url('/media/{{ post.main_image }}');">
                                         <img width="1920" height="1200" alt="{{ post.title }}"
                                             data-sizes="(max-width: 1920px) 100vw, 1920px"
                                             class="attachment-full size-full wp-post-image lazyload" />
@@ -57,12 +58,15 @@ Events | Dream Next Education Foundation Pvt. Ltd.
                                             </a></h2>
                                         <ul class="entry-meta">
                                             <li class="item-author">
-                                                <i class="fac fac-user"></i>
-                                                <a href="../author/admin/index.html" title="Posts by {{ post.}}"
-                                                    rel="author">Rinnah</a></li>
+                                                <i class="fas fa-list-alt"></i>
+                                                <a href="../author/admin/index.html"
+                                                    title="Category: {{ post.category }}" rel="category">
+                                                    {{ post.category }}
+                                                </a>
+                                            </li>
                                         </ul>
                                         <div class="entry-excerpt">
-                                            {{ post.summary }}
+                                            {{ post.summary|slice:":150" }}...
                                         </div>
                                         <div class="entry-readmore">
                                             <a href="{{ post.get_absolute_url }}" class="btn-text text-gradient">
@@ -124,68 +128,46 @@ Events | Dream Next Education Foundation Pvt. Ltd.
                         <section id="categories-4" class="widget widget_categories">
                             <div class="widget-content">
                                 <h2 class="widget-title">Categories</h2>
-                                <ul>
-                                    <li class="cat-item cat-item-1"><a href="../category/business/index.html">Business
-                                            <span class="count right">2 </span></a></li>
-                                    <li class="cat-item cat-item-18"><a href="../category/creative/index.html">Creative
-                                            <span class="count right">2 </span></a></li>
-                                    <li class="cat-item cat-item-19"><a href="../category/strategy/index.html">Strategy
-                                            <span class="count right">2 </span></a></li>
+                                <ul style="list-style: none;">
+                                    {% for category in event_category_data %}
+                                    <li class="cat-item cat-item-1">
+                                        <a href="{% url 'events_category' category.slug %}">
+                                            <i class="fas fa-list-alt"></i> {{ category.name }}
+                                        </a>
+                                    </li>
+                                    {% empty %}
+                                    No event category data
+                                    {% endfor %}
                                 </ul>
                             </div>
                         </section>
                         <section id="ct_recent_posts-3" class="widget widget_ct_recent_posts">
                             <div class="widget-content">
-                                <h2 class="widget-title">Recent News</h2>
+                                <h2 class="widget-title">Latest News</h2>
                                 <div class="posts-list ">
+                                    {% for news in news_data %}
                                     <div class="entry-brief">
-                                        <div class="entry-media"> <a
-                                                href="../how-stay-calm-from-the-first-time/index.html"><img
-                                                    alt="How Stay Calm from the First Time."
-                                                    data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/11/theme-10.jpg"
-                                                    class="lazyload"
-                                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /></a>
+                                        <div class="entry-media">
+                                            <a href="{{ news.get_absolute_url }}">
+                                                <img alt="{{ news.name }}" data-src="/media/{{ news.main_image }}"
+                                                    class="lazyload" src="/media/{{ news.main_image }}" />
+                                            </a>
                                         </div>
                                         <div class="entry-content">
-                                            <h4 class="entry-title"><a
-                                                    href="../how-stay-calm-from-the-first-time/index.html"
-                                                    title="How Stay Calm from the First Time.">How Stay Calm
-                                                    from the First Time.</a></h4>
-                                            <div class="item-date"> 5 Nov, 2019</div>
+                                            <h4 class="entry-title">
+                                                <a href="{{ news.get_absolute_url }}" title="{{ news.name }}">
+                                                    {{ news.name }}
+                                                </a>
+                                            </h4>
+                                            <div class="item-date"> {{ news.created_on|date:"d M, Y" }}
+
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="entry-brief">
-                                        <div class="entry-media"> <a
-                                                href="../why-youll-never-succeed-at-7-habits-of-highly/index.html"><img
-                                                    alt="Why You’ll Never Succeed at 7 Habits."
-                                                    data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/11/ud-blog1.jpg"
-                                                    class="lazyload"
-                                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /></a>
-                                        </div>
-                                        <div class="entry-content">
-                                            <h4 class="entry-title"><a
-                                                    href="../why-youll-never-succeed-at-7-habits-of-highly/index.html"
-                                                    title="Why You’ll Never Succeed at 7 Habits.">Why You’ll
-                                                    Never Succeed at 7 Habits.</a></h4>
-                                            <div class="item-date"> 5 Nov, 2019</div>
-                                        </div>
-                                    </div>
-                                    <div class="entry-brief">
-                                        <div class="entry-media"> <a
-                                                href="../you-can-use-it-for-any-kind-website-like/index.html"><img
-                                                    alt="You can use it for any kind website like."
-                                                    data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/11/theme-01.jpg"
-                                                    class="lazyload"
-                                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /></a>
-                                        </div>
-                                        <div class="entry-content">
-                                            <h4 class="entry-title"><a
-                                                    href="../you-can-use-it-for-any-kind-website-like/index.html"
-                                                    title="You can use it for any kind website like.">You can
-                                                    use it for any kind website like.</a></h4>
-                                            <div class="item-date"> 5 Nov, 2019</div>
-                                        </div>
-                                    </div>
+                                    {% empty %}
+                                    No latest news data
+                                    {% endfor %}
+
                                 </div>
                             </div>
                         </section>

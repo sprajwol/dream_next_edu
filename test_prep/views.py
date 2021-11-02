@@ -1,6 +1,8 @@
 from django.views.generic import TemplateView, ListView, DetailView
 
 from test_prep.models import Course
+from latestnews.models import News
+from events.models import Event
 # Create your views here.
 
 
@@ -15,6 +17,14 @@ class TestPreparationView(ListView):
         if (Course.objects.all().exists()):
             course_data = Course.objects.all()
             context['course_data'] = course_data
+
+        if (News.objects.all().exists()):
+            news_data = News.objects.all()[:3]
+            context['news_data'] = news_data
+
+        if (Event.objects.all().exists()):
+            recent_events_data = Event.objects.all()[:3]
+            context['recent_events_data'] = recent_events_data
 
         context['test_preparation_page'] = 'active'
         return context

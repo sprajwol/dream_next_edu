@@ -47,15 +47,25 @@
                     <div class="container">
                         <div class="row">
                             <ul class="ct-header-holder">
-                                <li><a href="mailto:info@consultio.com"><i
-                                            class="fac fac-envelope"></i>dreamnextedu@gmail.com</a></li>
-                                <li><i class="fac fac-clock"></i>Sun - Fri: 10:00 am - 06:00pm</li>
-                                <li><a href="https://www.google.com/maps?q=380+St+Kilda+Road,+Melbourne,+Australia"><i
-                                            class="fac fac-map-marker-alt"></i>Kumaripati, Lalitpur</a></li>
+                                <li>
+                                    <a href="mailto:info@consultio.com">
+                                        <i class="fac fac-envelope"></i>dreamnextedu@gmail.com
+                                    </a>
+                                </li>
+                                <li>
+                                    <i class="fac fac-clock"></i>Sun - Fri: 10:00 am - 06:00pm
+                                </li>
+                                <li>
+                                    <a href="https://goo.gl/maps/JgjsmQ5UQsxAae6RA" target="_blank">
+                                        <i class="fac fac-map-marker-alt"></i>Kumaripati, Lalitpur
+                                    </a>
+                                </li>
                             </ul>
-                            <div class="ct-header-topbar-btn"> <a class="btn effect-left-to-right"
-                                    href="../contact/index.html" target="_self">Appointment<i
-                                        class="flaticonv2 flaticonv2-right-arrow"></i></a></div>
+                            <div class="ct-header-topbar-btn">
+                                <a class="btn effect-left-to-right" href="{% url 'contact' %}" target="_self">
+                                    Appointment<i class="flaticonv2 flaticonv2-right-arrow"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -131,19 +141,20 @@
 
                                                 <li id="menu-item-414"
                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-414">
-                                                    <a href="services.html"><span>Services</a>
+                                                    <a href="javascript:;"><span>Services</a>
                                                     <ul class="sub-menu">
 
                                                         <li id="menu-item-5199"
                                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5199">
-                                                            <a
-                                                                href="../singleservice/template/index.html"><span>Consultation</span></a>
+                                                            <a href="{% url 'services_visa' %}">
+                                                                <span>Consultation</span>
+                                                            </a>
                                                         </li>
 
                                                         <li id="menu-item-5199"
                                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5199">
                                                             <a href="{% url 'services_visa' %}">
-                                                                Visa Application
+                                                                <span>Visa Application</span>
                                                             </a>
                                                         </li>
                                                     </ul>
@@ -151,7 +162,7 @@
 
                                                 <li id="menu-item-414"
                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-414">
-                                                    <a href="{% url 'test_preparation' %}"><span>Test Preparation</a>
+                                                    <a href="javascript:;"><span>Test Preparation</a>
                                                     <ul class="sub-menu">
                                                         {% for course in course_data %}
 
@@ -329,79 +340,12 @@
                                                                             <div
                                                                                 class="ct-text-editor elementor-clearfix">
                                                                                 Sun to Fri 10:00am to 5:00pm
-                                                                                <br>Saturday: Close
+                                                                                <br>Saturday: Closed
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="elementor-element elementor-element-ca7e4ea elementor-widget elementor-widget-ct_mailchimp_form"
-                                                                    data-id="ca7e4ea" data-element_type="widget"
-                                                                    data-widget_type="ct_mailchimp_form.default">
-                                                                    <div class="elementor-widget-container">
-                                                                        <div id="ct_mailchimp_form-ca7e4ea"
-                                                                            class="ct-mailchimp ct-mailchimp1 style4">
-                                                                            <script>
-                                                                                (function () {
-                                                                                    window.mc4wp = window.mc4wp || {
-                                                                                        listeners: [],
-                                                                                        forms: {
-                                                                                            on: function (evt,
-                                                                                                cb) {
-                                                                                                window.mc4wp
-                                                                                                    .listeners
-                                                                                                    .push({
-                                                                                                        event: evt,
-                                                                                                        callback: cb
-                                                                                                    });
-                                                                                            }
-                                                                                        }
-                                                                                    }
-                                                                                })();
-                                                                            </script>
-                                                                            <!-- Mailchimp for WordPress v4.8.5 - https://wordpress.org/plugins/mailchimp-for-wp/ -->
-                                                                            <form id="mc4wp-form-1"
-                                                                                class="mc4wp-form mc4wp-form-4680"
-                                                                                method="post" data-id="4680"
-                                                                                data-name="Form 1">
-                                                                                <div class="mc4wp-form-fields">
-                                                                                    <div class="field-group">
-                                                                                        <div class="field-input"> <input
-                                                                                                type="email"
-                                                                                                name="EMAIL"
-                                                                                                placeholder="Your mail address"
-                                                                                                required /></div>
-                                                                                        <div class="field-input"> <input
-                                                                                                type="submit"
-                                                                                                value="Subscribe" />
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div><label
-                                                                                    style="display: none !important;">Leave
-                                                                                    this field empty if you're human:
-                                                                                    <input type="text"
-                                                                                        name="_mc4wp_honeypot" value=""
-                                                                                        tabindex="-1"
-                                                                                        autocomplete="off" /></label><input
-                                                                                    type="hidden"
-                                                                                    name="_mc4wp_timestamp"
-                                                                                    value="1632325922" /><input
-                                                                                    type="hidden" name="_mc4wp_form_id"
-                                                                                    value="4680" /><input type="hidden"
-                                                                                    name="_mc4wp_form_element_id"
-                                                                                    value="mc4wp-form-1" />
-                                                                                <div class="mc4wp-response"></div>
-                                                                            </form>
-                                                                            <!-- / Mailchimp for WordPress Plugin -->
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="elementor-element elementor-element-5e573de4 elementor-widget elementor-widget-ct_icon"
-                                                                    data-id="5e573de4" data-element_type="widget"
-                                                                    data-widget_type="ct_icon.default">
-                                                                    <div class="elementor-widget-container">
 
-                                                                    </div>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -757,13 +701,6 @@
                 });
             });
         });
-    </script>
-    <script type="text/javascript">
-        (function () {
-            var c = document.body.className;
-            c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
-            document.body.className = c;
-        })();
     </script>
     <script type="text/javascript">
         if (typeof revslider_showDoubleJqueryError === "undefined") {

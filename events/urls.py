@@ -6,7 +6,9 @@ from events import views as events_views
 
 urlpatterns = [
     path('', events_views.EventView.as_view(), name='events'),
-    path('<slug:slug>', events_views.EventDetailView.as_view(),
+    path('category/<slug:slug>', events_views.EventView.as_view(),
+         name='events_category'),
+    path('view/<slug:slug>', events_views.EventDetailView.as_view(),
          name='eventdetail')
 ]
 

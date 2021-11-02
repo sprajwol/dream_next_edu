@@ -1130,6 +1130,8 @@ Dream Next Education Foundation Pvt. Ltd.
                                                                                         data-collg="3" data-colxl="3"
                                                                                         data-dir="false"
                                                                                         data-slidesToScroll="1">
+                                                                                        {% for section_course in course_data %}
+
                                                                                         <div
                                                                                             class="carousel-item slick-slide">
                                                                                             <div
@@ -1141,30 +1143,19 @@ Dream Next Education Foundation Pvt. Ltd.
                                                                                                     class="item--holder">
                                                                                                     <h3
                                                                                                         class="item--title">
-                                                                                                        TOEFL
+                                                                                                        {{ section_course.name }}
                                                                                                     </h3>
                                                                                                     <div
                                                                                                         class="item--content">
-                                                                                                        Unlimited
-                                                                                                        score
-                                                                                                        sharing.
-                                                                                                        Includes
-                                                                                                        a video
-                                                                                                        interview
-                                                                                                        to help
-                                                                                                        you
-                                                                                                        stand
-                                                                                                        out from
-                                                                                                        the
-                                                                                                        crowd.
+                                                                                                        {{ section_course.summary|slice:":150" }}...
                                                                                                     </div>
                                                                                                 </div>
                                                                                                 <div
                                                                                                     class="item--readmore">
                                                                                                     <a class="btn-more-plus"
-                                                                                                        href="../courses/toefl/index.html">+</a>
+                                                                                                        href="{{ section_course.get_absolute_url }}">+</a>
                                                                                                     <a class="btn"
-                                                                                                        href="../courses/toefl/index.html">
+                                                                                                        href="{{ section_course.get_absolute_url }}">
                                                                                                         Read
                                                                                                         more <i
                                                                                                             class="zmdi zmdi-long-arrow-right"></i>
@@ -1172,176 +1163,10 @@ Dream Next Education Foundation Pvt. Ltd.
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
-                                                                                        <div
-                                                                                            class="carousel-item slick-slide">
-                                                                                            <div
-                                                                                                class="grid-item-inner ">
-                                                                                                <div class="item--featured bg-image"
-                                                                                                    style="background-image: url(../wp-content/uploads/2019/11/theme-07.jpg);">
-                                                                                                </div>
-                                                                                                <div
-                                                                                                    class="item--holder">
-                                                                                                    <h3
-                                                                                                        class="item--title">
-                                                                                                        IELTS
-                                                                                                    </h3>
-                                                                                                    <div
-                                                                                                        class="item--content">
-                                                                                                        Unlimited
-                                                                                                        score
-                                                                                                        sharing.
-                                                                                                        Includes
-                                                                                                        a video
-                                                                                                        interview
-                                                                                                        to help
-                                                                                                        you
-                                                                                                        stand
-                                                                                                        out from
-                                                                                                        the
-                                                                                                        crowd.
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div
-                                                                                                    class="item--readmore">
-                                                                                                    <a class="btn-more-plus"
-                                                                                                        href="../courses/ielts/index.html">+</a>
-                                                                                                    <a class="btn"
-                                                                                                        href="../courses/ielts/index.html">
-                                                                                                        Read
-                                                                                                        more <i
-                                                                                                            class="zmdi zmdi-long-arrow-right"></i>
-                                                                                                    </a>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div
-                                                                                            class="carousel-item slick-slide">
-                                                                                            <div
-                                                                                                class="grid-item-inner ">
-                                                                                                <div class="item--featured bg-image"
-                                                                                                    style="background-image: url(../wp-content/uploads/2019/12/corporate-portfolio5.jpg);">
-                                                                                                </div>
-                                                                                                <div
-                                                                                                    class="item--holder">
-                                                                                                    <h3
-                                                                                                        class="item--title">
-                                                                                                        PTE
-                                                                                                    </h3>
-                                                                                                    <div
-                                                                                                        class="item--content">
-                                                                                                        Unlimited
-                                                                                                        score
-                                                                                                        sharing.
-                                                                                                        Includes
-                                                                                                        a video
-                                                                                                        interview
-                                                                                                        to help
-                                                                                                        you
-                                                                                                        stand
-                                                                                                        out from
-                                                                                                        the
-                                                                                                        crowd.
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div
-                                                                                                    class="item--readmore">
-                                                                                                    <a class="btn-more-plus"
-                                                                                                        href="../courses/spoken-english/index.html">+</a>
-                                                                                                    <a class="btn"
-                                                                                                        href="../courses/spoken-english/index.html">
-                                                                                                        Read
-                                                                                                        more <i
-                                                                                                            class="zmdi zmdi-long-arrow-right"></i>
-                                                                                                    </a>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div
-                                                                                            class="carousel-item slick-slide">
-                                                                                            <div
-                                                                                                class="grid-item-inner ">
-                                                                                                <div class="item--featured bg-image"
-                                                                                                    style="background-image: url(../wp-content/uploads/2019/12/corporate-portfolio4.jpg);">
-                                                                                                </div>
-                                                                                                <div
-                                                                                                    class="item--holder">
-                                                                                                    <h3
-                                                                                                        class="item--title">
-                                                                                                        Take
-                                                                                                        IELTS
-                                                                                                    </h3>
-                                                                                                    <div
-                                                                                                        class="item--content">
-                                                                                                        Unlimited
-                                                                                                        score
-                                                                                                        sharing.
-                                                                                                        Includes
-                                                                                                        a video
-                                                                                                        interview
-                                                                                                        to help
-                                                                                                        you
-                                                                                                        stand
-                                                                                                        out from
-                                                                                                        the
-                                                                                                        crowd.
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div
-                                                                                                    class="item--readmore">
-                                                                                                    <a class="btn-more-plus"
-                                                                                                        href="../courses/take-ielts/index.html">+</a>
-                                                                                                    <a class="btn"
-                                                                                                        href="../courses/take-ielts/index.html">
-                                                                                                        Read
-                                                                                                        more <i
-                                                                                                            class="zmdi zmdi-long-arrow-right"></i>
-                                                                                                    </a>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div
-                                                                                            class="carousel-item slick-slide">
-                                                                                            <div
-                                                                                                class="grid-item-inner ">
-                                                                                                <div class="item--featured bg-image"
-                                                                                                    style="background-image: url(../wp-content/uploads/2019/11/theme-09.jpg);">
-                                                                                                </div>
-                                                                                                <div
-                                                                                                    class="item--holder">
-                                                                                                    <h3
-                                                                                                        class="item--title">
-                                                                                                        Skills
-                                                                                                        Exam
-                                                                                                    </h3>
-                                                                                                    <div
-                                                                                                        class="item--content">
-                                                                                                        Unlimited
-                                                                                                        score
-                                                                                                        sharing.
-                                                                                                        Includes
-                                                                                                        a video
-                                                                                                        interview
-                                                                                                        to help
-                                                                                                        you
-                                                                                                        stand
-                                                                                                        out from
-                                                                                                        the
-                                                                                                        crowd.
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div
-                                                                                                    class="item--readmore">
-                                                                                                    <a class="btn-more-plus"
-                                                                                                        href="../courses/skills-exam/index.html">+</a>
-                                                                                                    <a class="btn"
-                                                                                                        href="../courses/skills-exam/index.html">
-                                                                                                        Read
-                                                                                                        more <i
-                                                                                                            class="zmdi zmdi-long-arrow-right"></i>
-                                                                                                    </a>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
+                                                                                        {% empty %}
+                                                                                        No course data
+                                                                                        {% endfor %}
+
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -2024,8 +1849,8 @@ Dream Next Education Foundation Pvt. Ltd.
                                                                                                 <div class="item--body">
                                                                                                     <div
                                                                                                         class="item--category">
-                                                                                                        <a href="../category/business/index.html"
-                                                                                                            rel="tag">Business</a>
+                                                                                                        <a href="{% url 'events_category' event.slug %}"
+                                                                                                            rel="tag">{{ event.category }}</a>
                                                                                                     </div>
                                                                                                     <h3
                                                                                                         class="item--title">
@@ -2036,7 +1861,7 @@ Dream Next Education Foundation Pvt. Ltd.
                                                                                                     </h3>
                                                                                                     <div
                                                                                                         class="item--content">
-                                                                                                        {{ event.summary }}
+                                                                                                        {{ event.summary|slice:":150" }}...
                                                                                                     </div>
                                                                                                     <div
                                                                                                         class="item--readmore">

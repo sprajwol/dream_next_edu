@@ -2,6 +2,7 @@ from django.views.generic import TemplateView, ListView, DetailView
 
 from events.models import Event, Category
 from test_prep.models import Course
+from latestnews.models import News
 # Create your views here.
 
 
@@ -18,8 +19,25 @@ class EventView(ListView):
             course_data = Course.objects.all()
             context['course_data'] = course_data
 
+        if (Category.objects.all().exists()):
+            event_category_data = Category.objects.all()
+            context['event_category_data'] = event_category_data
+
+        if (News.objects.all().exists()):
+            news_data = News.objects.all()[:3]
+            context['news_data'] = news_data
+
         context['events_page'] = 'active'
         return context
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+
+        if self.kwargs.get('slug'):
+            cat = Category.objects.get(slug=self.kwargs.get('slug'))
+            queryset = queryset.filter(category=cat)
+
+        return queryset
 
 
 class EventDetailView(DetailView):
@@ -33,6 +51,10 @@ class EventDetailView(DetailView):
         if (Course.objects.all().exists()):
             course_data = Course.objects.all()
             context['course_data'] = course_data
+
+        if (Category.objects.all().exists()):
+            event_category_data = Category.objects.all()
+            context['event_category_data'] = event_category_data
 
         context['events_page'] = 'active'
         return context

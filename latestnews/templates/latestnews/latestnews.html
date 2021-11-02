@@ -11,6 +11,7 @@ Latest News | Dream Next Education Foundation Pvt. Ltd.
 
 {% block cssarea %}
 {% include 'services/visa_upper_links.html' %}
+<link rel="stylesheet" href="{% static 'latestnews\styles\custom_css\latest_news.css' %}">
 {% endblock cssarea %}
 
 
@@ -60,13 +61,12 @@ Latest News | Dream Next Education Foundation Pvt. Ltd.
                                         </a>
                                     </h2>
                                     <ul class="entry-meta">
-                                        <li class="item-author">
-                                            <i class="fac fac-user"></i>
-                                            <a href="index.html" title="Posts by Rinnah" rel="author">Rinnah</a>
+                                        <li class="item-author"><i
+                                                class="fac fac-calendar-alt"></i>{{ news.created_on|date:"d M Y" }}
                                         </li>
                                     </ul>
                                     <div class="entry-excerpt">
-                                        {{ news.summary }}
+                                        {{ news.summary|slice:":150" }}...
                                     </div>
                                     <div class="entry-readmore">
                                         <a href="{{ news.get_absolute_url }}" class="btn-text text-gradient">
@@ -113,14 +113,34 @@ Latest News | Dream Next Education Foundation Pvt. Ltd.
                 <aside id="secondary"
                     class="widget-area widget-has-sidebar sidebar-fixed col-xl-3 col-lg-4 col-md-12 col-sm-12">
                     <div class="sidebar-sticky">
-                        <section id="search-2" class="widget widget_search">
+                        <section id="ct_recent_posts-3" class="widget widget_ct_recent_posts">
                             <div class="widget-content">
-                                <form role="search" method="get" class="search-form"
-                                    action="https://demo.casethemes.net/consultio-immigration/">
-                                    <div class="searchform-wrap"> <input type="text" placeholder="Search..." name="s"
-                                            class="search-field" /> <button type="submit" class="search-submit"><i
-                                                class="far fac-search"></i></button></div>
-                                </form>
+                                <h2 class="widget-title">Recent Events</h2>
+                                <div class="posts-list ">
+                                    {% for event in recent_events_data %}
+                                    <div class="entry-brief">
+                                        <div class="entry-media">
+                                            <a href="{{ event.get_absolute_url }}">
+                                                <img alt="{{ event.title }}" data-src="/media/{{ event.main_image }}"
+                                                    class="lazyload" src="/media/{{ event.main_image }}" />
+                                            </a>
+                                        </div>
+                                        <div class="entry-content">
+                                            <h4 class="entry-title">
+                                                <a href="{{ event.get_absolute_url }}" title="{{ event.title }}">
+                                                    {{ event.title }}
+                                                </a>
+                                            </h4>
+                                            <div class="item-date"> {{ event.created_on|date:"d M, Y" }}
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% empty %}
+                                    No recent events data
+                                    {% endfor %}
+
+                                </div>
                             </div>
                         </section>
 
