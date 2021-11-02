@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'study_abroad.apps.StudyAbroadConfig',
     'test_prep.apps.TestPrepConfig',
     'latestnews.apps.LatestnewsConfig',
+    'gallery.apps.GalleryConfig',
 ]
 
 MIDDLEWARE = [

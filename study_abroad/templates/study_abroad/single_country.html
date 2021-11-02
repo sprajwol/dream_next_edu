@@ -11,6 +11,7 @@ Study Abroad | Dream Next Education Foundation Pvt. Ltd.
 
 {% block cssarea %}
 {% include 'services/visa_upper_links.html' %}
+<link rel="stylesheet" href="{% static 'study_abroad\styles\custom_css\study_abroad.css' %}">
 {% endblock cssarea %}
 
 
@@ -19,11 +20,12 @@ Study Abroad | Dream Next Education Foundation Pvt. Ltd.
     <div class="container">
         <div class="page-title-inner">
             <div class="page-title-holder">
-                <h1 class="page-title">Canada</h1>
+                <h1 class="page-title">{{ object.name }}</h1>
             </div>
             <ul class="ct-breadcrumb">
-                <li><a class="breadcrumb-entry" href="../index.html">Country</a></li>
-                <li><a class="breadcrumb-entry" href="../blog-standard/index.html">DreamNext</a></li>
+                <li><a class="breadcrumb-entry" href="{% url 'home' %}">Home</a></li>
+                <li><span class="breadcrumb-entry">Study Abroad</span></li>
+                <li><span class="breadcrumb-entry">{{ object.name }}</span></li>
 
             </ul>
         </div>

@@ -1,0 +1,70 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block metaarea %}
+{% endblock metaarea %}
+
+{% block titlearea %}
+Gallery | ASMAN
+{% endblock titlearea %}
+
+{% block cssarea %}
+<link rel="stylesheet" type="text/css" href="{% static 'gallery\styles\custom\css\gallery.min.css' %}" />
+{% endblock cssarea %}
+
+{% block content %}
+<section class="page-title gallery-title text-center"
+    style="background: linear-gradient( rgba(28, 28, 28, 0.8), rgba(28, 28, 28, 0.8) ), url({% static 'home\static_images\blog-p4.jpg' %});">
+    <h2 class="text-extra-bold white text-uppercase">Gallery</h2>
+    <div class="page-location text-center display-ib"
+        style="background-image: url({% static 'home\static_images\curved.png' %});">
+        <span class="ubuntu fz-14 green-5c">Home <i class="gray-e9">/</i> Gallery</span>
+    </div>
+</section>
+
+<section class="mt-150 mb-150 gallery">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3 class=" black h-sep">Photo <span class="text-ultra-bold">Albums</span> </h3>
+                <p class="fz-16 gray-666 mt-50">Our charity helps those people who have no hope</p>
+            </div>
+        </div>
+
+        <div class="row mt-20">
+            {% if object_list %}
+            {% for each_album in object_list %}
+            <div class="col-md-3 col-sm-6 mt-50 text-center">
+                <div class="gallery-item">
+                    <div class="gallery-img">
+                        <a href="{{ each_album.get_absolute_url }}">
+                            <img class="img-responsive" src="/media/{{ each_album.images.all.first }}"
+                                alt=" {{ each_album.photo_album_name }}">
+                            <div class="gallery-overlay"></div>
+                            <div class="gallery-overlay-content text-center">
+                                <img src="{% static 'home\static_images\locked.png' %}"
+                                    alt="{{ each_album.photo_album_name }}">
+                            </div>
+                        </a>
+                    </div>
+                    <a href="{{ each_album.get_absolute_url }}">
+                        <h5 class="text-semi-bold mt-30">{{ each_album.photo_album_name }}</h5>
+                    </a>
+                </div>
+            </div>
+            {% if forloop.counter|divisibleby:4 %}
+        </div>
+        <div class="row mt-20">
+            {% endif %}
+            {% endfor %}
+            {% else %}
+            <h5 class="text-semi-bold mt-30">No albums has yet been created.</h5>
+            {% endif %}
+        </div>
+
+    </div>
+</section>
+{% endblock content %}
+
+{% block javascript %}
+{% endblock javascript %}

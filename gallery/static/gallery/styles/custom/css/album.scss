@@ -1,0 +1,48 @@
+.album-container {
+    /* Prevent vertical gaps */
+    line-height: 0;
+
+    column-count: 1;
+    column-gap: 2em;
+}
+
+.album-container > a > img {
+    width: 100% !important;
+    // object-fit: cover;
+    height: auto !important;
+    margin-bottom: 2em;
+}
+.mfp-image-holder {
+    cursor: default;
+}
+.mfp-close {
+    cursor: pointer !important;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .album-container {
+        column-count: 2;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .album-container {
+        column-count: 2;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .album-container {
+        column-count: 3;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .album-container {
+        column-count: 4;
+    }
+}

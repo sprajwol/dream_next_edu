@@ -1,0 +1,68 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+
+{% block metaarea %}
+{% endblock metaarea %}
+
+{% block titlearea %}
+Gallery | Dream Next Education Foundation Pvt. Ltd.
+{% endblock titlearea %}
+
+{% block cssarea %}
+{% include 'events/upper_links.html' %}
+<link rel="stylesheet" href="{% static 'events\styles\custom_css\events.css' %}">
+{% endblock cssarea %}
+
+
+{% block content %}
+<div id="pagetitle" class="page-title bg-image ">
+    <div class="container">
+        <div class="page-title-inner">
+            <div class="page-title-holder">
+                <h1 class="page-title">Gallery</h1>
+            </div>
+            <ul class="ct-breadcrumb">
+                <li><a class="breadcrumb-entry" href="{% url 'home' %}">Home</a></li>
+                <li><span class="breadcrumb-entry">Gallery</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="content" class="site-content">
+    <div class="content-inner">
+        <div class="container content-container">
+            <section class="mt-150 mb-150 gallery">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h3 class=" black h-sep">{{ object.photo_album_name }} <span
+                                    class="text-ultra-bold">Album</span> </h3>
+                            <p class="fz-16 gray-666 mt-50">{{ object.short_desc }}</p>
+                        </div>
+                    </div>
+
+                    <div class="row mt-50">
+                        {% if object.images.all %}
+                        <div class="album-container mt-30">
+
+                            {% for each_image in object.images.all %}
+                            <a href="/media/{{ each_image }}" title="Album: {{  object.photo_album_name }}">
+                                <img src="/media/{{ each_image }}" alt="{{ each_image.name }}">
+                            </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% else %}
+                    <h5 class="text-semi-bold mt-30">No images has yet been uploaded in this album.</h5>
+                    {% endif %}
+                </div>
+
+            </section>
+        </div>
+    </div><!-- #content inner -->
+</div><!-- #content -->
+{% endblock content %}
+
+{% block javascript %}
+{% endblock javascript %}
