@@ -61,13 +61,13 @@ Study Abroad | Dream Next Education Foundation Pvt. Ltd.
                                     <label>Share:</label>
                                     <a class="fb-social" title="Facebook"
                                         target="_blank"
-                                        href="http://www.facebook.com/sharer/sharer.php?u='https://www.facebook.com/sharer/sharer.php?u={{ request_full_path }}">
+                                        href="http://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}">
                                         <i
                                             class="fab fac-facebook-f"></i>
                                         </a>
                                             <a class="tw-social" title="Twitter"
                                         target="_blank"
-                                        href="https://twitter.com/intent/tweet?url={{ request_full_path }}">
+                                        href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}">
                                         <i
                                             class="fab fac-twitter"></i>
                                         </a>

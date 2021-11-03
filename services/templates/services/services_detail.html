@@ -61,11 +61,11 @@
                                 
                                 <div class="entry-social"> <label>Share:</label>
                                     <a class="fb-social" title="Facebook" target="_blank"
-                                        href="http://www.facebook.com/sharer/sharer.php?u={{ request.get_full_path }}">
+                                        href="http://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}">
                                         <i class="fab fac-facebook-f"></i>
                                     </a>
                                     <a class="tw-social" title="Twitter" target="_blank"
-                                        href="https://twitter.com/intent/tweet?url={{ request.get_full_path }}"><i
+                                        href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}"><i
                                             class="fab fac-twitter"></i>
                                 </div>
                             </div>
