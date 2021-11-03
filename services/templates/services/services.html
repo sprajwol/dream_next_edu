@@ -25,7 +25,6 @@ Services | Dream Next Education Foundation Pvt. Ltd.
             <ul class="ct-breadcrumb">
                 <li><a class="breadcrumb-entry" href="{% url 'home' %}">Home</a></li>
                 <li><span class="breadcrumb-entry">Services</span></li>
-                <li><span class="breadcrumb-entry">Visa Application</span></li>
             </ul>
         </div>
     </div>
@@ -62,11 +61,14 @@ Services | Dream Next Education Foundation Pvt. Ltd.
                                                                                     class="item--sub-title style1 show-line">
                                                                                     Services</div>
                                                                                 <h3 class="item--title st-default "
-                                                                                    data-wow-delay="ms"> <span>
+                                                                                    data-wow-delay="ms">
+                                                                                    <span>
                                                                                         We position our clients
                                                                                         at the forefront of
                                                                                         their field by advancing
-                                                                                        an agenda. </span></h3>
+                                                                                        an agenda.
+                                                                                    </span>
+                                                                                    </h3>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -122,7 +124,7 @@ Services | Dream Next Education Foundation Pvt. Ltd.
                                                                                 </div>
                                                                                 <div class="ct-grid-inner ct-grid-masonry row animate-time"
                                                                                     data-gutter="15">
-                                                                                    {% for visa in object_list %}
+                                                                                    {% for service in object_list %}
                                                                                     <div
                                                                                         class="grid-item col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 ">
                                                                                         <div
@@ -131,11 +133,11 @@ Services | Dream Next Education Foundation Pvt. Ltd.
                                                                                                 <div
                                                                                                     class="item--featured">
                                                                                                     <img class="disable-lazy "
-                                                                                                        src="/media/{{ visa.main_image }}"
+                                                                                                        src="/media/{{ service.main_image }}"
                                                                                                         width="541"
                                                                                                         height="600"
-                                                                                                        alt="theme-10"
-                                                                                                        title="theme-10" />
+                                                                                                        alt="{{ service.title }}"
+                                                                                                        title="{{ service.title }}" />
                                                                                                 </div>
                                                                                                 <div
                                                                                                     class="item--holder">
@@ -148,14 +150,14 @@ Services | Dream Next Education Foundation Pvt. Ltd.
                                                                                                         </div>
                                                                                                         <h3
                                                                                                             class="item--title">
-                                                                                                            {{ visa.title }}
+                                                                                                            {{ service.title }}
                                                                                                         </h3>
                                                                                                         <div
                                                                                                             class="item--gap">
                                                                                                         </div>
                                                                                                         <div
                                                                                                             class="item--content">
-                                                                                                            {{ visa.summary }}
+                                                                                                            {{ service.summary|slice:":150" }}...
                                                                                                         </div>
                                                                                                         <div
                                                                                                             class="item--icon-abs">
@@ -168,13 +170,14 @@ Services | Dream Next Education Foundation Pvt. Ltd.
                                                                                                     <h3
                                                                                                         class="item--title">
                                                                                                         <a
-                                                                                                            href="{{ visa.get_absolute_url}}">Business
-                                                                                                            Visa</a>
+                                                                                                            href="{{ service.get_absolute_url}}">
+                                                                                                            {{ service.title }}
+                                                                                                        </a>
                                                                                                     </h3>
                                                                                                     <div
                                                                                                         class="item--readmore">
                                                                                                         <a class="more-plus"
-                                                                                                            href="{{ visa.get_absolute_url}}">+</a>
+                                                                                                            href="{{ service.get_absolute_url}}">+</a>
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>

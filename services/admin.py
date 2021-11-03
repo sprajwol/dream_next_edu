@@ -3,7 +3,7 @@ from django.template.loader import get_template
 from django.utils.translation import gettext as _
 from django_summernote.admin import SummernoteModelAdmin
 
-from services.models import Visa
+from services.models import Service
 # Register your models here.
 
 
@@ -25,4 +25,4 @@ class VisaAdmin(SummernoteModelAdmin):
     image_thumb.short_description = _("Main Image Preview")
 
 
-admin.site.register(Visa, VisaAdmin)
+admin.site.register(Service, VisaAdmin)

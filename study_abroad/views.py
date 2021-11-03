@@ -2,6 +2,7 @@ from django.views.generic import TemplateView, ListView, DetailView
 
 from study_abroad.models import Country
 from test_prep.models import Course
+from services.models import Service
 # Create your views here.
 
 
@@ -16,6 +17,10 @@ class StudyAbroadView(ListView):
         if (Course.objects.all().exists()):
             course_data = Course.objects.all()
             context['course_data'] = course_data
+
+        if (Service.objects.all().exists()):
+            services_data = Service.objects.all()
+            context['services_data'] = services_data
 
         context['study_abroad_page'] = 'active'
         return context
@@ -32,6 +37,10 @@ class SingleCountryView(DetailView):
         if (Course.objects.all().exists()):
             course_data = Course.objects.all()
             context['course_data'] = course_data
+            
+        if (Service.objects.all().exists()):
+            services_data = Service.objects.all()
+            context['services_data'] = services_data
 
         context['study_abroad_page'] = 'active'
         return context

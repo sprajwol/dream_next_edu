@@ -1,13 +1,13 @@
 from django.views.generic import TemplateView, ListView, DetailView
 
-from services.models import Visa
+from services.models import Service
 from test_prep.models import Course
 # Create your views here.
 
 
-class ServicesVisaListView(ListView):
-    model = Visa
-    template_name = 'services/services_visa.html'
+class ServicesListView(ListView):
+    model = Service
+    template_name = 'services/services.html'
 
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
@@ -16,14 +16,18 @@ class ServicesVisaListView(ListView):
         if (Course.objects.all().exists()):
             course_data = Course.objects.all()
             context['course_data'] = course_data
+
+        if (Service.objects.all().exists()):
+            services_data = Service.objects.all()
+            context['services_data'] = services_data
 
         context['services_page'] = 'active'
         return context
 
-
-class ServicesVisaDetailView(DetailView):
-    model = Visa
-    template_name = 'services/services_visa_specific.html'
+        
+class ServicesDetailView(DetailView):
+    model = Service
+    template_name = 'services/services_detail.html'
 
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
@@ -32,6 +36,10 @@ class ServicesVisaDetailView(DetailView):
         if (Course.objects.all().exists()):
             course_data = Course.objects.all()
             context['course_data'] = course_data
+
+        if (Service.objects.all().exists()):
+            services_data = Service.objects.all()
+            context['services_data'] = services_data
 
         context['services_page'] = 'active'
         return context

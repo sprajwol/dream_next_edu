@@ -145,22 +145,24 @@
 
                                                 <li
                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-414">
-                                                    <a href="javascript:;"><span>Services</a>
+                                                    <a href="{% url 'services' %}"><span>Services</a>
                                                     <ul class="sub-menu">
-
+                                                        {% for service in services_data %}
+                                                        
                                                         <li
                                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5199">
-                                                            <a href="{% url 'services_visa' %}">
-                                                                <span>Consultation</span>
+                                                            <a href="{{ service.get_absolute_url }}">
+                                                                <span>{{ service.title }}</span>
                                                             </a>
                                                         </li>
-
+                                                        {% empty %}
                                                         <li
                                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5199">
-                                                            <a href="{% url 'services_visa' %}">
-                                                                <span>Visa Application</span>
-                                                            </a>
+                                                            
+                                                        No Data
                                                         </li>
+                                                        {% endfor %}
+
                                                     </ul>
                                                 </li>
 

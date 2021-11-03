@@ -3,6 +3,7 @@ from django.views.generic import TemplateView, ListView, DetailView
 from events.models import Event, Category
 from test_prep.models import Course
 from latestnews.models import News
+from services.models import Service
 # Create your views here.
 
 
@@ -18,6 +19,10 @@ class EventView(ListView):
         if (Course.objects.all().exists()):
             course_data = Course.objects.all()
             context['course_data'] = course_data
+            
+        if (Service.objects.all().exists()):
+            services_data = Service.objects.all()
+            context['services_data'] = services_data
 
         if (Category.objects.all().exists()):
             event_category_data = Category.objects.all()

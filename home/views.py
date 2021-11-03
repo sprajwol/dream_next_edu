@@ -4,8 +4,11 @@ from django.views.generic import TemplateView
 from home.models import HeroSlider
 from about.models import Testimonial
 from events.models import Event
-from test_prep.models import Course
 from contact.models import Contact
+
+
+from test_prep.models import Course
+from services.models import Service
 # Create your views here.
 
 
@@ -31,6 +34,10 @@ class HomeView(TemplateView):
         if (Course.objects.all().exists()):
             course_data = Course.objects.all()
             context['course_data'] = course_data
+            
+        if (Service.objects.all().exists()):
+            services_data = Service.objects.all()
+            context['services_data'] = services_data
 
         context['home_page'] = 'active'
         return context

@@ -2,6 +2,7 @@ from django.views.generic import TemplateView
 
 from about.models import Testimonial
 from test_prep.models import Course
+from services.models import Service
 # Create your views here.
 
 
@@ -19,6 +20,10 @@ class AboutView(TemplateView):
         if (Course.objects.all().exists()):
             course_data = Course.objects.all()
             context['course_data'] = course_data
+            
+        if (Service.objects.all().exists()):
+            services_data = Service.objects.all()
+            context['services_data'] = services_data
 
         context['about_page'] = 'active'
         return context

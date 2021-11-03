@@ -14,7 +14,7 @@ def get_visa_services_main_image_uploadpath(instance, filename):
     return f'uploads/services/visa/{text}/{text}_image.{ext}'
 
 
-class Visa(models.Model):
+class Service(models.Model):
     title = models.CharField(max_length=255)
     slug = models.SlugField(max_length=255, unique=True, blank=True, null=True)
     main_image = models.ImageField(
@@ -31,7 +31,7 @@ class Visa(models.Model):
         slug = slugify(self.title)
         unique_slug = slug
         num = 1
-        while Visa.objects.filter(slug=unique_slug).exists():
+        while Service.objects.filter(slug=unique_slug).exists():
             unique_slug = '{}-{}'.format(slug, num)
             num += 1
         return unique_slug
@@ -43,4 +43,4 @@ class Visa(models.Model):
         super().save(*args, **kwargs)
 
     def get_absolute_url(self):
-        return reverse('services_visa_detail', args=[str(self.slug)])
+        return reverse('services_detail', args=[str(self.slug)])

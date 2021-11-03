@@ -3,6 +3,7 @@ from django.views.generic import TemplateView
 
 from test_prep.models import Course
 from contact.models import Contact
+from services.models import Service
 # Create your views here.
 
 
@@ -16,6 +17,10 @@ class ContactView(TemplateView):
         if (Course.objects.all().exists()):
             course_data = Course.objects.all()
             context['course_data'] = course_data
+            
+        if (Service.objects.all().exists()):
+            services_data = Service.objects.all()
+            context['services_data'] = services_data
 
         context['contact_page'] = 'active'
         return context
