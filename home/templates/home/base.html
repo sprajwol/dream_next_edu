@@ -21,6 +21,9 @@
 
     <!-- NormalizeCSS Linking -->
     <!-- From template -->
+    <!-- maginific popup -->
+    <link rel="stylesheet" type="text/css"
+        href="{% static 'home\styles\packages\Magnific-popup\dist\magnific-popup.css' %}" />
     <!-- Custom CSS Linking -->
     <link rel="stylesheet" href="{% static 'home\styles\custom_css\base.css' %}">
     {% block cssarea %}
@@ -1048,7 +1051,9 @@
         id='preloaded-modules-js'></script>
 
 
-
+    <!-- magnific popup -->
+    <script type=" text/javascript"
+        src="{% static 'home\styles\packages\Magnific-popup\dist\jquery.magnific-popup.min.js' %}"></script>
     {% block javascript %}
     {% endblock javascript %}
 
