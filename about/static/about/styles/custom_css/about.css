@@ -9,3 +9,8 @@
 	object-fit: cover;
 	object-position: center;
 }
+
+.item--meta .social i {
+	color: #0082c6;
+	margin-right: 10px;
+}

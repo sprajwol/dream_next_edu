@@ -105,8 +105,8 @@ About | Dream Next Education Foundation Pvt. Ltd.
                                                                         data-widget_type="image.default">
                                                                         <div class="elementor-widget-container">
                                                                             <div class="elementor-image">
-                                                                                <img
-                                                                                    width="535" height="519" alt="Dream Next"
+                                                                                <img width="535" height="519"
+                                                                                    alt="Dream Next"
                                                                                     data-src="{% static 'home\static_images\About us section imagea.png' %}"
                                                                                     class="attachment-full size-full lazyload"
                                                                                     src="{% static 'home\static_images\About us section imagea.png' %}" />
@@ -156,7 +156,7 @@ About | Dream Next Education Foundation Pvt. Ltd.
                                                     </div>
                                                 </div>
                                             </section>
-                                            
+
                                             <section
                                                 class="elementor-section elementor-top-section elementor-element elementor-element-4b3b2339 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default"
                                                 data-id="4b3b2339" data-element_type="section"
@@ -439,7 +439,12 @@ About | Dream Next Education Foundation Pvt. Ltd.
                                                                                                         <h3 class="item--title st-default wow fadeInLeft"
                                                                                                             data-wow-delay="ms">
                                                                                                             <span>
-                                                                                                                Our dedicated team is ready to serve you.
+                                                                                                                Our
+                                                                                                                dedicated
+                                                                                                                team is
+                                                                                                                ready to
+                                                                                                                serve
+                                                                                                                you.
                                                                                                             </span>
                                                                                                         </h3>
                                                                                                     </div>
@@ -463,7 +468,11 @@ About | Dream Next Education Foundation Pvt. Ltd.
                                                                                                     class="elementor-widget-container">
                                                                                                     <div
                                                                                                         class="elementor-text-editor elementor-clearfix">
-                                                                                                        Meet the best team for the best consultation services.
+                                                                                                        Meet the best
+                                                                                                        team for the
+                                                                                                        best
+                                                                                                        consultation
+                                                                                                        services.
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
@@ -492,13 +501,22 @@ About | Dream Next Education Foundation Pvt. Ltd.
                                                                                         data-slidesToScroll="2"
                                                                                         data-dir="false">
 
-                                                                                        {% for each_testimonial in testimonial_data %}
+                                                                                        {% for each_member in members_data %}
                                                                                         <div class="slick-slide">
                                                                                             <div
                                                                                                 class="item--inner wow flipInX">
                                                                                                 <div
                                                                                                     class="item--description">
-                                                                                                    {{ each_testimonial.testimony }}
+                                                                                                    <i
+                                                                                                        class="fas fa-quote-left"></i>
+                                                                                                    {{ each_member.msg }}
+                                                                                                    <i
+                                                                                                        class="fas fa-quote-right"></i>
+                                                                                                    {% if each_member.email %}
+                                                                                                    <br />
+                                                                                                    <strong>Email:</strong>
+                                                                                                    {{ each_member.email }}
+                                                                                                    {% endif %}
                                                                                                 </div>
                                                                                                 <div
                                                                                                     class="item--holder">
@@ -506,42 +524,47 @@ About | Dream Next Education Foundation Pvt. Ltd.
                                                                                                         class="item--image">
                                                                                                         <img width="109"
                                                                                                             height="109"
-                                                                                                            alt="{{ each_testimonial.reviewer }}"
-                                                                                                            title="{{ each_testimonial.reviewer }}"
-                                                                                                            data-src="/media/{{ each_testimonial.image }}"
+                                                                                                            alt="{{ each_member.full_name }}"
+                                                                                                            title="{{ each_member.full_name }}"
+                                                                                                            data-src="/media/{{ each_member.image }}"
                                                                                                             class="lazyload testimonial-image"
-                                                                                                            src="/media/{{ each_testimonial.image }}" />
+                                                                                                            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
                                                                                                     </div>
                                                                                                     <div
                                                                                                         class="item--meta">
                                                                                                         <h3
                                                                                                             class="item--title">
-                                                                                                            {{ each_testimonial.reviewer }}
+                                                                                                            {{ each_member.full_name }}
                                                                                                         </h3>
-                                                                                                        {% if each_testimonial.designation %}
+                                                                                                        {% if each_member.position %}
                                                                                                         <div
                                                                                                             class="item--position">
-                                                                                                            ,
-                                                                                                            {{ each_testimonial.designation }}
+                                                                                                            {{ each_member.position }}
                                                                                                         </div>
                                                                                                         {% endif %}
                                                                                                         <div
-                                                                                                            class="item-rating">
-                                                                                                            {% with ''|center:each_testimonial.rating as range %}
-                                                                                                            {% for obj in range %}
-                                                                                                            <i
-                                                                                                                class="fac fac-star"></i>
-                                                                                                            {% empty %}
-                                                                                                            No Rating
-                                                                                                            {% endfor %}
-                                                                                                            {% endwith %}
+                                                                                                            class="social">
+                                                                                                            {% if each_member.email %}
+                                                                                                            <a href="mailto:{{ each_member.email }}"
+                                                                                                                target="_blank">
+                                                                                                                <i
+                                                                                                                    class="fas fa-at"></i>
+                                                                                                            </a>
+                                                                                                            {% endif %}
+                                                                                                            {% if each_member.linkedin %}
+                                                                                                            <a href="{{ each_member.linkedin }}"
+                                                                                                                class="">
+                                                                                                                <i
+                                                                                                                    class="fab fa-linkedin-in"></i>
+                                                                                                            </a>
+                                                                                                            {% endif %}
                                                                                                         </div>
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
                                                                                         {% empty %}
-                                                                                        No Testimonial Data
+                                                                                        No Member Data
                                                                                         {% endfor %}
 
                                                                                     </div>

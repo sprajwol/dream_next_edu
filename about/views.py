@@ -1,6 +1,6 @@
 from django.views.generic import TemplateView
 
-from about.models import Testimonial
+from about.models import Testimonial, Member
 from test_prep.models import Course
 from services.models import Service
 # Create your views here.
@@ -13,14 +13,14 @@ class AboutView(TemplateView):
         # Call the base implementation first to get a context
         context = super().get_context_data(**kwargs)
 
-        if (Testimonial.objects.all().exists()):
-            testimonials = Testimonial.objects.all()
-            context['testimonial_data'] = testimonials
+        if (Member.objects.all().exists()):
+            members = Member.objects.all()
+            context['members_data'] = members
 
         if (Course.objects.all().exists()):
             course_data = Course.objects.all()
             context['course_data'] = course_data
-            
+
         if (Service.objects.all().exists()):
             services_data = Service.objects.all()
             context['services_data'] = services_data

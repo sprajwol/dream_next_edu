@@ -16,7 +16,7 @@ def get_reviewer_image_uploadpath(instance, filename):
 def get_member_image_uploadpath(instance, filename):
     ext = filename.split('.')[-1]
     full_name = [
-        character for character in instance.reviewer if character.isalnum()]
+        character for character in instance.full_name if character.isalnum()]
     full_name = "".join(full_name)
 
     return f'uploads/about/members/{full_name}/{full_name}_image.{ext}'
@@ -69,6 +69,10 @@ class Member(models.Model):
     image = models.ImageField(upload_to=get_member_image_uploadpath,
                               blank=True, null=True, verbose_name='Member Image')
     position = models.CharField(max_length=50)
+    msg = models.CharField(max_length=255, blank=True, null=True)
+    email = models.EmailField(max_length=100, verbose_name='Email Address')
+    linkedin = models.CharField(
+        max_length=200, blank=True, null=True, verbose_name='LinkedIn Profile Link')
     created_at = models.DateField(auto_now_add=True, verbose_name='Created at')
     updated_at = models.DateField(auto_now=True, verbose_name='Updated at')
 
