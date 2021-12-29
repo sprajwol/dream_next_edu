@@ -30,6 +30,7 @@ class TestPreparationView(ListView):
         if (Event.objects.all().exists()):
             recent_events_data = Event.objects.all()[:3]
             context['recent_events_data'] = recent_events_data
+            context['show_event_popup'] = recent_events_data[0]
 
         context['test_preparation_page'] = 'active'
         return context
@@ -46,6 +47,10 @@ class TestPreparationDetailView(DetailView):
         if (Course.objects.all().exists()):
             course_data = Course.objects.all()
             context['course_data'] = course_data
+
+        if (Event.objects.all().exists()):
+            recent_events_data = Event.objects.all()[:3]
+            context['show_event_popup'] = recent_events_data[0]
 
         context['study_abroad_page'] = 'active'
         return context

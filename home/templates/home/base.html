@@ -350,7 +350,7 @@
                                                                             </div>
                                                                             <div
                                                                                 class="ct-text-editor elementor-clearfix">
-                                                                                Sun to Fri 10:00am to 5:00pm
+                                                                                Sun to Fri 7:00am to 6:00pm
                                                                                 <br>Saturday: Closed
                                                                             </div>
                                                                         </div>
@@ -470,136 +470,29 @@
         <a href="#" class="scroll-top"><i class="zmdi zmdi-long-arrow-up"></i></a>
     </div>
 
+    {% if show_event_popup %}
     <div id="ct-newsletter-popup">
         <div class="ct-newsletter-content">
             <div class="ct-newsletter-content-inner">
                 <div class="ct-newsletter-close"><i class="zmdi zmdi-close"></i></div>
                 <div class="ct-newsletter-holder">
                     <div class="ct-newsletter-meta">
-                        <h4 class="ct-newsletter-title"> Subscribe to our LatestNews</h4>
-                        <div class="ct-newsletter-desc"> Sign up to receive latest news, updates, and
-                            special offers delivered directly to your inbox.</div>
-                        <form method="post" action="https://demo.casethemes.net/consultio-immigration/?na=s"
-                            class="tnp-subscription" style=""> <input type="hidden" name="nlang" value="">
-                            <div class="tnp-field tnp-field-email"><label for="tnp-email">Your mail address</label>
-                                <input class="tnp-email" type="email" name="ne" value="" required>
-                            </div>
-                            <div class="tnp-field tnp-field-button"><input class="tnp-button" type="submit"
-                                    value="Subscrib now"></div>
-                        </form>
-                        <div class="ct-newsletter-hide"><span> No, thanks </span></div>
+                        <h4 class="ct-newsletter-title"> {{ show_event_popup.title }}</h4>
+                        <p>
+                            {{ show_event_popup.summary }}
+                        </p>
+                        <div class="ct-newsletter-hide"><a href="{{ show_event_popup.get_absolute_url}}"><span> Show more </span></a></div>
                     </div>
-                    <div class="ct-newsletter-image"><img alt=""
-                            data-src="https://demo.casethemes.net/consultio-immigration/wp-content/themes/csuti/assets/images/newsletter-icon.png"
+                    <div class="ct-newsletter-image">
+                        <img alt=""
+                            data-src="/media/{{ show_event_popup.main_image }}"
                             class="lazyload"
                             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /></div>
                 </div>
             </div>
         </div>
     </div>
-
-    <script>
-        (function () {
-            function maybePrefixUrlField() {
-                if (this.value.trim() !== '' && this.value.indexOf('http') !== 0) {
-                    this.value = "http://" + this.value;
-                }
-            }
-            var urlFields = document.querySelectorAll('.mc4wp-form input[type="url"]');
-            if (urlFields) {
-                for (var j = 0; j < urlFields.length; j++) {
-                    urlFields[j].addEventListener('blur', maybePrefixUrlField);
-                }
-            }
-        })();
-    </script><!-- Instagram Feed JS -->
-    <script type="text/javascript">
-        var sbiajaxurl = "../wp-admin/admin-ajax.html";
-    </script>
-    <div id="yith-quick-view-modal">
-        <div class="yith-quick-view-overlay"></div>
-        <div class="yith-wcqv-wrapper">
-            <div class="yith-wcqv-main">
-                <div class="yith-wcqv-head"> <a href="#" id="yith-quick-view-close" class="yith-wcqv-close">X</a></div>
-                <div id="yith-quick-view-content" class="woocommerce single-product"></div>
-            </div>
-        </div>
-    </div>
-    <script type="text/javascript">
-        jQuery(function ($) {
-            if (typeof wc_add_to_cart_params === 'undefined')
-                return false;
-            $(document.body).on('added_to_cart', function (event, fragments, cart_hash, $button) {
-                var $pid = $button.data('product_id');
-                $.ajax({
-                    type: 'POST',
-                    url: wc_add_to_cart_params.ajax_url,
-                    data: {
-                        'action': 'item_added',
-                        'id': $pid
-                    },
-                    success: function (response) {
-                        $('.ct-widget-cart-wrap').addClass('open');
-                    }
-                });
-            });
-        });
-    </script>
-    <script type="text/javascript">
-        if (typeof revslider_showDoubleJqueryError === "undefined") {
-            function revslider_showDoubleJqueryError(sliderID) {
-                var err = "<div class='rs_error_message_box'>";
-                err += "<div class='rs_error_message_oops'>Oops...</div>";
-                err += "<div class='rs_error_message_content'>";
-                err +=
-                    "You have some jquery.js library include that comes after the Slider Revolution files js inclusion.<br>";
-                err +=
-                    "To fix this, you can:<br>&nbsp;&nbsp;&nbsp; 1. Set 'Module General Options' -> 'Advanced' -> 'jQuery & OutPut Filters' -> 'Put JS to Body' to on";
-                err += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jQuery.js inclusion and remove it";
-                err += "</div>";
-                err += "</div>";
-                var slider = document.getElementById(sliderID);
-                slider.innerHTML = err;
-                slider.style.display = "block";
-            }
-        }
-    </script>
-    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="pswp__bg"></div>
-        <div class="pswp__scroll-wrap">
-            <div class="pswp__container">
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-            </div>
-            <div class="pswp__ui pswp__ui--hidden">
-                <div class="pswp__top-bar">
-                    <div class="pswp__counter"></div> <button class="pswp__button pswp__button--close"
-                        aria-label="Close (Esc)"></button> <button class="pswp__button pswp__button--share"
-                        aria-label="Share"></button> <button class="pswp__button pswp__button--fs"
-                        aria-label="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom"
-                        aria-label="Zoom in/out"></button>
-                    <div class="pswp__preloader">
-                        <div class="pswp__preloader__icn">
-                            <div class="pswp__preloader__cut">
-                                <div class="pswp__preloader__donut"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                    <div class="pswp__share-tooltip"></div>
-                </div> <button class="pswp__button pswp__button--arrow--left"
-                    aria-label="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right"
-                    aria-label="Next (arrow right)"></button>
-                <div class="pswp__caption">
-                    <div class="pswp__caption__center"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script type="text/template" id="tmpl-unavailable-variation-template">
-        <p>Sorry, this product is unavailable. Please choose a different combination.</p> </script>
+    {% endif %}
 
 
 

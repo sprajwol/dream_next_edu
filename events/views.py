@@ -32,6 +32,10 @@ class EventView(ListView):
             news_data = News.objects.all()[:3]
             context['news_data'] = news_data
 
+        if (Event.objects.all().exists()):
+            recent_events_data = Event.objects.all()[:3]
+            context['show_event_popup'] = recent_events_data[0]
+
         context['events_page'] = 'active'
         return context
 
@@ -60,6 +64,10 @@ class EventDetailView(DetailView):
         if (Category.objects.all().exists()):
             event_category_data = Category.objects.all()
             context['event_category_data'] = event_category_data
+
+        if (Event.objects.all().exists()):
+            recent_events_data = Event.objects.all()[:3]
+            context['show_event_popup'] = recent_events_data[0]
 
         context['events_page'] = 'active'
         return context

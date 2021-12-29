@@ -30,6 +30,7 @@ class HomeView(TemplateView):
         if (Event.objects.all().exists()):
             events = Event.objects.all()
             context['event_data'] = events
+            context['show_event_popup'] = events[0]
 
         if (Course.objects.all().exists()):
             course_data = Course.objects.all()

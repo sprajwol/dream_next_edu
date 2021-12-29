@@ -27,6 +27,7 @@ class LatestNewsView(ListView):
         if (Event.objects.all().exists()):
             recent_events_data = Event.objects.all()[:3]
             context['recent_events_data'] = recent_events_data
+            context['show_event_popup'] = recent_events_data[0]
 
         context['latest_news_page'] = 'active'
         return context
@@ -47,6 +48,10 @@ class LatestNewsDetailView(DetailView):
         if (Service.objects.all().exists()):
             services_data = Service.objects.all()
             context['services_data'] = services_data
+
+        if (Event.objects.all().exists()):
+            recent_events_data = Event.objects.all()[:3]
+            context['show_event_popup'] = recent_events_data[0]
 
         context['latest_news_page'] = 'active'
         return context
