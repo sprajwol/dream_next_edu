@@ -90,8 +90,8 @@
                                             data-src="{% static 'home\static_images\logo_icon.png' %}" class="lazyload"
                                             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
                                     </a>
-                                    <a class="logo-mobile" href="{% url 'home' %}" title="DreamNext Education Foundation"
-                                        rel="home">
+                                    <a class="logo-mobile" href="{% url 'home' %}"
+                                        title="DreamNext Education Foundation" rel="home">
                                         <img alt="DreamNext Education Foundation"
                                             data-src="{% static 'home\static_images\logo_icon.png' %}" class="lazyload"
                                             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
@@ -148,7 +148,7 @@
                                                     <a href="{% url 'services' %}"><span>Services</a>
                                                     <ul class="sub-menu">
                                                         {% for service in services_data %}
-                                                        
+
                                                         <li
                                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5199">
                                                             <a href="{{ service.get_absolute_url }}">
@@ -158,8 +158,8 @@
                                                         {% empty %}
                                                         <li
                                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5199">
-                                                            
-                                                        No Data
+
+                                                            No Data
                                                         </li>
                                                         {% endfor %}
 
@@ -192,13 +192,11 @@
                                                     <a href="{% url 'study_abroad' %}" class="is-one-page"
                                                         data-onepage-offset="80"><span>Study Abroad</a>
                                                 </li>
-                                                <li
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom">
+                                                <li class="menu-item menu-item-type-custom menu-item-object-custom">
                                                     <a href="{% url 'latest_news' %}" class="is-one-page"
                                                         data-onepage-offset="80"><span>Latest News</a>
                                                 </li>
-                                                <li
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom">
+                                                <li class="menu-item menu-item-type-custom menu-item-object-custom">
                                                     <a href="{% url 'gallery' %}" class="is-one-page"
                                                         data-onepage-offset="80"><span>Gallery</a>
                                                 </li>
@@ -213,10 +211,14 @@
                                 </nav>
 
 
-                                <div class="ct-header-social"> <a href="https://www.facebook.com/dreamnexted"
-                                        target="_blank"><i class="fab fac-facebook-f"></i></a><a
-                                        href="https://www.facebook.com/dreamnexted" target="_blank"><i
-                                            class="fab fac-instagram"></i></a></div>
+                                <div class="ct-header-social">
+                                    <a href="https://www.facebook.com/dreamnexted" target="_blank">
+                                        <i class="fab fac-facebook-f"></i>
+                                    </a>
+                                    <!-- <a href="https://www.facebook.com/dreamnexted" target="_blank">
+                                        <i class="fab fac-instagram"></i>
+                                    </a> -->
+                                </div>
                             </div>
 
                             <!-- END OF NAVIGATION BAR -->
@@ -371,8 +373,9 @@
                                                                         <div
                                                                             class="ct-heading h-align-  sub-style1 ct-heading-left item-st-default">
                                                                             <h3 class="item--title st-default "
-                                                                                data-wow-delay="ms"> <span> Official
-                                                                                    info: </span></h3>
+                                                                                data-wow-delay="ms">
+                                                                                <span> Official info: </span>
+                                                                            </h3>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -384,27 +387,33 @@
                                                                             class="ct-contact-info ct-contact-info1 style1 ">
                                                                             <div class="ct-inline-css" data-css=" ">
                                                                             </div>
-                                                                            <li> <span class="ct-contact-icon"> <i
-                                                                                        aria-hidden="true"
+                                                                            <li>
+                                                                                <span class="ct-contact-icon">
+                                                                                    <i aria-hidden="true"
                                                                                         class="fas fa-map-marker-alt"></i>
-                                                                                </span> <span
-                                                                                    class="ct-contact-content">
-                                                                                    Kumaripati, Lalitpur </span>
+                                                                                </span>
+                                                                                <span class="ct-contact-content">
+                                                                                    Kumaripati, Lalitpur
+                                                                                </span>
                                                                             </li>
-                                                                            <li> <span class="ct-contact-icon"> <i
-                                                                                        aria-hidden="true"
+                                                                            <li>
+                                                                                <span class="ct-contact-icon">
+                                                                                    <i aria-hidden="true"
                                                                                         class="fas fa-phone-alt"></i>
-                                                                                </span> <span
-                                                                                    class="ct-contact-content">
-                                                                                    01-5408575 </span></li>
-                                                                            <li> <span class="ct-contact-icon"> <i
-                                                                                        aria-hidden="true"
+                                                                                </span>
+                                                                                <span class="ct-contact-content">
+                                                                                    01-5408575 </span>
+                                                                            </li>
+                                                                            <li>
+                                                                                <span class="ct-contact-icon">
+                                                                                    <i aria-hidden="true"
                                                                                         class="fas fa-envelope"></i>
-                                                                                </span> <span
-                                                                                    class="ct-contact-content">
+                                                                                </span>
+                                                                                <span class="ct-contact-content">
                                                                                     dreamnextedu@gmail.com<br />
                                                                                     info@dreamnextedu.com
-                                                                                </span></li>
+                                                                                </span>
+                                                                            </li>
                                                                         </ul>
                                                                     </div>
                                                                 </div>
@@ -414,8 +423,11 @@
                                                     <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-109a859b"
                                                         data-id="109a859b" data-element_type="column">
                                                         <div class="elementor-column-wrap elementor-element-populated">
-                                                            <div class="elementor-widget-wrap">   
-                                                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227.31439574779503!2d85.31885924451394!3d27.671210546143694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19d1d7db5faf%3A0x9e4a84300b844c5a!2z4KSV4KWB4KSu4KS-4KSw4KWAIOCkrOCliOCkguCklSDgpLLgpL_gpK7gpL_gpJ_gpYfgpKE!5e0!3m2!1sen!2snp!4v1635917915458!5m2!1sen!2snp" style="border:0; height: 100%; width: 100%;" allowfullscreen="" loading="lazy"></iframe>
+                                                            <div class="elementor-widget-wrap">
+                                                                <iframe
+                                                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227.31439574779503!2d85.31885924451394!3d27.671210546143694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19d1d7db5faf%3A0x9e4a84300b844c5a!2z4KSV4KWB4KSu4KS-4KSw4KWAIOCkrOCliOCkguCklSDgpLLgpL_gpK7gpL_gpJ_gpYfgpKE!5e0!3m2!1sen!2snp!4v1635917915458!5m2!1sen!2snp"
+                                                                    style="border:0; height: 100%; width: 100%;"
+                                                                    allowfullscreen="" loading="lazy"></iframe>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -444,7 +456,7 @@
                                                                                 class="ct-text-editor elementor-clearfix">
                                                                                 <span class="ct-year">2021</span> © All
                                                                                 rights reserved by <a
-                                                                                    href="https://themeforest.net/user/case-themes/portfolio"
+                                                                                    href="{% url 'home' %}"
                                                                                     target="_blank"
                                                                                     rel="nofollow noopener">DreamNext
                                                                                     Education Foundation</a>
@@ -481,13 +493,16 @@
                         <p>
                             {{ show_event_popup.summary }}
                         </p>
-                        <div class="ct-newsletter-hide"><a href="{{ show_event_popup.get_absolute_url}}"><span> Show more </span></a></div>
+                        <div class="ct-newsletter-hide">
+                            <a href="{{ show_event_popup.get_absolute_url}}">
+                                <span> Show more </span>
+                            </a>
+                        </div>
                     </div>
                     <div class="ct-newsletter-image">
-                        <img alt=""
-                            data-src="/media/{{ show_event_popup.main_image }}"
-                            class="lazyload"
-                            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /></div>
+                        <img alt="" data-src="/media/{{ show_event_popup.main_image }}" class="lazyload"
+                            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                    </div>
                 </div>
             </div>
         </div>
@@ -521,38 +536,7 @@
     <script defer type='text/javascript'
         src='{% static "home\styles\assets\wp-content\plugins\woocommerce\assets\js\prettyPhoto\jquery.prettyPhoto.min.js" %}'
         id='prettyPhoto-js'></script>
-    <script type='text/javascript' id='jquery-yith-wcwl-js-extra'>
-        /* <![CDATA[ */
-        var yith_wcwl_l10n = {
-            "ajax_url": "\/consultio-immigration\/wp-admin\/admin-ajax.php",
-            "redirect_to_cart": "no",
-            "multi_wishlist": "",
-            "hide_add_button": "1",
-            "enable_ajax_loading": "",
-            "ajax_loader_url": "https:\/\/demo.casethemes.net\/consultio-immigration\/wp-content\/plugins\/yith-woocommerce-wishlist\/assets\/images\/ajax-loader-alt.svg",
-            "remove_from_wishlist_after_add_to_cart": "1",
-            "is_wishlist_responsive": "1",
-            "time_to_close_prettyphoto": "3000",
-            "fragments_index_glue": ".",
-            "reload_on_found_variation": "1",
-            "mobile_media_query": "768",
-            "labels": {
-                "cookie_disabled": "We are sorry, but this feature is available only if cookies on your browser are enabled.",
-                "added_to_cart_message": "<div class=\"woocommerce-notices-wrapper\"><div class=\"woocommerce-message\" role=\"alert\">Product added to cart successfully<\/div><\/div>"
-            },
-            "actions": {
-                "add_to_wishlist_action": "add_to_wishlist",
-                "remove_from_wishlist_action": "remove_from_wishlist",
-                "reload_wishlist_and_adding_elem_action": "reload_wishlist_and_adding_elem",
-                "load_mobile_action": "load_mobile",
-                "delete_item_action": "delete_item",
-                "save_title_action": "save_title",
-                "save_privacy_action": "save_privacy",
-                "load_fragments": "load_fragments"
-            }
-        };
-        /* ]]> */
-    </script>
+
     <script defer type='text/javascript'
         src='../wp-content/plugins/yith-woocommerce-wishlist/assets/js/jquery.yith-wcwl.min.js'
         id='jquery-yith-wcwl-js'></script>
@@ -768,16 +752,7 @@
     </script>
     <script type='text/javascript' src='{% static "home\styles\assets\wp-includes\js\wp-util.min.js" %}'
         id='wp-util-js'></script>
-    <script type='text/javascript' id='wc-add-to-cart-variation-js-extra'>
-        /* <![CDATA[ */
-        var wc_add_to_cart_variation_params = {
-            "wc_ajax_url": "\/consultio-immigration\/?wc-ajax=%%endpoint%%",
-            "i18n_no_matching_variations_text": "Sorry, no products matched your selection. Please choose a different combination.",
-            "i18n_make_a_selection_text": "Please select some product options before adding this product to your cart.",
-            "i18n_unavailable_text": "Sorry, this product is unavailable. Please choose a different combination."
-        };
-        /* ]]> */
-    </script>
+
     <script type='text/javascript'
         src='{% static "home\styles\assets\wp-content\plugins\woocommerce\assets\js\frontend\add-to-cart-variation.min.js" %}'
         id='wc-add-to-cart-variation-js'></script>
