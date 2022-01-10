@@ -147,21 +147,112 @@
                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-414">
                                                     <a href="{% url 'services' %}"><span>Services</a>
                                                     <ul class="sub-menu">
-                                                        {% for service in services_data %}
+                                                        <div class="container">
+                                                            <div data-elementor-type="wp-post" data-elementor-id="5137"
+                                                                class="elementor elementor-5137"
+                                                                data-elementor-settings="[]">
+                                                                <div class="elementor-inner">
+                                                                    <div class="elementor-section-wrap">
+                                                                        <section
+                                                                            class="elementor-section elementor-top-section elementor-element elementor-element-11f7370 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                                                                            data-id="11f7370"
+                                                                            data-element_type="section">
+                                                                            <div
+                                                                                class="elementor-container elementor-column-gap-default ">
+                                                                                <div class="elementor-row">
+                                                                                    <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-27051da4"
+                                                                                        data-id="27051da4"
+                                                                                        data-element_type="column">
+                                                                                        <div
+                                                                                            class="elementor-column-wrap elementor-element-populated">
+                                                                                            <div
+                                                                                                class="elementor-widget-wrap">
 
-                                                        <li
-                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5199">
-                                                            <a href="{{ service.get_absolute_url }}">
-                                                                <span>{{ service.title }}</span>
-                                                            </a>
-                                                        </li>
-                                                        {% empty %}
-                                                        <li
-                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5199">
+                                                                                                <div class="elementor-element elementor-element-43420956 elementor-widget elementor-widget-ct_menu_item"
+                                                                                                    data-id="43420956"
+                                                                                                    data-element_type="widget"
+                                                                                                    data-widget_type="ct_menu_item.default">
+                                                                                                    <div
+                                                                                                        class="elementor-widget-container">
+                                                                                                        <ul
+                                                                                                            class="ct-menu-item ">
+                                                                                                            {% for service in services_data %}
 
-                                                            No Data
-                                                        </li>
-                                                        {% endfor %}
+                                                                                                            <li>
+                                                                                                                <a href="{{ service.get_absolute_url }}">
+                                                                                                                    <span>{{ service.title }}</span>
+                                                                                                                </a>
+                                                                                                            </li>
+                                                                                                            {% empty %}
+                                                                                                            <li>
+                                                                                                                No Data
+                                                                                                            </li>
+                                                                                                            {% endfor %}
+                                                                                                        </ul>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5a87c3ab col-line-mega"
+                                                                                        data-id="5a87c3ab"
+                                                                                        data-element_type="column">
+                                                                                        <div
+                                                                                            class="elementor-column-wrap elementor-element-populated">
+                                                                                            <div
+                                                                                                class="elementor-widget-wrap">
+                                                                                                <div class="elementor-element elementor-element-480355a2 elementor-widget elementor-widget-ct_heading"
+                                                                                                    data-id="480355a2"
+                                                                                                    data-element_type="widget"
+                                                                                                    data-widget_type="ct_heading.default">
+                                                                                                    <div
+                                                                                                        class="elementor-widget-container">
+                                                                                                        <div
+                                                                                                            class="ct-heading h-align-  sub-style1 ct-heading-left item-st-default">
+                                                                                                            <h6 class="item--title st-default "
+                                                                                                                data-wow-delay="ms">
+                                                                                                                <span>
+                                                                                                                    Scholarships
+                                                                                                                </span>
+                                                                                                            </h6>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="elementor-element elementor-element-acd6f6b elementor-widget elementor-widget-ct_menu_item"
+                                                                                                    data-id="acd6f6b"
+                                                                                                    data-element_type="widget"
+                                                                                                    data-widget_type="ct_menu_item.default">
+                                                                                                    <div
+                                                                                                        class="elementor-widget-container">
+                                                                                                        <ul class="ct-menu-item ">
+                                                                                                            <li>
+                                                                                                                {% for scholarship in scholarships_data %}
+
+                                                                                                            <li>
+                                                                                                                <a href="{{ scholarship.get_absolute_url }}">
+                                                                                                                    <span>{{ scholarship.title }}</span>
+                                                                                                                </a>
+                                                                                                            </li>
+                                                                                                            {% empty %}
+                                                                                                            <li>
+                                                                                                                No Data
+                                                                                                            </li>
+                                                                                                            {% endfor %}
+                                                                                                            </li>
+                                                                                                        </ul>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </section>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
 
                                                     </ul>
                                                 </li>

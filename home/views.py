@@ -8,7 +8,7 @@ from contact.models import Contact
 
 
 from test_prep.models import Course
-from services.models import Service
+from services.models import Service, Scholoarship
 # Create your views here.
 
 
@@ -39,6 +39,10 @@ class HomeView(TemplateView):
         if (Service.objects.all().exists()):
             services_data = Service.objects.all()
             context['services_data'] = services_data
+
+        if (Scholoarship.objects.all().exists()):
+            scholarships_data = Scholoarship.objects.all()
+            context['scholarships_data'] = scholarships_data
 
         context['home_page'] = 'active'
         return context
