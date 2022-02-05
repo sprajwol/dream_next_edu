@@ -3,7 +3,7 @@ from django.views.generic import TemplateView
 
 from test_prep.models import Course
 from contact.models import Contact
-from services.models import Service
+from services.models import Service, Scholoarship
 from events.models import Event
 # Create your views here.
 
@@ -26,6 +26,10 @@ class ContactView(TemplateView):
         if (Event.objects.all().exists()):
             recent_events_data = Event.objects.all()[:3]
             context['show_event_popup'] = recent_events_data[0]
+
+        if (Scholoarship.objects.all().exists()):
+            scholarships_data = Scholoarship.objects.all()
+            context['scholarships_data'] = scholarships_data
 
         context['contact_page'] = 'active'
         return context

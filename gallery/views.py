@@ -1,7 +1,7 @@
 from django.views.generic import TemplateView, DetailView, ListView
 
 from gallery.models import Album
-from services.models import Service
+from services.models import Service, Scholoarship
 from test_prep.models import Course
 from events.models import Event
 # Create your views here.
@@ -27,6 +27,10 @@ class GalleryView(ListView):
         if (Event.objects.all().exists()):
             recent_events_data = Event.objects.all()[:3]
             context['show_event_popup'] = recent_events_data[0]
+
+        if (Scholoarship.objects.all().exists()):
+            scholarships_data = Scholoarship.objects.all()
+            context['scholarships_data'] = scholarships_data
 
         context['gallery_page'] = 'active'
 
@@ -55,6 +59,10 @@ class AlbumView(DetailView):
         if (Event.objects.all().exists()):
             recent_events_data = Event.objects.all()[:3]
             context['show_event_popup'] = recent_events_data[0]
+
+        if (Scholoarship.objects.all().exists()):
+            scholarships_data = Scholoarship.objects.all()
+            context['scholarships_data'] = scholarships_data
 
         context['gallery_page'] = 'active'
         # context['albums'] = album

@@ -27,6 +27,10 @@ class StudyAbroadView(ListView):
             recent_events_data = Event.objects.all()[:3]
             context['show_event_popup'] = recent_events_data[0]
 
+        if (Scholoarship.objects.all().exists()):
+            scholarships_data = Scholoarship.objects.all()
+            context['scholarships_data'] = scholarships_data
+
         context['study_abroad_page'] = 'active'
         return context
 

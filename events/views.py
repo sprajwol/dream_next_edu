@@ -3,7 +3,7 @@ from django.views.generic import TemplateView, ListView, DetailView
 from events.models import Event, Category
 from test_prep.models import Course
 from latestnews.models import News
-from services.models import Service
+from services.models import Service, Scholoarship
 # Create your views here.
 
 
@@ -35,6 +35,10 @@ class EventView(ListView):
         if (Event.objects.all().exists()):
             recent_events_data = Event.objects.all()[:3]
             context['show_event_popup'] = recent_events_data[0]
+
+        if (Scholoarship.objects.all().exists()):
+            scholarships_data = Scholoarship.objects.all()
+            context['scholarships_data'] = scholarships_data
 
         context['events_page'] = 'active'
         return context
@@ -68,6 +72,10 @@ class EventDetailView(DetailView):
         if (Event.objects.all().exists()):
             recent_events_data = Event.objects.all()[:3]
             context['show_event_popup'] = recent_events_data[0]
+
+        if (Scholoarship.objects.all().exists()):
+            scholarships_data = Scholoarship.objects.all()
+            context['scholarships_data'] = scholarships_data
 
         context['events_page'] = 'active'
         return context
