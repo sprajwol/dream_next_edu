@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views.generic import TemplateView
 
 from test_prep.models import Course
-from contact.models import Contact
+from contact.models import Contact, Enquiry
 from services.models import Service, Scholoarship
 from events.models import Event
 from study_abroad.models import Country
@@ -84,3 +84,45 @@ class EnquiryView(TemplateView):
             context['countries_data'] = countries_data
 
         return context
+
+    def post(self, request):
+        full_name = request.POST["full_name"]
+        dob = request.POST["dob"]
+        passport_number = request.POST["passport_number"]
+        qualification = request.POST["qualification"]
+        college_name = request.POST["college_name"]
+        grade_or_percent = request.POST["grade_or_percent"]
+        passed_year = request.POST["passed_year"]
+        marital_status = request.POST["marital_status"]
+        address = request.POST["address"]
+        contact = request.POST["contact"]
+        email = request.POST["email"]
+        guardian_contact = request.POST["guardian_contact"]
+        country_to_apply = request.POST["country_to_apply"]
+        desired_course = request.POST["desired_course"]
+        taken_proficiency_test_and_score = request.POST["taken_proficiency_test_and_score"]
+        chosen_educational_institution = request.POST["chosen_educational_institution"]
+        how_know_about_us = request.POST["how_know_about_us"]
+        # print("lavis")
+
+        enquiry = Enquiry()
+        enquiry.full_name = full_name
+        enquiry.dob = dob
+        enquiry.passport_number = passport_number
+        enquiry.qualification = qualification
+        enquiry.college_name = college_name
+        enquiry.grade_or_percent = grade_or_percent
+        enquiry.passed_year = passed_year
+        enquiry.marital_status = marital_status
+        enquiry.address = address
+        enquiry.contact = contact
+        enquiry.email = email
+        enquiry.guardian_contact = guardian_contact
+        enquiry.country_to_apply = country_to_apply
+        enquiry.desired_course = desired_course
+        enquiry.taken_proficiency_test_and_score = taken_proficiency_test_and_score
+        enquiry.chosen_educational_institution = chosen_educational_institution
+        enquiry.how_know_about_us = how_know_about_us
+        enquiry.save()
+
+        return render(request, self.template_name)
