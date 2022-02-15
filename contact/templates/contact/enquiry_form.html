@@ -1,0 +1,522 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+
+{% block metaarea %}
+{% endblock metaarea %}
+
+{% block titlearea %}
+Enquiry | Dream Next Education Foundation Pvt. Ltd.
+{% endblock titlearea %}
+
+{% block cssarea %}
+{% include 'contact/upper_links.html' %}
+{% endblock cssarea %}
+
+
+{% block content %}
+<div id="pagetitle" class="page-title bg-image ">
+    <div class="container">
+        <div class="page-title-inner">
+            <div class="page-title-holder">
+                <h1 class="page-title">Enquiry</h1>
+            </div>
+            <ul class="ct-breadcrumb">
+                <li><a class="breadcrumb-entry" href="{% url 'home' %}">Home</a></li>
+                <li><span class="breadcrumb-entry">Enquiry</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="content" class="site-content">
+    <div class="content-inner">
+        <div class="container content-container">
+            <div class="row content-row">
+                <div id="primary" class="content-area content-full-width col-12">
+                    <main id="main" class="site-main">
+                        <article id="post-24" class="post-24 page type-page status-publish hentry">
+                            <div class="entry-content clearfix">
+                                <div data-elementor-type="wp-page" data-elementor-id="24" class="elementor elementor-24"
+                                    data-elementor-settings="[]">
+                                    <div class="elementor-inner">
+                                        <div class="elementor-section-wrap">
+                                            
+                                            <section
+                                                class="elementor-section elementor-top-section elementor-element elementor-element-d8bdc5a elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                                                data-id="d8bdc5a" data-element_type="section">
+                                                <div class="elementor-container elementor-column-gap-extended ">
+                                                    <div class="elementor-row">
+                                                        <div class="elementor-element elementor-element-f409baa elementor-widget elementor-widget-ct_ctf7"
+                                                                        data-id="f409baa" data-element_type="widget"
+                                                                        data-widget_type="ct_ctf7.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div
+                                                                                class="ct-contact-form-layout1 style1 ">
+                                                                                <div class="ct-contact-form-inner">
+                                                                                    <div class="ct-contact-form">
+                                                                                        <div role="form" class="wpcf7"
+                                                                                            id="wpcf7-f91-p24-o1"
+                                                                                            lang="en-US" dir="ltr">
+                                                                                            <div
+                                                                                                class="screen-reader-response">
+                                                                                                <p role="status"
+                                                                                                    aria-live="polite"
+                                                                                                    aria-atomic="true">
+                                                                                                </p>
+                                                                                                <ul></ul>
+                                                                                            </div>
+                                                                                            <form method="POST"
+                                                                                                class="wpcf7-form">
+                                                                                                {% csrf_token %}
+                                                                                                <div class="row">
+                                                                                                    <div
+                                                                                                        class="input-filled col-lg-6 col-md-6">
+                                                                                                        <span
+                                                                                                            class="wpcf7-form-control-wrap your-name">
+                                                                                                            <input
+                                                                                                                type="text"
+                                                                                                                name="full_name"
+                                                                                                                size="40"
+                                                                                                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                                                                                                aria-required="true"
+                                                                                                                aria-invalid="false"
+                                                                                                                placeholder="Your name*" />
+                                                                                                        </span>
+                                                                                                    </div>
+                                                                                                    <div
+                                                                                                        class="input-filled col-lg-6 col-md-6">
+                                                                                                        <span class="wpcf7-form-control-wrap dob">
+                                                                                                            <input
+                                                                                                                type="text"
+                                                                                                                name="dob"
+                                                                                                                size="40"
+                                                                                                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                                                                                                aria-required="true"
+                                                                                                                aria-invalid="false"
+                                                                                                                placeholder="Date of Birth" />
+                                                                                                            </span>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="row">
+                                                                                                    <div
+                                                                                                        class="input-filled col-lg-4 col-md-4">
+                                                                                                        <span
+                                                                                                            class="wpcf7-form-control-wrap contact">
+                                                                                                            <input
+                                                                                                                type="text"
+                                                                                                                name="contact"
+                                                                                                                size="40"
+                                                                                                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                                                                                                aria-required="true"
+                                                                                                                aria-invalid="false"
+                                                                                                                placeholder="Mobile Number*" />
+                                                                                                        </span>
+                                                                                                    </div>
+                                                                                                    <div
+                                                                                                        class="input-filled col-lg-4 col-md-4">
+                                                                                                        <span class="wpcf7-form-control-wrap address">
+                                                                                                            <input
+                                                                                                                type="text"
+                                                                                                                name="address"
+                                                                                                                size="40"
+                                                                                                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                                                                                                aria-required="true"
+                                                                                                                aria-invalid="false"
+                                                                                                                placeholder="Address*" />
+                                                                                                            </span>
+                                                                                                    </div>
+                                                                                                    <div
+                                                                                                        class="input-filled col-lg-4 col-md-4">
+                                                                                                        <span class="wpcf7-form-control-wrap guardian_contact">
+                                                                                                            <input
+                                                                                                                type="text"
+                                                                                                                name="guardian_contact"
+                                                                                                                size="40"
+                                                                                                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                                                                                                aria-required="true"
+                                                                                                                aria-invalid="false"
+                                                                                                                placeholder="Guardian's Contact*" />
+                                                                                                            </span>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                
+                                                                                                <div class="row">
+                                                                                                    <div
+                                                                                                        class="input-filled col-12 email">
+                                                                                                        <span
+                                                                                                            class="wpcf7-form-control-wrap email">
+                                                                                                            <input
+                                                                                                                type="email"
+                                                                                                                name="email"
+                                                                                                                size="40"
+                                                                                                                class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
+                                                                                                                aria-required="true"
+                                                                                                                aria-invalid="false"
+                                                                                                                placeholder="Email*" />
+                                                                                                        </span>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="row">
+                                                                                                    <div
+                                                                                                        class="input-filled col-lg-6 col-md-6">
+                                                                                                        <span
+                                                                                                            class="wpcf7-form-control-wrap marital_status">
+                                                                                                            <select
+                                                                                                                name="marital_status"
+                                                                                                                class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required"
+                                                                                                                aria-required="true"
+                                                                                                                aria-invalid="false">
+                                                                                                                <option
+                                                                                                                    value="Choose martial status*"
+                                                                                                                    selected
+                                                                                                                    disabled>
+                                                                                                                    Choose martial status*
+                                                                                                                </option>
+                                                                                                                <option
+                                                                                                                    value="married">
+                                                                                                                    Married
+                                                                                                                </option>
+                                                                                                                <option
+                                                                                                                    value="unmarried">
+                                                                                                                    Test
+                                                                                                                    Unmarried
+                                                                                                                </option>
+
+                                                                                                            </select>
+                                                                                                        </span>
+                                                                                                    </div>
+                                                                                                    <div
+                                                                                                        class="input-filled col-lg-6 col-md-6">
+                                                                                                        <span class="wpcf7-form-control-wrap passport_number">
+                                                                                                            <input
+                                                                                                                type="text"
+                                                                                                                name="passport_number"
+                                                                                                                size="40"
+                                                                                                                class="wpcf7-form-control wpcf7-text"
+                                                                                                                aria-required="false"
+                                                                                                                aria-invalid="false"
+                                                                                                                placeholder="Passport Number" />
+                                                                                                            </span>
+                                                                                                    </div>
+                                                                                                </div>
+
+                                                                                                <br>
+
+                                                                                                <div class="row">
+                                                                                                    <div
+                                                                                                        class="input-filled col-12 college_name">
+                                                                                                        <span
+                                                                                                            class="wpcf7-form-control-wrap">
+                                                                                                            <input
+                                                                                                                type="text"
+                                                                                                                name="college_name"
+                                                                                                                value=""
+                                                                                                                size="40"
+                                                                                                                class="wpcf7-form-control wpcf7-text"
+                                                                                                                aria-required="true"
+                                                                                                                aria-invalid="false"
+                                                                                                                placeholder="College Name" />
+                                                                                                        </span>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="row">
+                                                                                                    <div
+                                                                                                        class="input-filled col-lg-4 col-md-4">
+                                                                                                        <span
+                                                                                                            class="wpcf7-form-control-wrap qualification">
+                                                                                                            <input
+                                                                                                                type="text"
+                                                                                                                name="qualification"
+                                                                                                                size="40"
+                                                                                                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                                                                                                aria-required="false"
+                                                                                                                aria-invalid="false"
+                                                                                                                placeholder="Qualification*" />
+                                                                                                        </span>
+                                                                                                    </div>
+                                                                                                    <div
+                                                                                                        class="input-filled col-lg-4 col-md-4">
+                                                                                                        <span class="wpcf7-form-control-wrap grade_or_percent">
+                                                                                                            <input
+                                                                                                                type="text"
+                                                                                                                name="grade_or_percent"
+                                                                                                                size="40"
+                                                                                                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                                                                                                aria-required="true"
+                                                                                                                aria-invalid="false"
+                                                                                                                placeholder="Grade / Percent" />
+                                                                                                            </span>
+                                                                                                    </div>
+                                                                                                    <div
+                                                                                                        class="input-filled col-lg-4 col-md-4">
+                                                                                                        <span class="wpcf7-form-control-wrap passed_year">
+                                                                                                            <input
+                                                                                                                type="text"
+                                                                                                                name="passed_year"
+                                                                                                                size="40"
+                                                                                                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                                                                                                aria-required="true"
+                                                                                                                aria-invalid="false"
+                                                                                                                placeholder="Passed Year" />
+                                                                                                            </span>
+                                                                                                    </div>
+                                                                                                </div>
+
+                                                                                                <br/>
+
+                                                                                                <div class="row">
+                                                                                                    <div
+                                                                                                        class="input-filled col-lg-6 col-md-6">
+                                                                                                        <span
+                                                                                                            class="wpcf7-form-control-wrap marital_status">
+                                                                                                            <select
+                                                                                                                name="marital_status"
+                                                                                                                class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required"
+                                                                                                                aria-required="true"
+                                                                                                                aria-invalid="false">
+                                                                                                                <option
+                                                                                                                    value="Choose martial status*"
+                                                                                                                    selected
+                                                                                                                    disabled>
+                                                                                                                    Choose country*
+                                                                                                                </option>
+                                                                                                                {% for country in countries_data %}
+                                                                                                                <option
+                                                                                                                    value="{{ country.slug }}">
+                                                                                                                    {{ country.name }}
+                                                                                                                </option>
+                                                                                                                {% empty %}
+                                                                                                                <option
+                                                                                                                    value="No data" disabled>
+                                                                                                                    No countries data added in study abroad.
+                                                                                                                </option>
+                                                                                                                {% endfor %}
+
+                                                                                                            </select>
+                                                                                                        </span>
+                                                                                                    </div>
+                                                                                                    <div
+                                                                                                        class="input-filled col-lg-6 col-md-6">
+                                                                                                        <span class="wpcf7-form-control-wrap desired_course">
+                                                                                                            <input
+                                                                                                                type="text"
+                                                                                                                name="desired_course"
+                                                                                                                size="40"
+                                                                                                                class="wpcf7-form-control wpcf7-text"
+                                                                                                                aria-required="false"
+                                                                                                                aria-invalid="false"
+                                                                                                                placeholder="Desired Course" />
+                                                                                                            </span>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="row">
+                                                                                                    <div
+                                                                                                        class="input-filled col-lg-6 col-md-6">
+                                                                                                        <span
+                                                                                                            class="wpcf7-form-control-wrap your-taken_proficiency_test_and_score">
+                                                                                                            <input
+                                                                                                                type="text"
+                                                                                                                name="taken_proficiency_test_and_score"
+                                                                                                                size="40"
+                                                                                                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                                                                                                aria-required="true"
+                                                                                                                aria-invalid="false"
+                                                                                                                placeholder="Have your taken any proficienry test? If yes, write down score too." />
+                                                                                                        </span>
+                                                                                                    </div>
+                                                                                                    <div
+                                                                                                        class="input-filled col-lg-6 col-md-6">
+                                                                                                        <span class="wpcf7-form-control-wrap chosen_educational_institution">
+                                                                                                            <input
+                                                                                                                type="text"
+                                                                                                                name="chosen_educational_institution"
+                                                                                                                size="40"
+                                                                                                                class="wpcf7-form-control wpcf7-text"
+                                                                                                                aria-required="true"
+                                                                                                                aria-invalid="false"
+                                                                                                                placeholder="Chosen Education Institurion" />
+                                                                                                            </span>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                
+                                                                                                <br/>
+
+                                                                                                <div class="row">
+                                                                                                    <div
+                                                                                                        class="input-filled col-12">
+                                                                                                        <span
+                                                                                                            class="wpcf7-form-control-wrap how_know_about_us">
+                                                                                                            <textarea
+                                                                                                                name="how_know_about_us"
+                                                                                                                cols="40"
+                                                                                                                rows="10"
+                                                                                                                class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required"
+                                                                                                                aria-required="true"
+                                                                                                                aria-invalid="false"
+                                                                                                                placeholder="How you got to know about us?*">
+                                                                                                            </textarea>
+                                                                                                        </span>
+                                                                                                    </div>
+                                                                                                    <div
+                                                                                                        class="input-filled col-12">
+                                                                                                        <button
+                                                                                                            type="submit"
+                                                                                                            class="wpcf7-submit btn">
+                                                                                                            <i
+                                                                                                                class="fac fac-paper-plane space-right"></i>
+                                                                                                            Submit
+                                                                                                        </button>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="wpcf7-response-output"
+                                                                                                    aria-hidden="true">
+                                                                                                </div>
+                                                                                            </form>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section
+                                                class="elementor-section elementor-top-section elementor-element elementor-element-d33da39 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                                                data-id="d33da39" data-element_type="section">
+                                                <div class="elementor-container elementor-column-gap-extended ">
+                                                    <div class="elementor-row">
+                                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-f37ff66"
+                                                            data-id="f37ff66" data-element_type="column">
+                                                            <div
+                                                                class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-f688838 elementor-widget elementor-widget-ct_clients_list"
+                                                                        data-id="f688838" data-element_type="widget"
+                                                                        data-widget_type="ct_clients_list.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div
+                                                                                class="ct-client1 ct-slick-slider style4">
+                                                                                <div class="ct-clients-list-inner">
+                                                                                    <div class="ct-slick-carousel"
+                                                                                        data-arrows="" data-dots=""
+                                                                                        data-pauseOnHover=""
+                                                                                        data-autoplay="true"
+                                                                                        data-autoplaySpeed="8000"
+                                                                                        data-infinite="true"
+                                                                                        data-speed="800" data-colxs="2"
+                                                                                        data-colsm="3" data-colmd="4"
+                                                                                        data-collg="4" data-colxl="4"
+                                                                                        data-dir="false"
+                                                                                        data-slidesToScroll="1">
+                                                                                        <div class="slick-slide">
+                                                                                            <div class="client-image ">
+                                                                                                <a href="#">
+                                                                                                    <img width="169"
+                                                                                                        height="35"
+                                                                                                        alt=""
+                                                                                                        data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/11/client-01.png"
+                                                                                                        class="ct-thumb-1 attachment-full lazyload"
+                                                                                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                                                                                                    <img width="169"
+                                                                                                        height="35"
+                                                                                                        alt=""
+                                                                                                        data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/11/client-01.png"
+                                                                                                        class="ct-thumb-2 attachment-full lazyload"
+                                                                                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                                                                                                </a></div>
+                                                                                        </div>
+                                                                                        <div class="slick-slide">
+                                                                                            <div class="client-image ">
+                                                                                                <a href="#">
+                                                                                                    <img width="143"
+                                                                                                        height="42"
+                                                                                                        alt=""
+                                                                                                        data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/11/client-02.png"
+                                                                                                        class="ct-thumb-1 attachment-full lazyload"
+                                                                                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                                                                                                    <img width="143"
+                                                                                                        height="42"
+                                                                                                        alt=""
+                                                                                                        data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/11/client-02.png"
+                                                                                                        class="ct-thumb-2 attachment-full lazyload"
+                                                                                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                                                                                                </a></div>
+                                                                                        </div>
+                                                                                        <div class="slick-slide">
+                                                                                            <div class="client-image ">
+                                                                                                <a href="#">
+                                                                                                    <img width="166"
+                                                                                                        height="38"
+                                                                                                        alt=""
+                                                                                                        data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/11/client-03.png"
+                                                                                                        class="ct-thumb-1 attachment-full lazyload"
+                                                                                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                                                                                                    <img width="166"
+                                                                                                        height="38"
+                                                                                                        alt=""
+                                                                                                        data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/11/client-03.png"
+                                                                                                        class="ct-thumb-2 attachment-full lazyload"
+                                                                                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                                                                                                </a></div>
+                                                                                        </div>
+                                                                                        <div class="slick-slide">
+                                                                                            <div class="client-image ">
+                                                                                                <a href="#">
+                                                                                                    <img width="170"
+                                                                                                        height="35"
+                                                                                                        alt=""
+                                                                                                        data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/11/client-04.png"
+                                                                                                        class="ct-thumb-1 attachment-full lazyload"
+                                                                                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                                                                                                    <img width="170"
+                                                                                                        height="35"
+                                                                                                        alt=""
+                                                                                                        data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/11/client-04.png"
+                                                                                                        class="ct-thumb-2 attachment-full lazyload"
+                                                                                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                                                                                                </a></div>
+                                                                                        </div>
+                                                                                        <div class="slick-slide">
+                                                                                            <div class="client-image ">
+                                                                                                <a href="#">
+                                                                                                    <img width="196"
+                                                                                                        height="36"
+                                                                                                        alt=""
+                                                                                                        data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/12/client-05.png"
+                                                                                                        class="ct-thumb-1 attachment-full lazyload"
+                                                                                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                                                                                                    <img width="196"
+                                                                                                        height="36"
+                                                                                                        alt=""
+                                                                                                        data-src="https://demo.casethemes.net/consultio-immigration/wp-content/uploads/2019/12/client-05.png"
+                                                                                                        class="ct-thumb-2 attachment-full lazyload"
+                                                                                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                                                                                                </a></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- .entry-content -->
+                        </article><!-- #post-24 -->
+                    </main><!-- #main -->
+                </div><!-- #primary -->
+            </div>
+        </div>
+    </div><!-- #content inner -->
+</div><!-- #content -->
+{% endblock content %}
+
+{% block javascript %}
+{% endblock javascript %}
