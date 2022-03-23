@@ -24,6 +24,9 @@ class Course(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
 
+    class Meta:
+        ordering = ('-name',)
+
     def __str__(self):
         return str(self.name)
 
