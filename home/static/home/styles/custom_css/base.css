@@ -7,11 +7,11 @@
 }
 
 .scroll-top {
-	height: 44px;
-	width: 44px;
-	right: 75px;
+	height: 44px !important;
+	width: 44px !important;
+	right: 75px !important;
 }
 
 .scroll-top.on {
-	bottom: 25px;
+	bottom: 25px !important;
 }
