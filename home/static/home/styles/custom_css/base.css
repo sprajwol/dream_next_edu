@@ -5,3 +5,13 @@
 .ct-main-menu > li > a {
 	font-size: 14px !important;
 }
+
+.scroll-top {
+	height: 44px;
+	width: 44px;
+	right: 75px;
+}
+
+.scroll-top.on {
+	bottom: 25px;
+}
