@@ -15,3 +15,7 @@
 .scroll-top.on {
 	bottom: 25px !important;
 }
+
+.ct-main-menu > li {
+    margin: 0 14px !important;
+}
