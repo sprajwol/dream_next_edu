@@ -21,9 +21,9 @@ ALLOWED_HOSTS = ['*']
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dreamnext_db',
-        'USER': 'dreamnext_db_user',
-        'PASSWORD': 'havel@52',
+        'NAME': 'dream_next_edu_db',
+        'USER': 'dreamnextuser',
+        'PASSWORD': 'hetex@90',
         'HOST': 'localhost',
         'PORT': '',
     }
