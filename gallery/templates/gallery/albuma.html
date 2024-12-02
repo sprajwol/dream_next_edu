@@ -1,0 +1,56 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block metaarea %}
+{% endblock metaarea %}
+
+{% block titlearea %}
+Gallery | ASMAN
+{% endblock titlearea %}
+
+{% block cssarea %}
+<link rel="stylesheet" type="text/css" href="{% static 'gallery\styles\custom\css\album.min.css' %}" />
+{% endblock cssarea %}
+
+{% block content %}
+<section class="page-title photo-album-title text-center"
+    style="background: linear-gradient( rgba(28, 28, 28, 0.8), rgba(28, 28, 28, 0.8) ), url(/media/{{ object.images.all.first }});">
+    <h2 class="text-extra-bold white text-uppercase">Photo Album</h2>
+    <div class="page-location text-center display-ib"
+        style="background-image: url({% static 'home\static_images\curved.png' %});">
+        <span class="ubuntu fz-14 green-5c">Home <i class="gray-e9">/</i> Gallery <i class="gray-e9">/</i> Photo
+            Album</span>
+    </div>
+</section>
+
+<section class="mt-150 mb-150 gallery">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3 class=" black h-sep">{{ object.photo_album_name }} <span class="text-ultra-bold">Album</span> </h3>
+                <p class="fz-16 gray-666 mt-50">{{ object.short_desc }}</p>
+            </div>
+        </div>
+
+        <div class="row mt-50">
+            {% if object.images.all %}
+            <div class="album-container mt-30">
+
+                {% for each_image in object.images.all %}
+                <a href="/media/{{ each_image }}" title="Album: {{  object.photo_album_name }}">
+                    <img src="/media/{{ each_image }}" alt="{{ each_image.name }}">
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+        {% else %}
+        <h5 class="text-semi-bold mt-30">No images has yet been uploaded in this album.</h5>
+        {% endif %}
+    </div>
+
+</section>
+{% endblock content %}
+
+{% block javascript %}
+<script type=" text/javascript" src="{% static 'gallery\styles\custom\js\album.js' %}"></script>
+{% endblock javascript %}

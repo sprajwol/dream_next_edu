@@ -22,6 +22,16 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('', include('home.urls')),
+    path('about/', include('about.urls')),
+    path('contact/', include('contact.urls')),
+    path('services/', include('services.urls')),
+    path('events/', include('events.urls')),
+    path('test-preparation/', include('test_prep.urls')),
+    path('study-abroad/', include('study_abroad.urls')),
+    path('latest-news/', include('latestnews.urls')),
+    path('gallery/', include('gallery.urls')),
+
+    path('summernote/', include('django_summernote.urls')),
 ]
 
 if settings.DEBUG:

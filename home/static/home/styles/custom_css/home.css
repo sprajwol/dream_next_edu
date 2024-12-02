@@ -1,0 +1,11 @@
+.slider-1-slide-1-layer-1_2320 {
+	white-space: normal;
+	width: 80vw;
+}
+
+.slick-slide .testimonial-image {
+	height: 96px;
+	width: 96px;
+	object-fit: cover;
+	object-position: center;
+}

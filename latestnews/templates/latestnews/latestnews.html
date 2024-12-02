@@ -1,0 +1,157 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+
+{% block metaarea %}
+{% endblock metaarea %}
+
+{% block titlearea %}
+Latest News | Dream Next Education Foundation Pvt. Ltd.
+{% endblock titlearea %}
+
+{% block cssarea %}
+{% include 'services/visa_upper_links.html' %}
+<link rel="stylesheet" href="{% static 'latestnews\styles\custom_css\latest_news.css' %}">
+{% endblock cssarea %}
+
+
+{% block content %}
+<div id="pagetitle" class="page-title bg-image ">
+    <div class="container">
+        <div class="page-title-inner">
+            <div class="page-title-holder">
+                <h1 class="page-title">Latest News</h1>
+            </div>
+            <ul class="ct-breadcrumb">
+                <li><a class="breadcrumb-entry" href="{% url 'home' %}">Home</a></li>
+                <li><span class="breadcrumb-entry">Latest News</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="content" class="site-content">
+    <div class="content-inner">
+        <div class="container content-container">
+            <div class="row content-row">
+                <div id="primary"
+                    class="content-area content-has-sidebar float-left col-xl-9 col-lg-8 col-md-12 col-sm-12">
+                    <main id="main" class="site-main">
+                        {% for news in page_obj %}
+                        <article
+                            class="single-hentry archive post-166 post type-post status-publish format-standard has-post-thumbnail hentry category-business tag-builder tag-cloud tag-map tag-tower tag-truck">
+                            <div class="entry-featured">
+                                <a href="{{ news.get_absolute_url }}"
+                                    style="background-image: url('/media/{{ news.main_image }}');">
+                                    <img width="1920" height="1200" alt=""
+                                        data-srcset="/media/{{ news.main_image }} 1920w, /media/{{ news.main_image }} 600w"
+                                        data-src="/media/{{ news.main_image }}"
+                                        data-sizes="(max-width: 1920px) 100vw, 1920px"
+                                        class="attachment-full size-full wp-post-image lazyload"
+                                        src="/media/{{ news.main_image }}" />
+                                </a>
+                                <div class="entry-date"> <span>{{ news.created_on|date:"d" }}</span>
+                                    <span>{{ news.created_on|date:"M" }} {{ news.created_on|date:"y" }}</span>
+                                </div>
+                            </div>
+                            <div class="entry-body">
+                                <div class="entry-holder">
+                                    <h2 class="entry-title">
+                                        <a href="{{ news.get_absolute_url }}">
+                                            {{ news.name }}
+                                        </a>
+                                    </h2>
+                                    <ul class="entry-meta">
+                                        <li class="item-author"><i
+                                                class="fac fac-calendar-alt"></i>{{ news.created_on|date:"d M Y" }}
+                                        </li>
+                                    </ul>
+                                    <div class="entry-excerpt">
+                                        {{ news.summary|slice:":150" }}...
+                                    </div>
+                                    <div class="entry-readmore">
+                                        <a href="{{ news.get_absolute_url }}" class="btn-text text-gradient">
+                                            <i class="fac fac-angle-right"></i>
+                                            <span>Read More</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article><!-- #post -->
+                        {% empty %}
+                        No latest news data
+                        {% endfor %}
+
+                        {% if page_obj  %}
+                        <nav class="navigation posts-pagination ">
+                            <div class="posts-page-links">
+                                {% if page_obj.has_previous %}
+                                <a class="next page-numbers" href="?page=1">
+                                    <i class="far fac-angle-left"></i>
+                                    <i class="far fac-angle-left"></i>
+                                </a>
+                                <a class="next page-numbers" href="?page={{ page_obj.previous_page_number }}">
+                                    <i class="far fac-angle-left"></i></a>
+                                <a class="next page-numbers" href="?page={{ page_obj.previous_page_number  }}">
+                                    {{ page_obj.previous_page_number  }}</a>
+                                {% endif %}
+                                <span aria-current="page" class="page-numbers current">{{ page_obj.number }}</span>
+
+                                {% if page_obj.has_next  %}
+                                <a class="next page-numbers" href="?page={{ page_obj.next_page_number  }}">
+                                    {{ page_obj.next_page_number  }}</a>
+                                <a class="next page-numbers" href="?page={{ page_obj.next_page_number  }}">
+                                    <i class="far fac-angle-right"></i></a>
+                                <a class="next page-numbers" href="?page={{ page_obj.paginator.num_pages }}">
+                                    <i class="far fac-angle-right"></i>
+                                    <i class="far fac-angle-right"></i>
+                                </a>
+                                {% endif %}
+                        </nav>
+                        {% endif %}
+                    </main><!-- #main -->
+                </div><!-- #primary -->
+                <aside id="secondary"
+                    class="widget-area widget-has-sidebar sidebar-fixed col-xl-3 col-lg-4 col-md-12 col-sm-12">
+                    <div class="sidebar-sticky">
+                        <section id="ct_recent_posts-3" class="widget widget_ct_recent_posts">
+                            <div class="widget-content">
+                                <h2 class="widget-title">Recent Events</h2>
+                                <div class="posts-list ">
+                                    {% for event in recent_events_data %}
+                                    <div class="entry-brief">
+                                        <div class="entry-media">
+                                            <a href="{{ event.get_absolute_url }}">
+                                                <img alt="{{ event.title }}" data-src="/media/{{ event.main_image }}"
+                                                    class="lazyload" src="/media/{{ event.main_image }}" />
+                                            </a>
+                                        </div>
+                                        <div class="entry-content">
+                                            <h4 class="entry-title">
+                                                <a href="{{ event.get_absolute_url }}" title="{{ event.title }}">
+                                                    {{ event.title }}
+                                                </a>
+                                            </h4>
+                                            <div class="item-date"> {{ event.created_on|date:"d M, Y" }}
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% empty %}
+                                    No recent events data
+                                    {% endfor %}
+
+                                </div>
+                            </div>
+                        </section>
+
+
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div><!-- #content inner -->
+</div><!-- #content -->
+{% endblock content %}
+
+{% block javascript %}
+{% endblock javascript %}

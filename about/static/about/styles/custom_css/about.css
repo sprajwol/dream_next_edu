@@ -1,0 +1,16 @@
+.item--holder .item--image {
+	display: flex;
+	justify-content: center;
+}
+
+.slick-slide .testimonial-image {
+	height: 109px !important;
+	width: 109px !important;
+	object-fit: cover;
+	object-position: center;
+}
+
+.item--meta .social i {
+	color: #0082c6;
+	margin-right: 10px;
+}

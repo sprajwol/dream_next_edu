@@ -1,0 +1,9 @@
+.grid-item-over > .item--holder {
+	justify-content: center;
+}
+
+.grid-item-over > .item--featured > img {
+	height: 25rem;
+	object-fit: cover;
+	object-position: center;
+}

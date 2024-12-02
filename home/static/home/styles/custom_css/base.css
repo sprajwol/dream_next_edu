@@ -1,0 +1,21 @@
+.ct-contact-info1 i {
+	color: inherit !important;
+}
+
+.ct-main-menu > li > a {
+	font-size: 14px !important;
+}
+
+.scroll-top {
+	height: 44px !important;
+	width: 44px !important;
+	right: 75px !important;
+}
+
+.scroll-top.on {
+	bottom: 25px !important;
+}
+
+.ct-main-menu > li {
+    margin: 0 14px !important;
+}

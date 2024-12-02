@@ -1,0 +1,183 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+
+{% block metaarea %}
+{% endblock metaarea %}
+
+{% block titlearea %}
+{{ object.title }} | Dream Next Education Foundation Pvt. Ltd.
+{% endblock titlearea %}
+
+{% block cssarea %}
+{% include 'services/visa_upper_links.html' %}
+<link rel="stylesheet" href="{% static 'services\styles\custom_css\services_detail.css' %}">
+{% endblock cssarea %}
+
+
+{% block content %}
+<div id="pagetitle" class="page-title bg-image ">
+    <div class="container">
+        <div class="page-title-inner">
+            <div class="page-title-holder">
+                <h1 class="page-title">{{ object.title }}</h1>
+            </div>
+            <ul class="ct-breadcrumb">
+                <li><a class="breadcrumb-entry" href="{% url 'home' %}">Home</a></li>
+                <li><a class="breadcrumb-entry" href="{% url 'services' %}">Services</a></li>
+                <li><span class="breadcrumb-entry">{{ object.title }}</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="content" class="site-content">
+    <div class="content-inner">
+        <div class="container content-container">
+            <div class="row content-row">
+                <div id="primary"
+                    class="content-area content-has-sidebar float-left col-xl-9 col-lg-8 col-md-12 col-sm-12">
+                    <main id="main" class="site-main">
+                        <article
+                            class="single-hentry post-166 post type-post status-publish format-standard has-post-thumbnail hentry category-business tag-builder tag-cloud tag-map tag-tower tag-truck">
+                            <div class="entry-blog">
+                                <div class="entry-featured">
+                                    <img width="501" height="313" alt=""
+                                        data-srcset="/media/{{ object.main_image }} 1920w, /media/{{ object.main_image }} 600w"
+                                        data-src="/media/{{ object.main_image }}"
+                                        data-sizes="(max-width: 501px) 100vw, 501px"
+                                        class="attachment-consultio-large size-consultio-large wp-post-image lazyload"
+                                        src="/media/{{ object.main_image }}" />
+                                    <div class="entry-category">
+                                        <a href="#" rel="tag">{{ object.category }}</a>
+                                    </div>
+                                </div>
+                                <div class="entry-body">
+                                    <div class="entry-content clearfix">
+                                        {{ object.description|safe }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="entry-footer">
+                                
+                                <div class="entry-social"> <label>Share:</label>
+                                    <a class="fb-social" title="Facebook" target="_blank"
+                                        href="http://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}">
+                                        <i class="fab fac-facebook-f"></i>
+                                    </a>
+                                    <a class="tw-social" title="Twitter" target="_blank"
+                                        href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}">
+                                        <i class="fab fac-twitter"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article><!-- #post -->
+
+                    </main><!-- #main -->
+                </div><!-- #primary -->
+                <aside id="secondary"
+                    class="widget-area widget-has-sidebar sidebar-fixed col-xl-3 col-lg-4 col-md-12 col-sm-12">
+                    <div class="sidebar-sticky">
+                        <div class="elementor-element elementor-element-310525f4 elementor-widget elementor-widget-ct_heading"
+                                                                            data-id="310525f4"
+                                                                            data-element_type="widget"
+                                                                            data-widget_type="ct_heading.default">
+                            <div class="elementor-widget-container">
+                                <div
+                                    class="ct-heading h-align-  sub-style1 ct-heading-left item-st-default">
+                                    <h3 class="item--title st-default "
+                                        data-wow-delay="ms">
+                                        <span> Contact </span>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="elementor-element elementor-element-2f1cc283 elementor-widget elementor-widget-ct_contact_info"
+                                                                            data-id="2f1cc283"
+                                                                            data-element_type="widget"
+                                                                            data-widget_type="ct_contact_info.default">
+                            <div class="elementor-widget-container">
+                                <ul id="ct_contact_info-2f1cc283"
+                                    class="ct-contact-info ct-contact-info1 style2 ">
+                                    <li> <span class="ct-contact-icon">
+                                            <i aria-hidden="true"
+                                                class="fas fa-map-marked-alt"></i>
+                                        </span> <span
+                                            class="ct-contact-content">
+                                            Kumaripati, Lalitpur
+                                        </span></li>
+                                    <li>
+                                        <span class="ct-contact-icon">
+                                            <i aria-hidden="true"
+                                                class="material zmdi zmdi-phone"></i>
+                                        </span> <span
+                                            class="ct-contact-content">
+                                            01-5408575
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="ct-contact-icon">
+                                            <i aria-hidden="true"
+                                                class="material zmdi zmdi-phone"></i>
+                                        </span> <span
+                                            class="ct-contact-content">
+                                            9849985262
+                                        </span>
+                                    </li>
+                                    <li> <span class="ct-contact-icon">
+                                            <i aria-hidden="true"
+                                                class="material zmdi zmdi-email-open"></i>
+                                        </span> <span
+                                            class="ct-contact-content">
+                                            dreamnextedu@gmail.com
+                                        </span></li>
+                                    <li> <span class="ct-contact-icon">
+                                            <i aria-hidden="true"
+                                                class="material zmdi zmdi-email-open"></i>
+                                        </span> <span
+                                            class="ct-contact-content">
+                                            info@dreamnextfoundation.edu.np
+                                        </span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="elementor-element elementor-element-310525f4 elementor-widget elementor-widget-ct_heading"
+                                                                            data-id="310525f4"
+                                                                            data-element_type="widget"
+                                                                            data-widget_type="ct_heading.default">
+                            <div class="elementor-widget-container">
+                                <div
+                                    class="ct-heading h-align-  sub-style1 ct-heading-left item-st-default">
+                                    <h3 class="item--title st-default "
+                                        data-wow-delay="ms">
+                                        <span> Enquire Now </span>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="elementor-element elementor-element-47e5baa1 elementor-widget">
+                            <div class="elementor-widget-container">
+                                <div class="ct-download">
+                                    <div class="item--download">
+                                        <a href="{% url 'enquiry' %}" style="justify-content:center;">
+                                            <i aria-hidden="true" class="far fa-file-pdf"></i>
+                                            <span>
+                                                Enquire Now
+                                            </span>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                                                         
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div><!-- #content inner -->
+</div><!-- #content -->
+
+{% endblock content %}
+
+{% block javascript %}
+{% endblock javascript %}

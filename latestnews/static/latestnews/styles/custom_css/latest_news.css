@@ -1,0 +1,16 @@
+.entry-blog .entry-featured img {
+	width: 100% !important;
+}
+
+.entry-blog .entry-body .entry-meta {
+	margin-top: 1rem;
+}
+
+.entry-blog .entry-content {
+	margin-top: 4rem;
+}
+
+.entry-footer {
+	margin-top: 5rem;
+	margin-bottom: 5rem;
+}

@@ -1,0 +1,181 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+
+{% block metaarea %}
+{% endblock metaarea %}
+
+{% block titlearea %}
+Test Preparation | Dream Next Education Foundation Pvt. Ltd.
+{% endblock titlearea %}
+
+{% block cssarea %}
+{% include 'services/visa_upper_links.html' %}
+{% endblock cssarea %}
+
+
+{% block content %}
+<div id="pagetitle" class="page-title bg-image ">
+    <div class="container">
+        <div class="page-title-inner">
+            <div class="page-title-holder">
+                <h1 class="page-title">Test Preparation</h1>
+            </div>
+            <ul class="ct-breadcrumb">
+                <li><a class="breadcrumb-entry" href="{% url 'home' %}">Home</a></li>
+                <li><span class="breadcrumb-entry">Test Preparation</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="content" class="site-content">
+    <div class="content-inner">
+        <div class="container content-container">
+            <div class="row content-row">
+                <div id="primary"
+                    class="content-area content-has-sidebar float-left col-xl-9 col-lg-8 col-md-12 col-sm-12">
+                    <main id="main" class="site-main">
+                        {% for course in object_list %}
+                        <article id=""
+                            class="single-hentry archive post-5472 courses type-courses status-publish has-post-thumbnail hentry">
+                            <div class="entry-featured">
+                                <a href="{{ course.get_absolute_url }}"
+                                    style="background-image: url('/media/{{ course.main_image }}');">
+                                    <img width="1920" height="1200" alt="{{ course.name }}"
+                                        class="attachment-full size-full wp-post-image lazyload" />
+                                </a>
+
+                            </div>
+                            <div class="entry-body">
+                                <div class="entry-holder">
+                                    <h2 class="entry-title">
+                                        <a href="{{ course.get_absolute_url }}"> {{ course.name }} </a>
+                                    </h2>
+
+                                    <div class="entry-excerpt">
+                                        {{ course.summary|slice:":150" }}...
+                                    </div>
+                                    <div class="entry-readmore">
+                                        <a href="{{ course.get_absolute_url }}" class="btn-text text-gradient">
+                                            <i class="fac fac-angle-right"></i>
+                                            <span>Read More</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article><!-- #post -->
+                        {% empty %}
+                        No Data
+                        {% endfor %}
+
+                    </main><!-- #main -->
+                </div><!-- #primary -->
+
+
+                <!-- SIDEBAR -->
+
+                <aside id="secondary"
+                    class="widget-area widget-has-sidebar sidebar-fixed col-xl-3 col-lg-4 col-md-12 col-sm-12">
+                    <div class="sidebar-sticky">
+                        <!-- <section id="search-2" class="widget widget_search">
+                            <div class="widget-content">
+                                <form role="search" method="get" class="search-form">
+                                    <div class="searchform-wrap"> <input type="text" placeholder="Search..." name="s"
+                                            class="search-field" /> <button type="submit" class="search-submit"><i
+                                                class="far fac-search"></i></button></div>
+                                </form>
+                            </div>
+                        </section> -->
+
+
+
+                        <section id="ct_recent_posts-3" class="widget widget_ct_recent_posts">
+                            <div class="widget-content">
+                                <h2 class="widget-title">Latest News</h2>
+                                <div class="posts-list ">
+                                    {% for news in news_data %}
+                                    <div class="entry-brief">
+                                        <div class="entry-media">
+                                            <a href="{{ news.get_absolute_url }}">
+                                                <img alt="{{ news.name }}" data-src="/media/{{ news.main_image }}"
+                                                    class="lazyload" src="/media/{{ news.main_image }}" />
+                                            </a>
+                                        </div>
+                                        <div class="entry-content">
+                                            <h4 class="entry-title">
+                                                <a href="{{ news.get_absolute_url }}" title="{{ news.name }}">
+                                                    {{ news.name }}
+                                                </a>
+                                            </h4>
+                                            <div class="item-date"> {{ news.created_on|date:"d M, Y" }}
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% empty %}
+                                    No latest news data
+                                    {% endfor %}
+
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="ct_recent_posts-3" class="widget widget_ct_recent_posts">
+                            <div class="widget-content">
+                                <h2 class="widget-title">Recent Events</h2>
+                                <div class="posts-list ">
+                                    {% for event in recent_events_data %}
+                                    <div class="entry-brief">
+                                        <div class="entry-media">
+                                            <a href="{{ event.get_absolute_url }}">
+                                                <img alt="{{ event.title }}" data-src="/media/{{ event.main_image }}"
+                                                    class="lazyload" src="/media/{{ event.main_image }}" />
+                                            </a>
+                                        </div>
+                                        <div class="entry-content">
+                                            <h4 class="entry-title">
+                                                <a href="{{ event.get_absolute_url }}" title="{{ event.title }}">
+                                                    {{ event.title }}
+                                                </a>
+                                            </h4>
+                                            <div class="item-date"> {{ event.created_on|date:"d M, Y" }}
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% empty %}
+                                    No recent events data
+                                    {% endfor %}
+
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- <section id="categories-3" class="widget widget_categories">
+                            <div class="widget-content">
+                                <h2 class="widget-title">Book Online</h2>
+                                <ul>
+                                    <li class="cat-item cat-item-1"><a href="../testbooking/index.html">IELTS
+                                            <span class="count right">2 </span></a></li>
+                                    <li class="cat-item cat-item-18"><a href="../testbooking/index.html">TOEFL
+                                            <span class="count right">2 </span></a></li>
+
+                                    <li class="cat-item cat-item-18"><a href="../testbooking/index.html">PTE
+                                            <span class="count right">2 </span></a></li>
+
+                                </ul>
+                            </div>
+                        </section> -->
+
+
+
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div><!-- #content inner -->
+</div><!-- #content -->
+{% endblock content %}
+
+{% block javascript %}
+{% endblock javascript %}

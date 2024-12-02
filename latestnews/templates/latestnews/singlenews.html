@@ -1,0 +1,114 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+
+{% block metaarea %}
+{% endblock metaarea %}
+
+{% block titlearea %}
+{{ object.name }} | Dream Next Education Foundation Pvt. Ltd.
+{% endblock titlearea %}
+
+{% block cssarea %}
+{% include 'services/visa_upper_links.html' %}
+<link rel="stylesheet" href="{% static 'latestnews\styles\custom_css\latest_news.css' %}">
+{% endblock cssarea %}
+
+
+{% block content %}
+<div id="pagetitle" class="page-title bg-image ">
+    <div class="container">
+        <div class="page-title-inner">
+            <div class="page-title-holder">
+                <h1 class="page-title">{{ object.name }}</h1>
+            </div>
+            <ul class="ct-breadcrumb">
+                <li><a class="breadcrumb-entry" href="{% url 'home' %}">Home</a></li>
+                <li><a class="breadcrumb-entry" href="{% url 'latest_news' %}">Latest News</a></li>
+                <li><span class="breadcrumb-entry">{{ object.name }}</span></li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="content" class="site-content">
+    <div class="content-inner">
+        <div class="container content-container">
+            <div class="row content-row">
+                <div id="primary"
+                    class="content-area content-has-sidebar float-left col-xl-9 col-lg-8 col-md-12 col-sm-12">
+                    <main id="main" class="site-main">
+                        <article id="post-166"
+                            class="single-hentry post-166 post type-post status-publish format-standard has-post-thumbnail hentry category-business tag-builder tag-cloud tag-map tag-tower tag-truck">
+                            <div class="entry-blog">
+                                <div class="entry-featured">
+                                    <img width="501" height="313" alt="{{ object.name }}"
+                                        data-srcset="/media/{{ object.main_image }} 1920w, /media/{{ object.main_image }} 600w"
+                                        data-src="/media/{{ object.main_image }}"
+                                        data-sizes="(max-width: 501px) 100vw, 501px"
+                                        class="attachment-consultio-large size-consultio-large wp-post-image lazyload"
+                                        src="/media/{{ object.main_image }}" />
+
+                                </div>
+                                <div class="entry-body">
+                                    <ul class="entry-meta">
+                                        <li class="item-date">
+                                            <i class="fac fac-calendar-alt"></i>{{ object.created_on }}
+                                        </li>
+
+                                    </ul>
+                                    <div class="entry-content clearfix">
+                                        {{ object.description|safe }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="entry-footer">
+
+                                <div class="entry-social">
+                                    <label>Share:</label>
+                                    <a class="fb-social" title="Facebook" target="_blank"
+                                        href="http://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}">
+                                        <i class="fab fac-facebook-f"></i>
+                                    </a>
+                                    <a class="tw-social" title="Twitter" target="_blank"
+                                        href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}">
+                                        <i class="fab fac-twitter"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            {% if object.get_previous_by_created_on %}
+
+                            <div class="entry-navigation">
+                                <div class="nav-links">
+                                    <div class="nav-item nav-post-prev">
+                                        <div class="nav-post-img">
+                                            <a
+                                                href="{% url 'latest_news_detail' object.get_previous_by_created_on.slug %}">
+                                                <img data-src='/media/{{ object.get_previous_by_created_on.main_image }}'
+                                                    class='lazyload'
+                                                    src='/media/{{ object.get_previous_by_created_on.main_image }}' /></a>
+                                        </div>
+                                        <div class="nav-post-meta"><label>Previous Post</label>
+                                            <a
+                                                href="{% url 'latest_news_detail' object.get_previous_by_created_on.slug %}">
+                                                {{ object.get_previous_by_created_on.name }}
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div><!-- .nav-links -->
+                                {% endif %}
+                            </div>
+                        </article><!-- #post -->
+
+                    </main><!-- #main -->
+                </div><!-- #primary -->
+
+            </div>
+        </div>
+    </div><!-- #content inner -->
+</div><!-- #content -->
+{% endblock content %}
+
+{% block javascript %}
+{% endblock javascript %}

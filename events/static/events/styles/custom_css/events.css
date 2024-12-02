@@ -1,0 +1,11 @@
+.widget_categories ul li a:before {
+	content: '' !important;
+}
+
+.entry-blog .entry-featured img {
+	width: 100% !important;
+}
+
+.entry-blog .entry-content {
+	margin-top: 4rem;
+}

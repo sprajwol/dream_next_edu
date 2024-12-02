@@ -1,0 +1,111 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+
+{% block metaarea %}
+{% endblock metaarea %}
+
+{% block titlearea %}
+{{ object.title }} | Dream Next Education Foundation Pvt. Ltd.
+{% endblock titlearea %}
+
+{% block cssarea %}
+{% include 'events/single_upper_links.html' %}
+<link rel="stylesheet" href="{% static 'events\styles\custom_css\events.css' %}">
+{% endblock cssarea %}
+
+
+{% block content %}
+
+<div id="pagetitle" class="page-title bg-image ">
+    <div class="container">
+        <div class="page-title-inner">
+            <div class="page-title-holder">
+                <h1 class="page-title">{{ object.title }}</h1>
+            </div>
+            <ul class="ct-breadcrumb">
+                <li><a class="breadcrumb-entry" href="{% url 'home' %}">Home</a></li>
+                <li><a class="breadcrumb-entry" href="{% url 'events' %}">Events</a></li>
+                <li><span class="breadcrumb-entry">{{ object.title }}</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="content" class="site-content">
+    <div class="content-inner">
+        <div class="container content-container">
+            <div class="row content-row">
+                <div id="primary"
+                    class="content-area content-has-sidebar float-left col-xl-9 col-lg-8 col-md-12 col-sm-12">
+                    <main id="main" class="site-main">
+                        <article id="post-166"
+                            class="single-hentry post-166 post type-post status-publish format-standard has-post-thumbnail hentry category-business tag-builder tag-cloud tag-map tag-tower tag-truck">
+                            <div class="entry-blog">
+                                <div class="entry-featured">
+                                    <img width="501" height="313" alt=""
+                                        data-srcset="/media/{{ object.main_image }} 1920w, /media/{{ object.main_image }} 600w"
+                                        data-src="/media/{{ object.main_image }}"
+                                        data-sizes="(max-width: 501px) 100vw, 501px"
+                                        class="attachment-consultio-large size-consultio-large wp-post-image lazyload"
+                                        src="/media/{{ object.main_image }}" />
+                                    <div class="entry-category">
+                                        <a href="../category/business/index.html" rel="tag">{{ object.category }}</a>
+                                    </div>
+                                </div>
+                                <div class="entry-body">
+                                    <ul class="entry-meta">
+                                        <li class="item-date"><i class="fac fac-calendar-alt"></i>5 Nov, 2019
+                                        </li>
+                                    </ul>
+                                    <div class="entry-content clearfix">
+                                        {{ object.description|safe }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="entry-footer">
+                                <div class="entry-social"> <label>Share:</label>
+                                    <a class="fb-social" title="Facebook" target="_blank"
+                                        href="http://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}">
+                                        <i class="fab fac-facebook-f"></i>
+                                    </a>
+                                    <a class="tw-social" title="Twitter" target="_blank"
+                                        href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}"><i
+                                            class="fab fac-twitter"></i>
+                                    </a> 
+                                    
+                                </div>
+                            </div>
+                        </article><!-- #post -->
+
+                    </main><!-- #main -->
+                </div><!-- #primary -->
+                <aside id="secondary"
+                    class="widget-area widget-has-sidebar sidebar-fixed col-xl-3 col-lg-4 col-md-12 col-sm-12">
+                    <div class="sidebar-sticky">
+                        <section id="categories-3" class="widget widget_categories">
+                            <div class="widget-content">
+                                <h2 class="widget-title">Categories</h2>
+                                <ul>
+                                    {% for category in event_category_data %}
+                                    <li class="cat-item cat-item-1">
+                                        <a href="{% url 'events_category' category.slug %}">
+                                            <i class="fas fa-list-alt"></i> {{ category.name }}
+                                        </a>
+                                    </li>
+                                    {% empty %}
+                                    No event category data
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </section>
+                        
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div><!-- #content inner -->
+</div><!-- #content -->
+{% endblock content %}
+
+{% block javascript %}
+{% endblock javascript %}

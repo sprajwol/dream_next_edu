@@ -30,10 +30,17 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'django_summernote',
+
     'home.apps.HomeConfig',
     'about.apps.AboutConfig',
     'contact.apps.ContactConfig',
     'services.apps.ServicesConfig',
+    'events.apps.EventsConfig',
+    'study_abroad.apps.StudyAbroadConfig',
+    'test_prep.apps.TestPrepConfig',
+    'latestnews.apps.LatestnewsConfig',
+    'gallery.apps.GalleryConfig',
 ]
 
 MIDDLEWARE = [

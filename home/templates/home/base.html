@@ -20,15 +20,49 @@
     <link rel="shortcut icon" href="{% static 'home\static_images\logo.jpg' %}">
 
     <!-- NormalizeCSS Linking -->
-    <link rel="stylesheet" type="text/css" href="{% static 'home\styles\packages\NormalizeCSS\normalize.css' %}">
+    <!-- From template -->
+    <!-- maginific popup -->
+    <link rel="stylesheet" type="text/css"
+        href="{% static 'home\styles\packages\Magnific-popup\dist\magnific-popup.css' %}" />
     <!-- Custom CSS Linking -->
-    <link rel="stylesheet" type="text/css" href="{% static 'home\styles\customs\css\base.min.css' %}">
+    <link rel="stylesheet" href="{% static 'home\styles\custom_css\base.css' %}">
     {% block cssarea %}
     {% endblock cssarea %}
 
 </head>
 
 <body>
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "111041860242562");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v13.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+    
     <div id="loader">
         <div class="lds-ring" id="loading">
             <div></div>
@@ -38,28 +72,852 @@
         </div>
     </div>
     <div id="page" class="site">
-        <header>
+        <header id="ct-masthead">
 
+
+            <!-- INFORMATION BAR OVER NAVIGATION BAR -->
+
+            <div id="ct-header-wrap" class="ct-header-layout22 fixed-height is-sticky">
+                <div id="ct-header-top" class="ct-header-top12">
+                    <div class="container">
+                        <div class="row">
+                            <ul class="ct-header-holder">
+                                <li>
+                                    <a href="mailto:info@consultio.com" target="_blank">
+                                        <i class="fac fac-envelope"></i>
+                                        info@dreamnextfoundation.edu.np
+                                    </a>
+                                </li>
+                                <li>
+                                    <i class="fac fac-clock"></i>
+                                    Sun - Fri: 7:00 am - 06:00pm
+                                </li>
+                                <li>
+                                    <a href="https://goo.gl/maps/JgjsmQ5UQsxAae6RA" target="_blank">
+                                        <i class="fac fac-map-marker-alt"></i>
+                                        Kumaripati, Lalitpur
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="ct-header-topbar-btn">
+                                <a class="btn effect-left-to-right" href="{% url 'enquiry' %}" target="_self">
+                                    Appointment<i class="flaticonv2 flaticonv2-right-arrow"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="ct-header" class="ct-header-main">
+                    <div class="container">
+                        <div class="row">
+                            <div class="ct-header-branding">
+                                <div class="ct-header-branding-inner">
+                                    <a class="logo-dark" href="{% url 'home' %}" title="DreamNext Education Foundation"
+                                        rel="home">
+                                        <img alt="DreamNext Education Foundation"
+                                            data-src="{% static 'home\static_images\logo.jpg' %}" class="lazyload"
+                                            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                                    </a>
+                                    <a class="logo-light" href="{% url 'home' %}" title="DreamNext Education Foundation"
+                                        rel="home">
+                                        <img alt="DreamNext Education Foundation"
+                                            data-src="{% static 'home\static_images\logo.jpg' %}" class="lazyload"
+                                            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                                    </a>
+                                    <a class="logo-mobile" href="{% url 'home' %}"
+                                        title="DreamNext Education Foundation" rel="home">
+                                        <img alt="DreamNext Education Foundation"
+                                            data-src="{% static 'home\static_images\logo.jpg' %}" class="lazyload"
+                                            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- END OF INFORMATION BAR OVER NAVIGATION BAR -->
+
+                            <!-- NAVIGATION BAR -->
+
+
+                            <div class="ct-header-navigation">
+                                <nav class="ct-main-navigation">
+                                    <div class="ct-main-navigation-inner">
+                                        <div class="ct-logo-mobile">
+                                            <a class="logo-mobile" href="{% url 'home' %}" title="" rel="home">
+                                                <img alt=""
+                                                    data-src="{% static 'home\static_images\logo.png' %}"
+                                                    class="lazyload"
+                                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                                            </a>
+                                        </div>
+
+                                        <div class="ct-main-navigation-filter">
+                                            <ul id="ct-main-menu" class="ct-main-menu sub-hover children-plus clearfix">
+                                                <li
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5146">
+                                                    <a href="{% url 'home' %}" class="is-one-page show-demos">
+                                                        <span>Home</span>
+                                                    </a>
+                                                </li>
+
+                                                <li
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5153">
+                                                    <a href="{% url 'about' %}" class="is-one-page"
+                                                        data-onepage-offset="80">
+                                                        <span>About us</span>
+                                                    </a>
+                                                </li>
+
+                                                <li
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-414">
+                                                    <a href="{% url 'services' %}"><span>Services</a>
+                                                    <ul class="sub-menu">
+                                                        <div class="container">
+                                                            <div data-elementor-type="wp-post" data-elementor-id="5137"
+                                                                class="elementor elementor-5137"
+                                                                data-elementor-settings="[]">
+                                                                <div class="elementor-inner">
+                                                                    <div class="elementor-section-wrap">
+                                                                        <section
+                                                                            class="elementor-section elementor-top-section elementor-element elementor-element-11f7370 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                                                                            data-id="11f7370"
+                                                                            data-element_type="section">
+                                                                            <div
+                                                                                class="elementor-container elementor-column-gap-default ">
+                                                                                <div class="elementor-row">
+                                                                                    <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-27051da4"
+                                                                                        data-id="27051da4"
+                                                                                        data-element_type="column">
+                                                                                        <div
+                                                                                            class="elementor-column-wrap elementor-element-populated">
+                                                                                            <div
+                                                                                                class="elementor-widget-wrap">
+
+                                                                                                <div class="elementor-element elementor-element-43420956 elementor-widget elementor-widget-ct_menu_item"
+                                                                                                    data-id="43420956"
+                                                                                                    data-element_type="widget"
+                                                                                                    data-widget_type="ct_menu_item.default">
+                                                                                                    <div
+                                                                                                        class="elementor-widget-container">
+                                                                                                        <ul
+                                                                                                            class="ct-menu-item ">
+                                                                                                            {% for service in services_data %}
+
+                                                                                                            <li>
+                                                                                                                <a href="{{ service.get_absolute_url }}">
+                                                                                                                    <span>{{ service.title }}</span>
+                                                                                                                </a>
+                                                                                                            </li>
+                                                                                                            {% empty %}
+                                                                                                            <li>
+                                                                                                                No Data
+                                                                                                            </li>
+                                                                                                            {% endfor %}
+                                                                                                        </ul>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5a87c3ab col-line-mega"
+                                                                                        data-id="5a87c3ab"
+                                                                                        data-element_type="column">
+                                                                                        <div
+                                                                                            class="elementor-column-wrap elementor-element-populated">
+                                                                                            <div
+                                                                                                class="elementor-widget-wrap">
+                                                                                                <div class="elementor-element elementor-element-480355a2 elementor-widget elementor-widget-ct_heading"
+                                                                                                    data-id="480355a2"
+                                                                                                    data-element_type="widget"
+                                                                                                    data-widget_type="ct_heading.default">
+                                                                                                    <div
+                                                                                                        class="elementor-widget-container">
+                                                                                                        <div
+                                                                                                            class="ct-heading h-align-  sub-style1 ct-heading-left item-st-default">
+                                                                                                            <h6 class="item--title st-default "
+                                                                                                                data-wow-delay="ms">
+                                                                                                                <span>
+                                                                                                                    Scholarships
+                                                                                                                </span>
+                                                                                                            </h6>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="elementor-element elementor-element-acd6f6b elementor-widget elementor-widget-ct_menu_item"
+                                                                                                    data-id="acd6f6b"
+                                                                                                    data-element_type="widget"
+                                                                                                    data-widget_type="ct_menu_item.default">
+                                                                                                    <div
+                                                                                                        class="elementor-widget-container">
+                                                                                                        <ul class="ct-menu-item ">
+                                                                                                            <li>
+                                                                                                                {% for scholarship in scholarships_data %}
+
+                                                                                                            <li>
+                                                                                                                <a href="{{ scholarship.get_absolute_url }}">
+                                                                                                                    <span>{{ scholarship.title }}</span>
+                                                                                                                </a>
+                                                                                                            </li>
+                                                                                                            {% empty %}
+                                                                                                            <li>
+                                                                                                                No Data
+                                                                                                            </li>
+                                                                                                            {% endfor %}
+                                                                                                            </li>
+                                                                                                        </ul>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </section>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+                                                    </ul>
+                                                </li>
+
+                                                <li
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-414">
+                                                    <a href="{% url 'test_preparation' %}"><span>Test Preparation</a>
+                                                    <ul class="sub-menu">
+                                                        {% for course in course_data %}
+
+                                                        <li id="menu-item-5199"
+                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5199">
+                                                            <a
+                                                                href="{{ course.get_absolute_url}}"><span>{{ course.name }}</a>
+                                                        </li>
+                                                        {% empty %}
+                                                        No Course Data
+                                                        {% endfor %}
+                                                    </ul>
+                                                </li>
+                                                <li
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5156">
+                                                    <a href="{% url 'events' %}" class="is-one-page"
+                                                        data-onepage-offset="80"><span>Events</a>
+                                                </li>
+                                                <li
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5157">
+                                                    <a href="{% url 'study_abroad' %}" class="is-one-page"
+                                                        data-onepage-offset="80"><span>Study Abroad</a>
+                                                </li>
+                                                <li class="menu-item menu-item-type-custom menu-item-object-custom">
+                                                    <a href="{% url 'latest_news' %}" class="is-one-page"
+                                                        data-onepage-offset="80"><span>Latest News</a>
+                                                </li>
+                                                <li class="menu-item menu-item-type-custom menu-item-object-custom">
+                                                    <a href="{% url 'gallery' %}" class="is-one-page"
+                                                        data-onepage-offset="80"><span>Gallery</a>
+                                                </li>
+                                                <li
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5160">
+                                                    <a href="{% url 'contact' %}" class="is-one-page"
+                                                        data-onepage-offset="80"><span>Contact</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </nav>
+
+
+                                <div class="ct-header-social">
+                                    <a href="https://www.facebook.com/dreamnexted" target="_blank">
+                                        <i class="fab fac-facebook-f"></i>
+                                    </a>
+                                    <a href="https://www.instagram.com/dnefoundation/" target="_blank">
+                                        <i class="fab fac-instagram"></i>
+                                    </a>
+                                    <a href="https://www.youtube.com/watch?v=js5XQNVY6yM&list=PLHwPqbxukPHv9Wi9TdT1uwaS2O0-pj_wl&index=1" target="_blank">
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                    <a href="https://www.tiktok.com/@dreamnexteducation" target="_blank">
+                                        <i class="fab fa-tiktok"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- END OF NAVIGATION BAR -->
+                        </div>
+                    </div>
+                    <div id="ct-menu-mobile"> <span class="btn-nav-mobile open-menu"> <span></span> </span></div>
+                </div>
+            </div>
         </header>
 
         <main>
-            This is it
             {% block content %}
             {% endblock content %}
         </main>
 
-        <footer>
+        <footer id="colophon" class="site-footer-custom">
+            <div class="footer-custom-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div data-elementor-type="wp-post" data-elementor-id="20" class="elementor elementor-20"
+                                data-elementor-settings="[]">
+                                <div class="elementor-inner">
+                                    <div class="elementor-section-wrap">
+                                        
+                                        <section
+                                            class="elementor-section elementor-top-section elementor-element elementor-element-4b35436 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                                            data-id="4b35436" data-element_type="section"
+                                            data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
+                                            <div class="elementor-container elementor-column-gap-extended ">
+                                                <div class="elementor-row">
+                                                    <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-2fa889c3"
+                                                        data-id="2fa889c3" data-element_type="column">
+                                                        <div class="elementor-column-wrap elementor-element-populated">
+                                                            <div class="elementor-widget-wrap">
+                                                                <div class="elementor-element elementor-element-4fd8a94 elementor-widget elementor-widget-ct_heading"
+                                                                    data-id="4fd8a94" data-element_type="widget"
+                                                                    data-widget_type="ct_heading.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div
+                                                                            class="ct-heading h-align-  sub-style1 ct-heading-left item-st-default">
+                                                                            <h3 class="item--title st-default "
+                                                                                data-wow-delay="ms"> <span> We are
+                                                                                    <b>DreamNext Education
+                                                                                        Foundation!</b> </span></h3>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="elementor-element elementor-element-324188f1 elementor-widget elementor-widget-ct_text_editor"
+                                                                    data-id="324188f1" data-element_type="widget"
+                                                                    data-widget_type="ct_text_editor.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div id="ct_text_editor-324188f1"
+                                                                            class="ct-text-editor " data-wow-delay="ms">
+                                                                            <div class="ct-inline-css" data-css=" ">
+                                                                            </div>
+                                                                            <div
+                                                                                class="ct-text-editor elementor-clearfix">
+                                                                                We help students for their bright future
+                                                                                and secure career.</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
 
+                                                                <div class="elementor-element elementor-element-12558334 elementor-widget elementor-widget-ct_text_editor"
+                                                                    data-id="12558334" data-element_type="widget"
+                                                                    data-widget_type="ct_text_editor.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div id="ct_text_editor-12558334"
+                                                                            class="ct-text-editor " data-wow-delay="ms">
+                                                                            <div class="ct-inline-css" data-css=" ">
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-4d62e194"
+                                                        data-id="4d62e194" data-element_type="column">
+                                                        <div class="elementor-column-wrap elementor-element-populated">
+                                                            <div class="elementor-widget-wrap">
+                                                                <div class="elementor-element elementor-element-ec7fe7f elementor-widget elementor-widget-ct_heading"
+                                                                    data-id="ec7fe7f" data-element_type="widget"
+                                                                    data-widget_type="ct_heading.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div
+                                                                            class="ct-heading h-align-  sub-style1 ct-heading-left item-st-default">
+                                                                            <h3 class="item--title st-default "
+                                                                                data-wow-delay="ms"> <span> Opening
+                                                                                    Hours
+                                                                                </span></h3>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="elementor-element elementor-element-7b23233 elementor-widget elementor-widget-ct_text_editor"
+                                                                    data-id="7b23233" data-element_type="widget"
+                                                                    data-widget_type="ct_text_editor.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div id="ct_text_editor-7b23233"
+                                                                            class="ct-text-editor " data-wow-delay="ms">
+                                                                            <div class="ct-inline-css" data-css=" ">
+                                                                            </div>
+                                                                            <div
+                                                                                class="ct-text-editor elementor-clearfix">
+                                                                                Sun to Fri 7:00am to 6:00pm
+                                                                                <br>Saturday: Closed
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-109a859b"
+                                                        data-id="109a859b" data-element_type="column">
+                                                        <div class="elementor-column-wrap elementor-element-populated">
+                                                            <div class="elementor-widget-wrap">
+                                                                <div class="elementor-element elementor-element-9f425fd elementor-widget elementor-widget-ct_heading"
+                                                                    data-id="9f425fd" data-element_type="widget"
+                                                                    data-widget_type="ct_heading.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div
+                                                                            class="ct-heading h-align-  sub-style1 ct-heading-left item-st-default">
+                                                                            <h3 class="item--title st-default "
+                                                                                data-wow-delay="ms">
+                                                                                <span> Official info: </span>
+                                                                            </h3>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="elementor-element elementor-element-722cda7e elementor-widget elementor-widget-ct_contact_info"
+                                                                    data-id="722cda7e" data-element_type="widget"
+                                                                    data-widget_type="ct_contact_info.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <ul id="ct_contact_info-722cda7e"
+                                                                            class="ct-contact-info ct-contact-info1 style1 ">
+                                                                            <div class="ct-inline-css" data-css=" ">
+                                                                            </div>
+                                                                            <li>
+                                                                                <span class="ct-contact-icon">
+                                                                                    <i aria-hidden="true"
+                                                                                        class="fas fa-map-marker-alt"></i>
+                                                                                </span>
+                                                                                <span class="ct-contact-content">
+                                                                                    Kumaripati, Lalitpur
+                                                                                </span>
+                                                                            </li>
+                                                                            <li>
+                                                                                <span class="ct-contact-icon">
+                                                                                    <i aria-hidden="true"
+                                                                                        class="fas fa-phone-alt"></i>
+                                                                                </span>
+                                                                                <span class="ct-contact-content">
+                                                                                    01-5408575 </span>
+                                                                            </li>
+                                                                            <li>
+                                                                                <span class="ct-contact-icon">
+                                                                                    <i aria-hidden="true"
+                                                                                        class="fas fa-phone-alt"></i>
+                                                                                </span>
+                                                                                <span class="ct-contact-content">
+                                                                                    9849985262 </span>
+                                                                            </li>
+                                                                            <li>
+                                                                                <span class="ct-contact-icon">
+                                                                                    <i aria-hidden="true"
+                                                                                        class="fas fa-envelope"></i>
+                                                                                </span>
+                                                                                <span class="ct-contact-content">
+                                                                                    dreamnextedu@gmail.com<br />
+                                                                                    info@dreamnextfoundation.edu.np
+                                                                                </span>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-109a859b"
+                                                        data-id="109a859b" data-element_type="column">
+                                                        <div class="elementor-column-wrap elementor-element-populated">
+                                                            <div class="elementor-widget-wrap">
+                                                                <iframe
+                                                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227.31439574779503!2d85.31885924451394!3d27.671210546143694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19d1d7db5faf%3A0x9e4a84300b844c5a!2z4KSV4KWB4KSu4KS-4KSw4KWAIOCkrOCliOCkguCklSDgpLLgpL_gpK7gpL_gpJ_gpYfgpKE!5e0!3m2!1sen!2snp!4v1635917915458!5m2!1sen!2snp"
+                                                                    style="border:0; height: 100%; width: 100%;"
+                                                                    allowfullscreen="" loading="lazy"></iframe>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                        <section
+                                            class="elementor-section elementor-top-section elementor-element elementor-element-66f8378a elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                                            data-id="66f8378a" data-element_type="section"
+                                            data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
+                                            <div class="elementor-container elementor-column-gap-extended ">
+                                                <div class="elementor-row">
+                                                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-2198aa8"
+                                                        data-id="2198aa8" data-element_type="column">
+                                                        <div class="elementor-column-wrap elementor-element-populated">
+                                                            <div class="elementor-widget-wrap">
+                                                                <div class="elementor-element elementor-element-17b407c6 elementor-widget elementor-widget-ct_text_editor"
+                                                                    data-id="17b407c6" data-element_type="widget"
+                                                                    data-widget_type="ct_text_editor.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div id="ct_text_editor-17b407c6"
+                                                                            class="ct-text-editor " data-wow-delay="ms">
+                                                                            <div class="ct-inline-css" data-css="">
+                                                                            </div>
+                                                                            <div
+                                                                                class="ct-text-editor elementor-clearfix">
+                                                                                <span class="ct-year">2021</span> © All
+                                                                                rights reserved by <a
+                                                                                    href="{% url 'home' %}"
+                                                                                    target="_blank"
+                                                                                    rel="nofollow noopener">DreamNext
+                                                                                    Education Foundation</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <span class="ct-footer-year">2021</span>
         </footer>
+
+        <a href="#" class="scroll-top"><i class="zmdi zmdi-long-arrow-up"></i></a>
     </div>
 
-    <!-- ALL JS LINKING ARE HERE -->
-    <!-- jQuery -->
-    <!-- <script type=" text/javascript" src="{% static 'home\styles\packages\jQuery\jquery-3.6.0.min.js' %}"></script> -->
+    {% if show_event_popup %}
+    <div id="ct-newsletter-popup">
+        <div class="ct-newsletter-content">
+            <div class="ct-newsletter-content-inner">
+                <div class="ct-newsletter-close"><i class="zmdi zmdi-close"></i></div>
+                <div class="ct-newsletter-holder">
+                    <div class="ct-newsletter-meta">
+                        <h4 class="ct-newsletter-title"> {{ show_event_popup.title }}</h4>
+                        <p>
+                            {{ show_event_popup.summary }}
+                        </p>
+                        <div class="ct-newsletter-hide">
+                            <a href="{{ show_event_popup.get_absolute_url}}">
+                                <span> Show more </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ct-newsletter-image">
+                        <img alt="" data-src="/media/{{ show_event_popup.main_image }}" class="lazyload"
+                            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
 
-    <!-- Custom -->
 
-    <script type=" text/javascript" src="{% static 'home\styles\customs\js\base.js' %}"></script>
+    <link rel='stylesheet' id='elementor-post-20-css'
+        href='{% static "home\styles\assets\wp-content\uploads\elementor\css\post-20.css" %}' type='text/css'
+        media='all' />
+    <link rel='stylesheet' id='photoswipe-css'
+        href='{% static "home\styles\assets\wp-content\plugins\woocommerce\assets\css\photoswipe\photoswipe.min.css" %}'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='photoswipe-default-skin-css'
+        href='{% static "home\styles\assets\wp-content\plugins\woocommerce\assets\css\photoswipe\default-skin\default-skin.min.css" %}'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='elementor-icons-shared-0-css'
+        href='{% static "home\styles\assets\wp-content\plugins\elementor\assets\lib\font-awesome\css\fontawesome.min.css" %}'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='elementor-icons-fa-brands-css'
+        href='{% static "home\styles\assets\wp-content\plugins\elementor\assets\lib\font-awesome\css\brands.min.css" %}'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='elementor-icons-fa-solid-css'
+        href='{% static "home\styles\assets\wp-content\plugins\elementor\assets\lib\font-awesome\css\solid.min.css" %}'
+        type='text/css' media='all' />
+    <script defer type='text/javascript'
+        src='{% static "home\styles\assets\wp-content\plugins\yith-woocommerce-wishlist\assets\js\jquery.selectBox.min.js" %}'
+        id='jquery-selectBox-js'></script>
+    <script defer type='text/javascript'
+        src='{% static "home\styles\assets\wp-content\plugins\woocommerce\assets\js\prettyPhoto\jquery.prettyPhoto.min.js" %}'
+        id='prettyPhoto-js'></script>
+
+    <script defer type='text/javascript'
+        src='{% static "home\styles\assets\wp-content\plugins\woocommerce\assets\js\frontend\add-to-cart.min.js" %}'
+        id='wc-add-to-cart-js'></script>
+    <script defer type='text/javascript'
+        src='{% static "home\styles\assets\wp-content\plugins\woocommerce\assets\js\js-cookie\js.cookie.min.js" %}'
+        id='js-cookie-js'></script>
+    <script defer type='text/javascript'
+        src='{% static "home\styles\assets\wp-content\plugins\woocommerce\assets\js\frontend\woocommerce.min.js" %}'
+        id='woocommerce-js'></script>
+
+    <script defer type='text/javascript'
+        src='{% static "home\styles\assets\wp-content\plugins\woocommerce\assets\js\frontend\cart-fragments.min.js" %}'
+        id='wc-cart-fragments-js'></script>
+
+    <script defer type='text/javascript'
+        src='{% static "home\styles\assets\wp-content\plugins\wp-user-avatar\assets\js\frontend.min.js" %}'
+        id='ppress-frontend-script-js'></script>
+    <script defer type='text/javascript'
+        src='{% static "home\styles\assets\wp-content\plugins\wp-smushit\app\assets\js\smush-lazy-load.min.js" %}'
+        id='smush-lazy-load-js'></script>
+
+    <script defer type='text/javascript'
+        src='{% static "home\styles\assets\wp-content\plugins\yith-woocommerce-quick-view\assets\js\frontend.min.js" %}'
+        id='yith-wcqv-frontend-js'></script>
+    <script defer type='text/javascript'
+        src='{% static "home\styles\assets\wp-content\themes\csuti\assets\js\bootstrap.min.js" %}' id='bootstrap-js'>
+    </script>
+    <script defer type='text/javascript'
+        src='{% static "home\styles\assets\wp-content\themes\csuti\assets\js\nice-select.min.js" %}'
+        id='nice-select-js'></script>
+    <script defer type='text/javascript'
+        src='{% static "home\styles\assets\wp-content\uploads\siteground-optimizer-assets\match-height.min.js" %}'
+        id='match-height-js'></script>
+    <script defer type='text/javascript'
+        src='{% static "home\styles\assets\wp-content\themes\csuti\assets\js\magnific-popup.min.js" %}'
+        id='magnific-popup-js'></script>
+    <script defer type='text/javascript'
+        src='{% static "home\styles\assets\wp-content\themes\csuti\assets\js\progressbar.min.js" %}'
+        id='progressbar-js'></script>
+    <script defer type='text/javascript'
+        src='{% static "home\styles\assets\wp-content\themes\csuti\assets\js\wow.min.js" %}' id='wow-js'></script>
+    <script defer type='text/javascript' src='{% static "home\styles\assets\wp-includes\js\jquery\ui\core.min.js" %}'
+        id='jquery-ui-core-js'></script>
+    <script defer type='text/javascript' src='{% static "home\styles\assets\wp-includes\js\jquery\ui\mouse.min.js" %}'
+        id='jquery-ui-mouse-js'></script>
+    <script defer type='text/javascript' src='{% static "home\styles\assets\wp-includes\js\jquery\ui\slider.min.js" %}'
+        id='jquery-ui-slider-js'></script>
+    <script defer type='text/javascript'
+        src='{% static "home\styles\assets\wp-content\uploads\siteground-optimizer-assets\consultio-main.min.js" %}'
+        id='consultio-main-js'></script>
+    <script defer type='text/javascript'
+        src='{% static "home\styles\assets\wp-content\uploads\siteground-optimizer-assets\consultio-woocommerce.min.js" %}'
+        id='consultio-woocommerce-js'></script>
+    <script type='text/javascript' src='{% static "home\styles\assets\wp-includes\js\wp-embed.min.js" %}'
+        id='wp-embed-js'></script>
+    <script type='text/javascript'
+        src='{% static "home\styles\assets\wp-content\plugins\elementor\assets\lib\waypoints\waypoints.min.js" %}'
+        id='elementor-waypoints-js'></script>
+
+    <script type='text/javascript'
+        src='{% static "home\styles\assets\wp-content\plugins\case-theme-core\assets\js\lib\jquery.singlePageNav.js" %}'
+        id='single-page-nav-js'></script>
+    <script type='text/javascript'
+        src='{% static "home\styles\assets\wp-content\plugins\elementor\assets\lib\jquery-numerator\jquery-numerator.min.js" %}'
+        id='jquery-numerator-js'></script>
+    <script type='text/javascript'
+        src='{% static "home\styles\assets\wp-content\themes\csuti\elementor\js\ct-counter-widget.js" %}'
+        id='ct-counter-widget-js-js'></script>
+    <script type='text/javascript' src='{% static "home\styles\assets\wp-includes\js\imagesloaded.min.js" %}'
+        id='imagesloaded-js'></script>
+    <script type='text/javascript'
+        src='{% static "home\styles\assets\wp-content\plugins\case-theme-core\assets\js\lib\isotope.pkgd.min.js" %}'
+        id='isotope-js'></script>
+
+    <script type='text/javascript'
+        src='{% static "home\styles\assets\wp-content\themes\csuti\elementor\js\ct-post-masonry-widget.js" %}'
+        id='ct-post-masonry-widget-js-js'></script>
+    <script type='text/javascript'
+        src='{% static "home\styles\assets\wp-content\themes\csuti\elementor\js\ct-post-grid-widget.js" %}'
+        id='ct-post-grid-widget-js-js'></script>
+    <script type='text/javascript'
+        src='{% static "home\styles\assets\wp-content\plugins\elementor\assets\lib\slick\slick.min.js" %}'
+        id='jquery-slick-js'></script>
+    <script type='text/javascript'
+        src='{% static "home\styles\assets\wp-content\themes\csuti\elementor\js\ct-post-carousel-widget.js" %}'
+        id='ct-post-carousel-widget-js-js'></script>
+
+    <script type='text/javascript'
+        src='{% static "home\styles\assets\wp-content\plugins\instagram-feed\js\sbi-scripts.min.js" %}'
+        id='sb_instagram_scripts-js'></script>
+    <script type='text/javascript'
+        src='{% static "home\styles\assets\wp-content\themes\csuti\assets\js\jquery.cookie.js" %}' id='ct-cookie-js'>
+    </script>
+    <script type='text/javascript'
+        src='{% static "home\styles\assets\wp-content\themes\csuti\assets\js\newsletter-popup.js" %}'
+        id='newsletter-popup-js'></script>
+    <script type='text/javascript' defer
+        src='{% static "home\styles\assets\wp-content\plugins\mailchimp-for-wp\assets\js\forms.js" %}'
+        id='mc4wp-forms-api-js'></script>
+    <script type='text/javascript' src='{% static "\home\styles\assets\wp-includes\js\underscore.min.js" %}'
+        id='underscore-js'></script>
+
+    <script type='text/javascript' src='{% static "home\styles\assets\wp-includes\js\wp-util.min.js" %}'
+        id='wp-util-js'></script>
+
+    <script type='text/javascript'
+        src='{% static "home\styles\assets\wp-content\plugins\woocommerce\assets\js\frontend\add-to-cart-variation.min.js" %}'
+        id='wc-add-to-cart-variation-js'></script>
+    <script type='text/javascript'
+        src='{% static "home\styles\assets\wp-content\plugins\woocommerce\assets\js\zoom\jquery.zoom.min.js" %}'
+        id='zoom-js'></script>
+    <script type='text/javascript'
+        src='{% static "home\styles\assets\wp-content\plugins\woocommerce\assets\js\photoswipe\photoswipe.min.js" %}'
+        id='photoswipe-js'></script>
+    <script type='text/javascript'
+        src='{% static "home\styles\assets\wp-content\plugins\woocommerce\assets\js\photoswipe\photoswipe-ui-default.min.js" %}'
+        id='photoswipe-ui-default-js'></script>
+    <script type='text/javascript' id='wc-single-product-js-extra'>
+        /* <![CDATA[ */
+        var wc_single_product_params = {
+            "i18n_required_rating_text": "Please select a rating",
+            "review_rating_required": "yes",
+            "flexslider": {
+                "rtl": false,
+                "animation": "slide",
+                "smoothHeight": true,
+                "directionNav": false,
+                "controlNav": "thumbnails",
+                "slideshow": false,
+                "animationSpeed": 500,
+                "animationLoop": false,
+                "allowOneSlide": false
+            },
+            "zoom_enabled": "1",
+            "zoom_options": [],
+            "photoswipe_enabled": "1",
+            "photoswipe_options": {
+                "shareEl": false,
+                "closeOnScroll": false,
+                "history": false,
+                "hideAnimationDuration": 0,
+                "showAnimationDuration": 0
+            },
+            "flexslider_enabled": "1"
+        };
+        /* ]]> */
+    </script>
+    <script type='text/javascript'
+        src='{% static "home\styles\assets\wp-content\plugins\woocommerce\assets\js\frontend\single-product.min.js" %}'
+        id='wc-single-product-js'></script>
+    <script type='text/javascript'
+        src='{% static "home\styles\assets\wp-content\plugins\elementor\assets\js\webpack.runtime.min.js" %}'
+        id='elementor-webpack-runtime-js'></script>
+    <script type='text/javascript'
+        src='{% static "home\styles\assets\wp-content\plugins\elementor\assets\js\frontend-modules.min.js" %}'
+        id='elementor-frontend-modules-js'></script>
+    <script type='text/javascript'
+        src='{% static "home\styles\assets\wp-content\plugins\elementor\assets\lib\swiper\swiper.min.js" %}'
+        id='swiper-js'></script>
+    <script type='text/javascript'
+        src='{% static "home\styles\assets\wp-content\plugins\elementor\assets\lib\share-link\share-link.min.js" %}'
+        id='share-link-js'></script>
+    <script type='text/javascript'
+        src='{% static "home\styles\assets\wp-content\plugins\elementor\assets\lib\dialog\dialog.min.js" %}'
+        id='elementor-dialog-js'></script>
+    <script type='text/javascript' id='elementor-frontend-js-before'>
+        var elementorFrontendConfig = {
+            "environmentMode": {
+                "edit": false,
+                "wpPreview": false,
+                "isScriptDebug": false
+            },
+            "i18n": {
+                "shareOnFacebook": "Share on Facebook",
+                "shareOnTwitter": "Share on Twitter",
+                "pinIt": "Pin it",
+                "download": "Download",
+                "downloadImage": "Download image",
+                "fullscreen": "Fullscreen",
+                "zoom": "Zoom",
+                "share": "Share",
+                "playVideo": "Play Video",
+                "previous": "Previous",
+                "next": "Next",
+                "close": "Close"
+            },
+            "is_rtl": false,
+            "breakpoints": {
+                "xs": 0,
+                "sm": 480,
+                "md": 768,
+                "lg": 1025,
+                "xl": 1440,
+                "xxl": 1600
+            },
+            "responsive": {
+                "breakpoints": {
+                    "mobile": {
+                        "label": "Mobile",
+                        "value": 767,
+                        "direction": "max",
+                        "is_enabled": true
+                    },
+                    "mobile_extra": {
+                        "label": "Mobile Extra",
+                        "value": 880,
+                        "direction": "max",
+                        "is_enabled": false
+                    },
+                    "tablet": {
+                        "label": "Tablet",
+                        "value": 1024,
+                        "direction": "max",
+                        "is_enabled": true
+                    },
+                    "tablet_extra": {
+                        "label": "Tablet Extra",
+                        "value": 1365,
+                        "direction": "max",
+                        "is_enabled": false
+                    },
+                    "laptop": {
+                        "label": "Laptop",
+                        "value": 1620,
+                        "direction": "max",
+                        "is_enabled": false
+                    },
+                    "widescreen": {
+                        "label": "Widescreen",
+                        "value": 2400,
+                        "direction": "min",
+                        "is_enabled": false
+                    }
+                }
+            },
+            "version": "3.2.5",
+            "is_static": false,
+            "experimentalFeatures": [],
+            "urls": {
+                "assets": "https:\/\/demo.casethemes.net\/consultio-immigration\/wp-content\/plugins\/elementor\/assets\/"
+            },
+            "settings": {
+                "page": [],
+                "editorPreferences": []
+            },
+            "kit": {
+                "global_image_lightbox": "yes",
+                "active_breakpoints": ["viewport_mobile", "viewport_tablet"],
+                "lightbox_enable_counter": "yes",
+                "lightbox_enable_fullscreen": "yes",
+                "lightbox_enable_zoom": "yes",
+                "lightbox_enable_share": "yes",
+                "lightbox_title_src": "title",
+                "lightbox_description_src": "description"
+            },
+            "post": {
+                "id": 5147,
+                "title": "Home%20Onepage%20%E2%80%93%20DreamNext Education Foundation",
+                "excerpt": "",
+                "featuredImage": false
+            }
+        };
+    </script>
+    <script type='text/javascript'
+        src='{% static "home\styles\assets\wp-content\plugins\elementor\assets\js\frontend.min.js" %}'
+        id='elementor-frontend-js'></script>
+    <script type='text/javascript'
+        src='{% static "home\styles\assets\wp-content\plugins\elementor\assets\js\preloaded-modules.min.js" %}'
+        id='preloaded-modules-js'></script>
+
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+
+    <!-- magnific popup -->
+    <script type=" text/javascript"
+        src="{% static 'home\styles\packages\Magnific-popup\dist\jquery.magnific-popup.min.js' %}"></script>
     {% block javascript %}
     {% endblock javascript %}
 
